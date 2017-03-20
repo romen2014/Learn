@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oBtn1=document.getElementById('btn1');
+			var oBtn2=document.getElementById('btn2');
+			var timer=null;
+
+			//setTimeout(执行体,间隔)	延时执行	一次
+			//setInterval(执行体,间隔)	间隔执行	重复	适用于通知，微博动态，好友动态的服务器定时更新数据获取
+			oBtn1.onclick=function(){
+				timer=setInterval(function(){
+					alert('a');
+				},1000);
+
+			};
+
+			oBtn2.onclick=function(){
+				clearInterval(timer);
+			}
+		};
+	</script>
+</head>
+<body>
+	<input type="button" id="btn1" value="开始">
+	<input type="button" id="btn2" value="停止">
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文本域，支持多行文本输入</title>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/489">文本域，支持多行文本输入</a></h1>
+    <hr>
+    <p>当用户需要在表单中输入大段文字时，需要用到文本输入域。</p>
+    <p>语法：</p>
+    <code>&lt;textarea  rows="行数" cols="列数"&gt;文本&lt;/textarea&gt;</code>
+    <ol>
+      <li>
+        &lt;textarea&gt;标签是成对出现的，以&lt;textarea&gt;开始，以&lt;/textarea&gt;结束。
+      </li>
+      <li>
+        cols ：多行输入域的列数。
+      </li>
+      <li>
+        rows ：多行输入域的行数。
+      </li>
+      <li>
+        在&lt;textarea&gt;&lt;/textarea&gt;标签之间可以输入默认值。
+      </li>
+    </ol>
+    <p>举例：</p>
+    <pre>
+      &lt;form  method="post" action="save.php"&gt;
+              &lt;label&gt;联系我们&lt;/label&gt;
+              &lt;textarea cols="50" rows="10" &gt;在这里输入内容...&lt;/textarea&gt;
+      &lt;/form&gt;
+    </pre>
+    <strong>注意：代码中的&lt;label&gt;标签在本章5-9中讲解。</strong>
+    <p>在浏览器中显示结果：</p>
+    <form  method="post" action="save.php">
+            <label>联系我们</label>
+            <textarea cols="50" rows="10" >在这里输入内容...</textarea>
+    </form>
+    <strong>textarea的cols与rows两个属性可用css样式的width和height来代替：col用width、row用height来代替。（这两个css样式在以后的章节会讲解）</strong>
+  </body>
+</html>

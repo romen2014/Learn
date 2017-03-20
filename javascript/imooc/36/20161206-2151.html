@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编程挑战</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    pre{
+      color: black;
+      font-size: 14px;
+    }
+    .default{
+      height:400px;
+      width:600px;
+    	border:#333 solid 1px;
+    	padding:5px;
+    }
+  </style>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1660">编程挑战</a></h1>
+  <hr>
+  <h3>要求:</h3>
+  <p>小伙伴们，请编写"改变颜色"、"改变宽高"、"隐藏内容"、"显示内容"、"取消设置"的函数，点击相应按钮执行相应操作，点击"取消设置"按钮后，提示是否取消设置，如是执行操作，否则不做操作。</p>
+  <ol>
+    <h3>任务</h3>
+    <li>
+      定义"改变颜色"的函数
+      <pre>
+        提示:
+        obj.style.color
+        obj.style.backgroundColor
+      </pre>
+    </li>
+    <li>
+      定义"改变宽高"的函数
+      <pre>
+        提示:
+        obj.style.width
+        obj.style.height
+      </pre>
+    </li>
+    <li>
+      定义"隐藏内容"的函数
+      <pre>
+        提示:
+        obj.style.display="none";
+      </pre>
+    </li>
+    <li>
+      定义"显示内容"的函数
+      <pre>
+        提示:
+        obj.style.display="block";
+      </pre>
+    </li>
+    <li>
+      定义"取消设置"的函数
+      <pre>
+        提示:
+        使用confirm()确定框，来确认是否取消设置。
+        如是将以上所有的设置恢复原始值,否则不做操作。
+      </pre>
+    </li>
+    <li>
+      当点击相应按钮，执行相应操作，为按钮添加相应事件
+    </li>
+  </ol>
+  <h3>结果:</h3>
+  <script type="text/javascript">
+    function changeColor(){
+      var obj = document.getElementById('txt');
+      obj.style.color = "red";
+      obj.style.backgroundColor = "#ccc";
+    }
+    function changeWidthHeight(){
+      var obj = document.getElementById('txt');
+      obj.style.width = 800 + "px";
+      obj.style.height = 600 + "px";
+    }
+    function changeDisplayNone(){
+      var obj = document.getElementById('txt');
+      obj.style.display = "none";
+    }
+    function changeDisplayBlock(){
+      var obj = document.getElementById('txt');
+      obj.style.display = "block";
+    }
+    function changeReset(){
+      var reset = window.confirm("是否要取消设置?");
+      if(reset){
+        var obj = document.getElementById('txt');
+        obj.style.color = "black";
+        obj.style.backgroundColor = "#fff";
+        obj.style.width = 600 + "px";
+        obj.style.height = 400 + "px";
+        obj.style.display = "block";
+      }
+    }
+  </script>
+  <form>
+  <!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
+    <input type="button" value="改变颜色" onclick="changeColor();">
+    <input type="button" value="改变宽高" onclick="changeWidthHeight();">
+    <input type="button" value="隐藏内容" onclick="changeDisplayNone();">
+    <input type="button" value="显示内容" onclick="changeDisplayBlock();">
+    <input type="button" value="取消设置" onclick="changeReset();">
+  </form>
+  <h2 id="con">JavaScript课程</H2>
+  <div id="txt" class="default">
+    <h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5>
+    <p>1. JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
+    <p>2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。</p>
+    <p>3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。</p>
+  </div>
+</body>
+</html>

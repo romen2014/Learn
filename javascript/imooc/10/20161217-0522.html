@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数调用</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/349">函数调用</a></h1>
+  <hr>
+  <p>函数定义好后，是不能自动执行的，需要调用它,直接在需要的位置写函数名。</p>
+  <p><strong>第一种情况:在&lt;script>标签内调用。</strong></p>
+  <pre>
+    &lt;script type="text/javascript">
+      function add2(){
+        sum = 1 + 1;
+        alert(sum);
+      }
+      add2();//调用函数，直接写函数名。
+    &lt;/script>
+  </pre>
+  <p><strong>第二种情况:在HTML文件中调用，如通过点击按钮后调用定义好的函数。</strong></p>
+  <pre>
+    //按钮调用：onclick点击事件，直接写函数名
+    &lt;input type="button" value="click it" onclick="add2();">
+  </pre>
+  <p><strong>注意:</strong>鼠标事件会在后面讲解。</p>
+</body>
+</html>

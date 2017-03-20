@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编程练习</title>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1636">编程练习</a></h1>
+  <hr>
+  制作一个表格，显示班级的学生信息。
+  <ol>
+    <strong>要求</strong>
+    <li>鼠标移到不同行上时背景色改为色值为 #f2f2f2，移开鼠标时则恢复为原背景色 #fff</li>
+    <li>点击添加按钮，能动态在最后添加一行</li>
+    <li>点击删除按钮，则删除当前行</li>
+  </ol>
+  <hr>
+  <table border="1" width="50%" id="table">
+  <tr>
+    <th>学号</th>
+    <th>姓名</th>
+    <th>操作</th>
+  </tr>
+  <tr>
+    <td>xh1</td>
+    <td>王小明</td>
+    <td><a href="javascript:;" onclick="del(this)">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+  </tr>
+  <tr>
+    <td>xh2</td>
+    <td>刘小芳</td>
+    <td><a href="javascript:;" onclick="del(this)">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+  </tr>
+  </table>
+  <input type="button" value="添加一行" onclick="append()"/>   <!--在添加按钮上添加点击事件  -->
+  <script>
+    var xh = 3;
+    window.onload = function(){
+      aTr = document.getElementsByTagName('tr');
+      for(var i = 0; i < aTr.length; i++){
+        setStyle(aTr[i]);
+      }
+    }
+
+    function setStyle(tr){
+      tr.onmouseover = function(){
+        tr.style.backgroundColor = "#f2f2f2";
+      }
+      tr.onmouseout = function(){
+        tr.style.backgroundColor = "#fff";
+      }
+    }
+
+    function append(){
+      var sName=prompt('请输入姓名','');
+      if(sName == null || sName.trim() == ""){
+        return;
+      }
+      var oTable = document.getElementById('table');
+      var oTr = document.createElement("tr");
+      oTable.appendChild(oTr);
+      var oTd1 = document.createElement("td");
+      oTd1.innerHTML = "xh" + xh++ ;
+      oTr.appendChild(oTd1);
+      var oTd2 = document.createElement("td");
+      oTd2.innerHTML = sName;
+      oTr.appendChild(oTd2);
+      var oTd3 = document.createElement("td");
+      oTr.appendChild(oTd3);
+      var oA = document.createElement("a");
+      oA.setAttribute("href", "javascript:;");
+      oA.setAttribute("onclick", "del(this)");
+      oA.innerHTML = "删除";
+      oTd3.appendChild(oA);
+      setStyle(oTr);
+    }
+
+    function del(obj){
+       var tr=obj.parentNode.parentNode;
+       tr.parentNode.removeChild(tr);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>水平居中设置-不定宽块状元素方法（一）</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      table{
+        border:1px blue solid;
+        margin:0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/6363">水平居中设置-不定宽块状元素方法（一）</a></h1>
+    <hr>
+    <p>在实际工作中我们会遇到需要为“不定宽度的块状元素”设置居中，比如网页上的分页导航，因为分页的数量是不确定的，所以我们不能通过设置宽度来限制它的弹性。(不定宽块状元素：块状元素的宽度width不固定。)</p>
+    <ol>
+      不定宽度的块状元素有三种方法居中（这三种方法目前使用的都很多）：
+      <li>加入 table 标签</li>
+      <li>设置 display: inline 方法：与第一种类似，显示类型设为 行内元素，进行不定宽元素的属性设置</li>
+      <li>设置 position:relative 和 left:50%：利用 相对定位 的方式，将元素向左偏移 50% ，即达到居中的目的</li>
+    </ol>
+    <p>这一小节我们来讲一下第一种方法：</p>
+    <ol>
+      <p>为什么选择方法一加入table标签? 是利用table标签的长度自适应性---即不定义其长度也不默认父元素body的长度（table其长度根据其内文本长度决定），因此可以看做一个定宽度块元素，然后再利用定宽度块状居中的margin的方法，使其水平居中。</p>
+      <li>为需要设置的居中的元素外面加入一个 table 标签 ( 包括 &lt;tbody&gt;、&lt;tr&gt;、&lt;td&gt; )。</li>
+      <li>为这个 table 设置“左右 margin 居中”（这个和定宽块状元素的方法一样）。</li>
+    </ol>
+    <p>举例如下：</p>
+    <p>html代码：</p>
+    <pre>
+      &lt;div&gt;
+       &lt;table&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;ul&gt;
+                &lt;li&gt;我是第一行文本&lt;/li&gt;
+                &lt;li&gt;我是第二行文本&lt;/li&gt;
+                &lt;li&gt;我是第三行文本&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+       &lt;/table&gt;
+      &lt;/div&gt;
+    </pre>
+    <p>css代码：</p>
+    <pre>
+      table{
+        border:1px blue solid;
+        margin:0 auto;
+      }
+    </pre>
+    <p>示例：</p>
+
+    <div>
+     <table>
+      <tbody>
+        <tr>
+          <td>
+            <ul>
+              <li>我是第一行文本</li>
+              <li>我是第二行文本我是第二行文本</li>
+              <li>我是第三行文本</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+     </table>
+    </div>
+
+  </body>
+</html>

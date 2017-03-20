@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>getAttribute()方法</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1587">getAttribute()方法</a></h1>
+  <hr>
+  <p>通过元素节点的属性名称获取属性的值。</p>
+  <p>语法：</p>
+  <code>elementNode.getAttribute(name)</code>
+  <p>说明：</p>
+  <p>1. elementNode：使用getElementById()、getElementsByTagName()等方法，获取到的元素节点。</p>
+  <p>2. name：要想查询的元素节点的属性名字</p>
+  <p>看看下面的代码，获取h4标签的属性值：</p>
+  <pre>
+    &lt;h4 id="alink" title="getAttribute()获取标签的属性值" onclick="hattr()">点击我，获取标签的属性值&lt;/h4>
+    &lt;script>
+      function hattr(){
+        var oA = document.getElementById('alink');
+        var aId = oA.getAttribute("id");
+        document.write("h4标签的ID：" + aId + "&lt;br>");
+        var aTitle = oA.getAttribute("title");
+        document.write("h4标签的title：" + aTitle);
+      }
+    &lt;/script>
+  </pre>
+  <p>运行结果：</p>
+  <h4 id="alink" title="getAttribute()获取标签的属性值" onclick="hattr()">点击我，获取标签的属性值</h4>
+  <script>
+    function hattr(){
+      var oA = document.getElementById('alink');
+      var aId = oA.getAttribute("id");
+      document.write("h4标签的ID：" + aId + "<br>");
+      var aTitle = oA.getAttribute("title");
+      document.write("h4标签的title：" + aTitle);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>水平居中设置-不定宽块状元素方法（三）</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      .container{
+        border: 1px blue solid;
+        float:left;
+        position:relative;
+        left:50%
+      }
+
+      .container ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+
+        position:relative;
+        left:-50%;
+      }
+      .container li{float:left;display:inline;margin-right:8px;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/6365">水平居中设置-不定宽块状元素方法（三）</a></h1>
+    <hr>
+    <p>除了前两节讲到的插入table标签，以及改变元素的display类型，可以使不定宽块状元素水平居中之外，本节介绍第3种实现这种效果的方法，设置浮动和相对定位来实现。</p>
+    <p>方法三：通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left: -50% 来实现水平居中。</p>
+    <p>我们可以这样理解：假想ul层的父层（即下面例子中的div层）中间有条平分线将ul层的父层（div层）平均分为两份，ul层的css代码是将ul层的最左端与ul层的父层（div层）的平分线对齐；而li层的css代码则是将li层的平分线与ul层的最左端（也是div层的平分线）对齐，从而实现li层的居中。</p>
+    <p>html代码：</p>
+    <pre>
+      &lt;div class="container"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    </pre>
+    <p>css代码：</p>
+    <pre>
+      .container{
+        float:left;
+        position:relative;
+        left:50%
+      }
+
+      .container ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+
+        position:relative;
+        left:-50%;
+      }
+      .container li{float:left;display:inline;margin-right:8px;}
+    </pre>
+    <p>这三种方法使用得都非常广泛，各有优缺点，具体选用哪种方法，可以视具体情况而定。</p>
+    <p>示例：</p>
+
+    <div class="container">
+      <ul>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+      </ul>
+    </div>
+
+  </body>
+</html>

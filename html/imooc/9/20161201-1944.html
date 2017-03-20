@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文本输入框、密码输入框</title>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/479">文本输入框、密码输入框</a></h1>
+    <hr>
+    <p>当用户要在表单中键入字母、数字等内容时，就会用到文本输入框。文本框也可以转化为密码输入框。</p>
+    <p>语法：</p>
+    <pre>
+      &lt;form&gt;
+         &lt;input type="text/password" name="名称" value="文本" /&gt;
+      &lt;/form&gt;
+    </pre>
+    <ol>
+      <li>
+        <p><strong>type :</strong></p>
+        <p>当type=<strong>"text"</strong>时，输入框为文本输入框;</p>
+        <p>当type=<strong>"password"</strong>时, 输入框为密码输入框。</p>
+      </li>
+      <li>
+        <strong>name :</strong>为文本框命名，以备后台程序ASP 、PHP使用。
+      </li>
+      <li>
+        <strong>value :</strong>为文本输入框设置默认值。(一般起到提示作用)
+      </li>
+    </ol>
+    <p>举例：</p>
+    <pre>
+      &lt;form&gt;
+        姓名：
+        &lt;input type="text" name="myName"&gt;
+        &lt;br/&gt;
+        密码：
+        &lt;input type="password" name="pass"&gt;
+      &lt;/form&gt;
+    </pre>
+    <p>在浏览器中显示的结果：</p>
+    <form>
+      姓名：
+      <input type="text" name="myName">
+      <br/>
+      密码：
+      <input type="password" name="pass">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多物体运动框架</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 50px;
+			background-color: red;
+			margin: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var aDiv = document.getElementsByTagName('div');
+		for (var i = aDiv.length - 1; i >= 0; i--) {
+			aDiv.timer = null;
+			aDiv[i].onmouseover = function(){
+				move(this,400);
+			};
+			aDiv[i].onmouseout = function(){
+				move(this,100);
+			};
+		};
+	}
+	// 多物体运动核心就是给每个运动对象分别分配一个定时器
+	// var timer = null;
+	function move(oDiv, target){
+		clearInterval(oDiv.timer);
+		oDiv.timer = setInterval(function(){
+			var speed = (target - oDiv.offsetWidth)/3;
+			speed = speed>0?Math.ceil(speed):Math.floor(speed);
+			if(oDiv.offsetWidth == target){
+				clearInterval(oDiv.timer);
+			}else{
+				oDiv.style.width = oDiv.offsetWidth + speed + 'px';
+			document.title = oDiv.offsetWidth;
+			}
+		},30);
+	}
+	</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+code, pre {
+  border: 1px #ccc solid;
+  background-color: #eee;
+  font-size: 14px;
+  margin: 10px;
+  padding: 10px;
+}
+code{
+  display: block;
+}
+span{
+  color: red;
+}
+
+a{
+  text-decoration: none;
+  color: blue;
+}
+a:hover{
+  text-decoration: underline;
+  color: #D60000;
+}
+
+table{
+  border: 1px black solid;
+}
+table tr th{
+  text-align: center;
+  font-weight: bold;
+  border: 1px black solid;
+  background-color: #ccc;
+}
+table tr td{
+  border: 1px black solid;
+  background-color: #eee;
+}
+table tr td:hover{
+  background-color: #ccc;
+}

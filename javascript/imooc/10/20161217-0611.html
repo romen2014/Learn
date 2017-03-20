@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>鼠标单击事件onclick</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/640">鼠标单击事件onclick</a></h1>
+  <hr>
+  <p>onclick是鼠标单击事件，当在网页上单击鼠标时，就会发生该事件。同时onclick事件调用的程序块就会被执行，通常与按钮一起使用。</p>
+  <p>比如，我们单击按钮时，触发 onclick 事件，并调用两个数和的函数add2()。代码如下：</p>
+  <pre>
+    &lt;html>
+      &lt;head>
+        &lt;script type="text/javascript">
+          function add2(){
+            var numa,numb,sum;
+            numa=6;
+            numb=8;
+            sum=numa+numb;
+            document.write("两数和为:"+sum);
+          }
+        &lt;/script>
+      &lt;/head>
+      &lt;body>
+        &lt;form>
+          &lt;input name="button" type="button" value="点击提交" onclick="add2()" />
+        &lt;/form>
+      &lt;/body>
+    &lt;/html>
+  </pre>
+  <p><strong>注意: </strong>在网页中，如使用事件，就在该元素中设置事件属性。 </p>
+</body>
+</html>

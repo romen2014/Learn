@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>创建元素节点createElement()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1696">创建元素节点createElement()</a></h1>
+  <hr>
+  <p>createElement()方法可创建元素节点。此方法可返回一个 Element 对象。</p>
+  <p>语法：</p>
+  <code>document.createElement(tagName)</code>
+  <p><strong>参数：</strong>tagName：字符串值，这个字符串用来指明创建元素的类型。</p>
+  <p><strong>注意：</strong>要与appendChild() 或 insertBefore()方法联合使用，将元素显示在页面中。</p>
+  <p>我们来创建一个按钮，代码如下：</p>
+  <pre>
+    var body = document.body;
+    var input = document.createElement("input");
+    // 可以使用setAttribute来设置属性
+    input.setAttribute("type", "button");
+    input.value = "创建一个按钮";
+    body.appendChild(input);
+  </pre>
+  <p>运行结果:</p>
+  <script>
+    var body = document.body;
+    var input = document.createElement("input");
+    // 可以使用setAttribute来设置属性
+    input.setAttribute("type", "button");
+    input.value = "创建一个按钮";
+    body.appendChild(input);
+   </script>
+</body>
+</html>

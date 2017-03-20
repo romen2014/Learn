@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文字排版--字体</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      body{font-family:"宋体";}
+      body{font-family:"微软雅黑";}
+      body{font-family:"Microsoft Yahei";}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2076">文字排版--字体</a></h1>
+    <hr>
+    <p>我们可以使用css样式为网页中的文字设置字体、字号、颜色等样式属性。下面我们来看一个例子，下面代码实现：为网页中的文字设置字体为宋体。</p>
+    <code style="font-family:"宋体";">body{font-family:"宋体";}</code>
+    <p>这里注意不要设置不常用的字体，因为如果用户本地电脑上如果没有安装你设置的字体，就会显示浏览器默认的字体。（因为用户是否可以看到你设置的字体样式取决于用户本地电脑上是否安装你设置的字体。）</p>
+    <p>现在一般网页喜欢设置 <span class="point">“微软雅黑”</span>，如下代码：</p>
+    <code style="font-family:'Microsoft Yahei'">body{font-family:"Microsoft Yahei";}</code>
+    <p>或</p>
+    <code style="font-family:'微软雅黑';">body{font-family:"微软雅黑";}</code>
+    <p>注意：第一种方法比第二种方法兼容性更好一些。</p>
+    <p>因为这种字体即美观又可以在客户端安全的显示出来（用户本地一般都是默认安装的）。</p>
+  </body>
+</html>

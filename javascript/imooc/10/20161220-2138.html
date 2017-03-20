@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Navigator 对象</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1154">Navigator 对象</a></h1>
+  <hr>
+  <p>Navigator 对象包含有关浏览器的信息，通常用于检测浏览器与操作系统的版本。</p>
+  <p>对象属性:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>属性</td>
+        <td>描述</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>appCodeName</td>
+        <td>浏览器代码名的字符串表示</td>
+      </tr>
+      <tr>
+        <td>appName</td>
+        <td>返回浏览器的名称</td>
+      </tr>
+      <tr>
+        <td>appVersion</td>
+        <td>返回浏览器的平台和版本信息</td>
+      </tr>
+      <tr>
+        <td>platform</td>
+        <td>返回运行浏览器的操作系统平台</td>
+      </tr>
+      <tr>
+        <td>userAgent</td>
+        <td>返回由客户机发送服务器的user-agent头部的值</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>以上信息查看如下:</p>
+  <pre>
+    document.write("Browser code : " + navigator.appCodeName + "&lt;br>");
+    document.write("Browser name : " + navigator.appName + "&lt;br>");
+    document.write("Browser version : " + navigator.appVersion + "&lt;br>");
+    document.write("platform : " + navigator.platform + "&lt;br>");
+    document.write("userAgent : " + navigator.userAgent + "&lt;br>");
+  </pre>
+  <script type="text/javascript">
+    document.write("Browser code : " + navigator.appCodeName + "<br>");
+    document.write("Browser name : " + navigator.appName + "<br>");
+    document.write("Browser version : " + navigator.appVersion + "<br>");
+    document.write("platform : " + navigator.platform + "<br>");
+    document.write("userAgent : " + navigator.userAgent + "<br>");
+  </script>
+  <p><span>userAgent:</span>用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)</p>
+  <p>几种浏览的user_agent.，像360的兼容模式用的是IE、极速模式用的是chrom的内核。</p>
+  <img src="http://img.mukewang.com/535a3a4a0001e03f06870189.jpg" alt="">
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>事件对象</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/video/2140" target="_blank">IE事件对象</a></h1>
+  <hr>
+  <table>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+      <th>演示</th>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>获取事件类型</td>
+      <td><input type="button" value="DOM事件对象" id="btn310"></td>
+    </tr>
+    <tr>
+      <td>srcElement</td>
+      <td>获取事件目标</td>
+    </tr>
+    <tr>
+      <td>cancelBubble</td>
+      <td>阻止事件冒泡</td>
+      <td>
+        <div id="box">
+          <input type="button" value="事件冒泡" id="btn311">
+          <input type="button" value="阻止事件冒泡" id="btn312">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>returnValue</td>
+      <td>阻止事件默认行为</td>
+      <td><a href="http://www.baidu.com" id="go">示例超链接</a></td>
+    </tr>
+  </table>
+
+  <script type="text/javascript" src="event.js"></script>
+
+  <script type="text/javascript">
+  var eu = eventUtil;
+    // 常用事件属性演示
+    function showMes310(event){
+      event = eu.getEvent(event);
+      alert("事件类型：" + eu.getType(event) + " | 事件目标：" + eu.getTarget(event).nodeName);
+    }
+    var oBtn310 = document.getElementById('btn310');
+    eu.addHandler(oBtn310, 'click', showMes310);
+
+    // 事件冒泡
+    function showBox(){
+      alert("BOX被冒泡点击");
+    }
+    var box = document.getElementById('box');
+    eu.addHandler(box, 'click', showBox);
+    var oBtn311 = document.getElementById('btn311');
+    eu.addHandler(oBtn311, 'click', showMes310);
+
+    // 阻止事件冒泡
+    function showMes312(event){
+      event = eu.getEvent(event);
+      alert("事件类型：" + eu.getType(event) + " | 事件目标：" + eu.getTarget(event).nodeName);
+      eu.stopPropagation(event);
+    }
+    var oBtn312 = document.getElementById('btn312');
+    eu.addHandler(oBtn312, 'click', showMes312);
+
+    // 阻止事件默认行为，且停止冒泡
+    function stopGo(event){
+      event = eu.getEvent(event);
+      alert("事件类型：" + eu.getType(event) + " | 事件目标：" + eu.getTarget(event).nodeName);
+      eu.stopPropagation(event);
+      eu.preventDefault(event);
+    }
+    var oA = document.getElementById('go');
+    eu.addHandler(oA, 'click', stopGo);
+  </script>
+</body>
+</html>

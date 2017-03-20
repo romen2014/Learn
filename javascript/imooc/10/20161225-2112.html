@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>创建文本节点createTextNode()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1697">创建文本节点createTextNode()</a></h1>
+  <hr>
+  <p>createTextNode() 方法创建新的文本节点，返回新创建的 Text 节点。</p>
+  <p>语法：</p>
+  <code>document.createTextNode(data)</code>
+  <p><strong>参数：</strong>data : 字符串值，可规定此节点的文本。</p>
+  <p>我们来创建一个<div>元素并向其中添加一条消息，代码如下：</p>
+  <pre>
+    var oDiv = document.createElement("div");
+    oDiv.style.backgroundColor = "#ccc";
+    oDiv.style.color = "red";
+    var oText = document.createTextNode("Hello World!");
+    oDiv.appendChild(oText);
+    document.body.appendChild(oDiv);
+  </pre>
+  <p>运行结果:</p>
+  <script>
+    var oDiv = document.createElement("div");
+    oDiv.style.backgroundColor = "#ccc";
+    oDiv.style.color = "red";
+    var oText = document.createTextNode("Hello World!");
+    oDiv.appendChild(oText);
+    document.body.appendChild(oDiv);
+  </script>
+</body>
+</html>

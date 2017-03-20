@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>访问兄弟节点</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1593">访问兄弟节点</a></h1>
+  <hr>
+  <p>1. nextSibling 属性可返回某个节点之后紧跟的节点（处于同一树层级中）。</p>
+  <p>语法：</p>
+  <code>nodeObject.nextSibling</code>
+  <p><strong>说明：</strong>如果无此节点，则该属性返回 null。</p>
+  <p>2. previousSibling 属性可返回某个节点之前紧跟的节点（处于同一树层级中）。</p>
+  <p>语法：</p>
+  <code>nodeObject.previousSibling</code>
+  <p><strong>说明：</strong>如果无此节点，则该属性返回 null。</p>
+  <p><strong>注意：</strong>两个属性获取的是节点。Internet Explorer 会忽略节点间生成的空白文本节点（例如，换行符号），而其它浏览器不会忽略。</p>
+  <p>解决问题方法:</p>
+  <p>判断节点nodeType是否为1, 如是为元素节点，跳过。</p>
+  <pre>
+    &lt;ul id="u1">
+      &lt;li>javascript&lt;/li>
+      &lt;li>jquery&lt;/li>
+      &lt;li>angularjs&lt;/li>
+    &lt;/ul>
+    &lt;ul>
+      &lt;li>html&lt;/li>
+      &lt;li>css&lt;/li>
+    &lt;/ul>
+    &lt;script>
+      function get_nextSibling(n){
+        var next = n.nextSibling;
+        while(next.nodeType != 1){
+          next = next.nextSibling;
+        }
+        return next;
+      }
+
+      var x = document.getElementsByTagName('li')[0];
+      document.write(x.nodeName + " = " + x.innerHTML + "&lt;br>");
+      var y = get_nextSibling(x);
+      document.write("nextSibling: ");
+      document.write(y.nodeName + " = " + y.innerHTML + "&lt;br>");
+    &lt;/script>
+  </pre>
+  <p>运行结果:</p>
+  <ul id="u1">
+    <li>javascript</li>
+    <li>jquery</li>
+    <li>angularjs</li>
+  </ul>
+  <ul>
+    <li>html</li>
+    <li>css</li>
+  </ul>
+  <script>
+    function get_nextSibling(n){
+      var next = n.nextSibling;
+      while(next.nodeType != 1){
+        next = next.nextSibling;
+      }
+      return next;
+    }
+
+    var x = document.getElementsByTagName('li')[0];
+    document.write(x.nodeName + " = " + x.innerHTML + "<br>");
+    var y = get_nextSibling(x);
+    document.write("nextSibling: ");
+    document.write(y.nodeName + " = " + y.innerHTML + "<br>");
+  </script>
+</body>
+</html>

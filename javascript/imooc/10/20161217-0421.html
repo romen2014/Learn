@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>for循环</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/307">for循环</a></h1>
+  <hr>
+  <p>很多事情不只是做一次，要重复做。如打印10份试卷，每次打印一份，重复这个动作，直到打印完成。这些事情，我们使用循环语句来完成，循环语句，就是重复执行一段代码。</p>
+  <p>for语句结构：</p>
+  <pre>
+    for(初始化变量;循环条件;循环迭代){
+      环语句
+    }
+  </pre>
+  <p>假如，一个盒子里有6个球，我们每次取一个，重复从盒中取出球，直到球取完为止。</p>
+  <pre>
+    var num=1;
+    for (num=1;num<=6;num++){  //初始化值；循环条件；循环后条件值更新
+      document.write("取出第"+num+"个球&lt;br />");
+    }
+  </pre>
+  <p>执行结果：</p>
+  <script>
+    var num=1;
+    for (num=1;num<=6;num++){  //初始化值；循环条件；循环后条件值更新
+      document.write("取出第"+num+"个球<br />");
+    }
+  </script>
+  <p>执行思路:</p>
+  <ul>
+    <li>
+      <ul>
+        <strong>第一次</strong>
+        <li>
+          初始化：num=1
+        </li>
+        <li>
+          判断：num<=6(num值此时为1)
+        </li>
+        <li>
+          输出：取出第1个球
+        </li>
+        <li>
+          条件值更新：num++(num=num+1,num值更新为2)
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <strong>第二次</strong>
+        <li>
+          判断：num<=6(num值此时为2,所以判断2<=6,条件成立)
+        </li>
+        <li>
+          输出：取出第2个球
+        </li>
+        <li>
+          条件值更新：num++(num=num+1,num值更新为3)
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <strong>第三次</strong>
+        <li>
+          判断：num<=6(num值此时为3,所以判断3<=6,条件成立)
+        </li>
+        <li>
+          输出：取出第3个球
+        </li>
+        <li>
+          条件值更新：num++(num=num+1,num值更新为4)
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul><strong>第四次</strong>、<strong>第五次</strong> //中间环节一样，略...</ul>
+    </li>
+    <li>
+      <ul>
+        <strong>第六次</strong>
+        <li>
+          判断：num<=6(num值此时为6,所以判断6<=6,条件成立)
+        </li>
+        <li>
+          输出：取出第6个球
+        </li>
+        <li>
+          条件值更新：num++(num=num+1,num值更新为7)
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <strong>第七次</strong>
+        <li>
+          判断：num<=6(num值此时为7,所以判断7<=6,条件不成立)
+        </li>
+        <li>
+          不再执行循环体内的输出语句
+        </li>
+        <li>
+          结束for循环
+        </li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>向数组增加一个新元素</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/236">向数组增加一个新元素</a></h1>
+  <hr>
+  <p>上一节中，我们使用myarray变量存储了5个人的成绩，现在多出一个人的成绩，如何存储呢？</p>
+  <img src="http://img.mukewang.com/52ca00eb0001dd4805120199.jpg" alt="">
+  <p>只需使用下一个未用的索引，任何时刻可以不断向数组增加新元素。</p>
+  <pre>
+    myarray[5]=88; //使用一个新索引，为数组增加一个新元素
+  </pre>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var myarray=new Array();
+    myarray[0]=88;
+    myarray[1]=90;
+    myarray[2]=68;
+    myarray[3]=99;
+    document.write("数组第一个值是:"+myarray[0]+"&lt;br>");
+    document.write("数组第二个值是:"+myarray[1]+"&lt;br>");
+    document.write("数组第三个值是:"+myarray[2]+"&lt;br>");
+    document.write("数组新增加的值是:"+myarray[3]+"&lt;br>");
+  </pre>
+  <script type="text/javascript">
+    var myarray=new Array();
+    myarray[0]=88;
+    myarray[1]=90;
+    myarray[2]=68;
+    myarray[3]=99;
+    document.write("数组第一个值是:"+myarray[0]+"<br>");
+    document.write("数组第二个值是:"+myarray[1]+"<br>");
+    document.write("数组第三个值是:"+myarray[2]+"<br>");
+    document.write("数组新增加的值是:"+myarray[3]+"<br>");
+  </script>
+</body>
+</html>

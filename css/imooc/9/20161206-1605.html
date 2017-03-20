@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>长度值</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      #demo1 {
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/5989">长度值</a></h1>
+    <hr>
+    <p>长度单位总结一下，目前比较常用到px（像素）、em、% 百分比，要注意其实这三种单位都是相对单位。</p>
+    <ol>
+      <li>
+        <strong>像素</strong>
+        <p>像素为什么是相对单位呢？因为像素指的是显示器上的小点（CSS规范中假设“90像素=1英寸”）。实际情况是浏览器会使用显示器的实际像素值有关，在目前大多数的设计者都倾向于使用像素（px）作为单位。</p>
+      </li>
+      <li>
+        <strong>em</strong>
+        <p>就是本元素给定字体的 font-size 值，如果元素的 font-size 为 14px ，那么 1em = 14px；如果 font-size 为 18px，那么 1em = 18px。如下代码：</p>
+        <code>p{font-size:12px;text-indent:2em;}</code>
+        <p>上面代码就是可以实现段落首行缩进 24px（也就是两个字体大小的距离）。</p>
+        <strong>下面注意一个特殊情况：</strong>
+        <p>但当给 font-size 设置单位为 em 时，此时计算的标准以 p 的父元素的 font-size 为基础。如下代码：</p>
+        <p>html:</p>
+        <code>&lt;p&gt;以这个&lt;span&gt;例子&lt;/span&gt;为例。&lt;/p&gt;</code>
+        <p>css:</p>
+        <pre>
+          p{font-size:14px}
+          span{font-size:0.8em;}
+        </pre>
+        <p>示例：</p>
+        <p style="font-size:14px;">以这个<span style="font-size:0.8em">例子</span>为例。</p>
+        <p>结果 span 中的字体“例子”字体大小就为 11.2px（14 * 0.8 = 11.2px）。</p>
+      </li>
+      <li>
+        <strong>百分比</strong>
+        <p>设置行高（行间距）为字体的130%（12 * 1.3 = 15.6px）。</p>
+        <code>p{font-size:12px;line-height:130%}</code>
+      </li>
+    </ol>
+  </body>
+</html>

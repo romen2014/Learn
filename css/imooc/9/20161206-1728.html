@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>垂直居中-父元素高度确定的多行文本（方法二）</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      .container{
+        height:300px;
+        background:#ccc;
+        display:table-cell;/*IE8以上及Chrome、Firefox*/
+        vertical-align:middle;/*IE8以上及Chrome、Firefox*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/6424">垂直居中-父元素高度确定的多行文本（方法二）</a></h1>
+    <hr>
+    <p>除了上一节讲到的插入table标签，可以使父元素高度确定的多行文本垂直居中之外，本节介绍另外一种实现这种效果的方法。但这种方法兼容性比较差，只是提供大家学习参考。</p>
+    <p>在 chrome、firefox 及 IE8 以上的浏览器下可以设置块级元素的 display 为 table-cell（设置为表格单元显示），激活 vertical-align 属性，但注意 IE6、7 并不支持这个样式, 兼容性比较差。</p>
+    <p>html代码：</p>
+    <pre>
+      &lt;div class="container"&gt;
+        &lt;div&gt;
+          &lt;p&gt;看我是否可以居中。&lt;/p&gt;
+          &lt;p&gt;看我是否可以居中。&lt;/p&gt;
+          &lt;p&gt;看我是否可以居中。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    </pre>
+    <p>css代码：</p>
+    <pre>
+      .container{
+        height:300px;
+        background:#ccc;
+        display:table-cell;/*IE8以上及Chrome、Firefox*/
+        vertical-align:middle;/*IE8以上及Chrome、Firefox*/
+      }
+    </pre>
+    <p>这种方法的好处是不用添加多余的无意义的标签，但缺点也很明显，它的兼容性不是很好，不兼容 IE6、7而且这样修改display的block变成了table-cell，破坏了原有的块状元素的性质。</p>
+    <p>示例：</p>
+    <div class="container">
+      <div>
+        <p>看我是否可以居中。</p>
+        <p>看我是否可以居中。看我是否可以居中。</p>
+        <p>看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。</p>
+        <p>看我是否可以居中。看我是否可以居中。</p>
+        <p>看我是否可以居中。</p>
+      </div>
+    </div>
+  </body>
+</html>

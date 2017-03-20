@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>页面加载事件onload</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="message()">
+  <h1><a href="http://www.imooc.com/code/674">页面加载事件onload</a></h1>
+  <hr>
+  <p>事件会在页面加载完成后，立即发生，同时执行被调用的程序。</p>
+  <p>注意：1. 加载页面时，触发onload事件，事件写在&lt;body>标签内。</p>
+  <p>注意：2. 此节的加载页面，可理解为打开一个新页面时。</p>
+  <p>如下代码,当加载一个新页面时，弹出对话框“加载中，请稍等…”。</p>
+  <pre>
+      &lt;html>
+        &lt;head>
+          &lt;script type="text/javascript">
+            function message(){
+              alert("加载中，请稍后...");
+            }
+          &lt;/script>
+        &lt;/head>
+        &lt;body onload="message()">
+        &lt;/body>
+      &lt;/html>
+  </pre>
+  <script type="text/javascript">
+    function message(){
+      alert("加载中，请稍后...");
+    }
+  </script>
+</body>
+</html>

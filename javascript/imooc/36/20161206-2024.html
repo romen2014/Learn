@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript-打开新窗口（window.open）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/412">JavaScript-打开新窗口（window.open）</a></h1>
+  <hr>
+  <p>open() 方法可以查找一个已经存在或者新建的浏览器窗口。</p>
+  <p>语法：</p>
+  <pre>window.open([URL], [窗口名称], [参数字符串])</pre>
+  <p>参数说明:</p>
+  <pre>
+    URL：可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。
+    窗口名称：可选参数，被打开窗口的名称。
+      1.该名称由字母、数字和下划线字符组成。
+      2."_top"、"_blank"、"_self"具有特殊意义的名称。
+         _blank：在新窗口显示目标网页
+         _self：在当前窗口显示目标网页
+         _top：框架网页中在上部窗口中显示目标网页
+      3.相同 name 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。
+      4.name 不能包含有空格。
+    参数字符串：可选参数，设置窗口参数，各参数用逗号隔开。
+  </pre>
+  <p>参数表:</p>
+  <img src="http://img.mukewang.com/52e3677900013d6a05020261.jpg" alt="">
+  <p>例如:打开http://www.imooc.com网站，大小为300px * 200px，无菜单，无工具栏，无状态栏，有滚动条窗口：</p>
+  <pre>
+    window.open('http://www.imooc.com','_blank','width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes');
+  </pre>
+  <strong>注意：运行结果考虑浏览器兼容问题。</strong>
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function myOpen(){
+      window.open('http://www.imooc.com','_blank','width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes');
+    }
+  </script>
+  <input type="button" value="点击按钮查看效果" onclick="myOpen();">
+</body>
+</html>

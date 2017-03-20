@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>伪类选择器</title>
+    <style media="screen">
+      code{
+        color: red;
+        font-size: 2em;
+      }
+      span{
+        color: red;
+        font-size: 1.5em;
+      }
+      /*本节重点代码*/
+      a:hover{color:green;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2036">伪类选择器</a></h1>
+    <hr>
+    <p>更有趣的是伪类选择器，为什么叫做伪类选择器，它允许给html <span>不存在的标签（标签的某种状态）</span>设置样式，比如说我们给html中一个标签元素的 <span>鼠标滑过的状态</span>来设置字体颜色：</p>
+    <code>a:hover{color:green;}</code>
+    <p>上面一行代码就是为 a 标签鼠标滑过的状态设置字体颜色变绿。试试用鼠标放在本页标题链接上。</p>
+    <strong>关于伪类选择器</strong>
+    <p>关于伪类选择符，到目前为止，可以兼容所有浏鉴器的“伪类选择符”就是 a 标签上使用 :hover 了（其实伪类选择符还有很多，尤其是 css3 中，但是因为不能兼容所有浏览器，本教程只是讲了这一种最常用的）。其实 :hover 可以放在任意的标签上，比如说 p:hover，但是它们的兼容性也是很不好的， <span>所以现在比较常用的还是 a:hover 的组合</span>。</p>
+  </body>
+</html>

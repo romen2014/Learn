@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>if..else嵌套语句</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/250">if..else嵌套语句</a></h1>
+  <hr>
+  <p>要在多组语句中选择一组来执行，使用if..else嵌套语句。</p>
+  <p>语法:</p>
+  <pre>
+    if(条件1){
+      条件1成立时执行的代码
+    }else if(条件2){
+      条件2成立时执行的代码
+    }...
+    else if(条件n){
+      条件n成立时执行的代码
+    }else{
+      条件1、2至n不成立时执行的代码
+    }
+  </pre>
+  <p>假设数学考试，小明考了86分，给他做个评价，60分以下的不及格，60(包含60分)-75分为良好，75(包含75分)-85分为很好，85(包含85分)-100优秀。</p>
+  <p>代码表示如下:</p>
+  <pre>
+    var myscore = 86;
+    if(myscore < 60){
+      document.write("成绩不及格，加油了！");
+    }else if(myscore < 75){
+      document.write("成绩良好，不错阿！");
+    }else if(myscore < 85){
+      document.write("成绩很好，很棒");
+    }else{
+      document.write("成绩优秀，超级棒");
+    }
+  </pre>
+  <p>结果：</p>
+  <script>
+    var myscore = 86;
+    if(myscore < 60){
+      document.write("成绩不及格，加油了！");
+    }else if(myscore < 75){
+      document.write("成绩良好，不错阿！");
+    }else if(myscore < 85){
+      document.write("成绩很好，很棒");
+    }else{
+      document.write("成绩优秀，超级棒");
+    }
+  </script>
+</body>
+</html>

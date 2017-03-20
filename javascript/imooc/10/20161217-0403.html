@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>if...else语句</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/249">if...else语句</a></h1>
+  <hr>
+  <p>if...else语句是在指定的条件成立时执行代码，在条件不成立时执行else后的代码。</p>
+  <p>语法:</p>
+  <pre>
+    if(条件){
+      条件成立时执行的代码
+    }else{
+      条件不成立时执行的代码
+    }
+  </pre>
+  <p>假设你应聘web前端技术开发岗位，如果你会HTML技术，你面试成功，欢迎加入公司，否则你面试不成功，不能加入公司。</p>
+  <p>代码表示如下:</p>
+  <pre>
+    var mycarrer = "HTML"; //mycarrer变量存储技能
+    if(mycarrer == "HTML"){
+      document.write("你面试成功，欢迎加入公司。");
+    }else{  //否则，技能不是HTML
+      document.write("你面试不成功，不能加入公司。");
+    }
+  </pre>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>事件处理程序</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>事件处理程序</h1>
+  <hr>
+  <h3>二、事件处理程序</h3>
+
+  <p><a href="http://www.imooc.com/video/2132" target="_blank">HTML事件处理程序</a>：将事件直接加在html标签上。</p>
+  <ul>
+    缺点：
+    <li>HTML代码和JS代码紧密地耦合在一起</li>
+  </ul>
+
+  <p><a href="http://www.imooc.com/video/2133" target="_blank">DOM0级事件处理程序</a>：把一个函数赋值给一个事件的处理程序属性。</p>
+  <ul>
+    优点：
+    <li>简单</li>
+    <li>跨浏览器</li>
+    <li>HTML代码与JS代码解耦</li>
+    <li>可以给一个元素添加多个事件或事件处理程序</li>
+  </ul>
+
+  <p><a href="http://www.imooc.com/video/2134" target="_blank">DOM2级事件处理程序</a></p>
+  <ul>
+    定义了两个方法，用于处理指定和删除事件处理程序的操作：
+    <li>addEventListener()</li>
+    <li>removeEventListener()</li>
+  </ul>
+  <ul>
+    接收三个参数：
+    <li>要处理的事件名称</li>
+    <li>作为事件处理程序的函数</li>
+    <li>
+      布尔值
+      <ul>
+        <li>true——捕获阶段调用事件处理程序</li>
+        <li>false——冒泡阶段调用事件处理程序*</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><a href="http://www.imooc.com/video/2138" target="_blank">IE事件处理程序 及 跨浏览器兼容性</a></p>
+  <ul>
+    <li>添加事件：attachEvent()</li>
+    <li>删除事件：detachEvent()</li>
+  </ul>
+  <ul>
+    接收两个参数：
+    <li>要处理的事件名称</li>
+    <li>作为事件处理程序的函数</li>
+  </ul>
+
+  <hr>
+  <!-- HTML事件处理程序 -->
+  <input type="button" value="HTML事件处理程序" id="btn21" onclick="showMessage()">
+  <script type="text/javascript">
+    function showMessage(){
+      alert('HTML事件处理程序演示');
+    }
+  </script>
+
+  <!-- DOM0级事件处理程序 -->
+  <input type="button" value="DOM0级事件处理程序" id="btn22">
+  <script type="text/javascript">
+    var oBtn22 = document.getElementById('btn22');
+    oBtn22.onclick = function(){
+      alert('DOM0级事件处理程序演示');
+    }
+    // oBtn22.onclick = null; //可以直接清除btn22的点击事件。
+  </script>
+
+  <!-- DOM2级事件处理程序 -->
+  <input type="button" value="DOM2级事件处理程序" id="btn23">
+  <script type="text/javascript">
+    var oBtn23 = document.getElementById('btn23');
+    function showMessageForEventListener(){
+      alert('DOM2级事件处理程序演示');
+    }
+    // 所有方法不加on前缀
+    oBtn23.addEventListener('click', showMessageForEventListener, false);
+    // 通过addEventListener添加的事件只能通过removeEventListener删除，且三个参数必须一致。
+    // oBtn23.removeEventListener('click', showMessageForEventListener, false);
+  </script>
+
+  <!-- IE事件处理程序 -->
+  <input type="button" value="IE事件处理程序" id="btn24">
+  <script type="text/javascript">
+    var oBtn24 = document.getElementById('btn24');
+    function showMessageForIEListener(){
+      alert('IE事件处理程序演示');
+    }
+    // 所有方法需要加on前缀
+    oBtn24.attachEvent('onclick', showMessageForIEListener);
+    oBtn24.detachEvent('onclick', showMessageForIEListener);
+  </script>
+
+  <!-- 浏览器兼容 -->
+  <input type="button" value="浏览器兼容" id="btn25">
+  <script type="text/javascript">
+    var oBtn25 = document.getElementById('btn25');
+
+    var eventUtil = {
+      // 添加句柄
+      addHandler:function(element, type, handler){
+        if(element.addEventListener){
+          // DOM2
+          element.addEventListener(type, handler, false);
+        }else if(element.attachEvent){
+          // IE
+          element.attachEvent("on" + type, handler);
+        }else{
+          // DOM0
+          element['on' + type] = handler;
+        }
+      },
+      // 删除句柄
+      removeHandler:function(element, type, handler){
+        if(element.removeEventListener){
+          // DOM2
+          element.removeEventListener(type, handler, false);
+        }else if(element.detachEvent){
+          // IE
+          element.detachEvent("on" + type, handler);
+        }else{
+          // DOM0
+          element['on' + type] = null;
+        }
+      }
+    }
+
+    function showMessageForAll(){
+      alert('浏览器兼容演示');
+    }
+
+    eventUtil.addHandler(oBtn25, 'click', showMessageForAll);
+  </script>
+</body>
+</html>

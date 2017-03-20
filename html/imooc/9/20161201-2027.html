@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>form表单中的label标签</title>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/3319">form表单中的label标签</a></h1>
+    <hr>
+    <p>小伙伴们，你们在前面学习表单各种控件的时候，有没有发现一个标签--label，这一小节就来揭晓它的作用。</p>
+    <p>label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户改进了可用性。如果你在 label 标签内点击文本，就会触发此控件。就是说，当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上（就自动选中和该label标签相关连的表单控件上）</p>
+    <p>语法：</p>
+    <code>&lt;label for="控件id名称"&gt;</code>
+    <p><strong>注意：</strong>标签的 <strong>for 属性中的值</strong>应当与相关控件的 <strong>id 属性值</strong>一定要相同。</strong></p>
+    <p>例子：</p>
+    <pre>
+      &lt;form&gt;
+        &lt;label for="male"&gt;男&lt;/label&gt;
+        &lt;input type="radio" name="gender" id="male" /&gt;
+        &lt;br /&gt;
+        &lt;label for="female"&gt;女&lt;/label&gt;
+        &lt;input type="radio" name="gender" id="female" /&gt;
+        &lt;label for="email"&gt;输入你的邮箱地址&lt;/label&gt;
+        &lt;input type="email" id="email" placeholder="Enter email"&gt;
+        &lt;br /&gt;
+        你对什么运动感兴趣：
+        &lt;br /&gt;
+        &lt;label for="manpao"&gt;慢跑&lt;/label&gt;
+        &lt;input type="checkbox" name="like" value="0" id="manpao"&gt;
+        &lt;br /&gt;
+        &lt;label for="dengshan"&gt;登山&lt;/label&gt;
+        &lt;input type="checkbox" name="like" value="1" id="dengshan"&gt;
+        &lt;br /&gt;
+        &lt;label for="lanqiu"&gt;篮球&lt;/label&gt;
+        &lt;input type="checkbox" name="like" value="2" id="lanqiu"&gt;
+      &lt;/form&gt;
+    </pre>
+    <p>在页面中的显示效果：</p>
+    <form>
+      <label for="male">男</label>
+      <input type="radio" name="gender" id="male" />
+      <br />
+      <label for="female">女</label>
+      <input type="radio" name="gender" id="female" />
+      <label for="email">输入你的邮箱地址</label>
+      <input type="email" id="email" placeholder="Enter email">
+      <br />
+      你对什么运动感兴趣：
+      <br />
+      <label for="manpao">慢跑</label>
+      <input type="checkbox" name="like" value="0" id="manpao">
+      <br />
+      <label for="dengshan">登山</label>
+      <input type="checkbox" name="like" value="1" id="dengshan">
+      <br />
+      <label for="lanqiu">篮球</label>
+      <input type="checkbox" name="like" value="2" id="lanqiu">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件对象</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		document.onclick =function(ev){
+			// IE
+			// alert(event.clientX + " | " + event.clientY);
+			// FF
+			// alert(ev.clientX + " | " + ev.clientY);
+
+			// 兼容写法
+			var oEvent = ev || event;
+			// clientX、clientY为鼠标的可视区坐标
+			// 如需要用到页面坐标，则需要加上scrollTop、scrollLeft
+			alert(oEvent.clientX + " | " + oEvent.clientY);
+		}
+	}
+	</script>
+</head>
+<body>
+</body>
+</html>

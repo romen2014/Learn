@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery 基本筛选选择器</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="../../jquery-2.2.0.js"></script>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/8344">JQuery 基本筛选选择器</a></h1>
+  <hr>
+  <p>很多时候我们不能直接通过基本选择器与层级选择器找到我们想要的元素，为此jQuery提供了一系列的筛选选择器用来更快捷的找到所需的DOM元素。筛选选择器很多都不是CSS的规范，而是jQuery自己为了开发者的便利延展出来的选择器。</p>
+  <p>筛选选择器的用法与CSS中的伪元素相似，选择器用冒号“：”开头，通过一个列表，看看基本筛选器的描述：</p>
+  <table>
+    <tr>
+      <th>选择器</th>
+      <th>描述</th>
+    </tr>
+    <tr>
+      <td>$(':first')</td>
+      <td>匹配第一个元素。</td>
+    </tr>
+    <tr>
+      <td>$(':last')</td>
+      <td>匹配最后一个元素。</td>
+    </tr>
+    <tr>
+      <td>$(':not(selector)')</td>
+      <td>一个用来过滤的选择器，选择所有元素去除不匹配给定的选择器元素。</td>
+    </tr>
+    <tr>
+      <td>$(':eq(index)')</td>
+      <td>在匹配的集合中选择索引值为index的元素。</td>
+    </tr>
+    <tr>
+      <td>$(':lt(index)')</td>
+      <td>选择匹配集合中所有小于给定索引值index的元素。</td>
+    </tr>
+    <tr>
+      <td>$(':gt(index)')</td>
+      <td>选择匹配集合中所有大于给定索引值index的元素。</td>
+    </tr>
+    <tr>
+      <td>$(':even')</td>
+      <td>选择索引值为偶数的元素，从0开始计数。</td>
+    </tr>
+    <tr>
+      <td>$(':odd')</td>
+      <td>选择索引值为奇数的元素，从0开始计数。</td>
+    </tr>
+    <tr>
+      <td>$(':header')</td>
+      <td>选择所有标题元素。</td>
+    </tr>
+    <tr>
+      <td>$(':lang(language)')</td>
+      <td>选择指定语言的所有元素。</td>
+    </tr>
+    <tr>
+      <td>$(':root')</td>
+      <td>选择该文档的根元素。</td>
+    </tr>
+    <tr>
+      <td>$(':animated')</td>
+      <td>选择所有正在执行动画效果的元素。</td>
+    </tr>
+  </table>
+  <ol>
+    注意事项
+    <li>:eq(),:lt(),:gt(),:even,:odd用来筛选他们前面匹配表达式的集合元素，根据之前匹配的元素再进一步筛选。</li>
+    <li>gt是一个段落筛选，从指定索引的下一个开始，gt(1)实际从2开始。</li>
+  </ol>
+</body>
+</html>

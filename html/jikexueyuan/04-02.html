@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web SQL</title>
+	<script>
+	var db = openDatabase("MyData", "", "HTML5 Database Test", 1024*100);
+
+	function showAll(){
+		var sql = "";
+		db.transaction(function(tx){
+			// sql = "DROP TABLE IF EXISTS MsgData";
+			// var params = [];
+			// tx.executeSql(sql, params);
+
+			sql = "CREATE TABLE IF NOT EXISTS MsgData(name TEXT, message TEXT, time INTEGER)";
+			var params = [];
+			tx.executeSql(sql, params);
+
+			sql = "SELECT * FROM MsgData";
+			var params = [];
+			tx.executeSql(sql, params,function(tx, rs){
+				var oOl = document.getElementById('show');
+				for(var i = 0; i < rs.rows.length; i++){
+					var oLi = document.createElement('li');
+					// alert(rs.rows.item(i));
+					oLi.innerHTML = rs.rows.item(i).name + " _says : ";
+					oLi.innerHTML += rs.rows.item(i).message + " _at :";
+					var date = new Date();
+					date.setTime(rs.rows.item(i).time);
+					oLi.innerHTML += date;
+					oOl.appendChild(oLi);
+				};
+			});
+		});
+	};
+
+	window.onload = function () {
+
+		showAll();
+
+		oSaveBtn = document.getElementById('savaBtn');
+		oSaveBtn.onclick = function () {
+			var data = new Object;
+			data.name = document.getElementById('name').value;
+			data.message = document.getElementById('message').value;
+			data.time = new Date().getTime();
+
+			db.transaction(function(tx){
+				sql = "INSERT INTO MsgData VALUES(?, ?, ?)";
+				var params = [data.name, data.message, data.time];
+				tx.executeSql(sql, params, function(tx){
+					var oOl = document.getElementById('show');
+					var oLi = document.createElement('li');
+					// alert(rs.rows.item(i));
+					oLi.innerHTML = data.name + " _says : ";
+					oLi.innerHTML += data.message + " _at :";
+					var date = new Date();
+					date.setTime(data.time);
+					oLi.innerHTML += date;
+					oOl.appendChild(oLi);
+
+				},function(tx, error){
+					alert(error.source + ":" + error.message);
+				});
+			});
+		};
+	};
+	</script>
+</head>
+<body>
+	<h1><a target="_blank" href="http://www.jikexueyuan.com/course/1395_3.html?ss=1">Web SQL应用</a></h1>
+	<hr>
+	<input type="text" id="name" placeholder="name">
+	<input type="text" id="message" placeholder="message">
+	<input type="button" id="savaBtn" value="留言">
+	<ol id="show">
+	</ol>
+</body>
+</html>

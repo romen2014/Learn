@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>二维数组</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1520">二维数组</a></h1>
+  <hr>
+  <p>一维数组，我们看成一组盒子，每个盒子只能放一个内容。</p>
+  <pre>一维数组的表示: myarray[]</pre>
+  <p>二维数组，我们看成一组盒子，不过每个盒子里还可以放多个盒子。</p>
+  <pre>二维数组的表示: myarray[][]</pre>
+  <p><strong>注意:</strong> 二维数组的两个维度的索引值也是从0开始，两个维度的最后一个索引值为长度-1。 </p>
+  <ol>
+    <li>
+      <strong>二维数组的定义方法一</strong>
+      <pre>
+        var myarr=new Array();  //先声明一维
+          for(var i=0;i&lt;2;i++){   //一维长度为2
+            myarr[i]=new Array();  //再声明二维
+            for(var j=0;j&lt;3;j++){   //二维长度为3
+            myarr[i][j]=i+j;   // 赋值，每个数组元素的值为i+j
+          }
+        }
+      </pre>
+      <p><strong>注意:</strong>关于for 循环语句，请看第四章4-5 。</p>
+      <p>将上面二维数组，用表格的方式表示:</p>
+      <img src="http://img.mukewang.com/537957a20001c24c03200210.jpg" alt="">
+    </li>
+    <li>
+      <strong>二维数组的定义方法二</strong>
+      <p>var Myarr = [[0 , 1 , 2 ],[1 , 2 , 3]]</p>
+    </li>
+    <li>
+      <strong>赋值</strong>
+      <code>myarr[0][1]=5; //将5的值传入到数组中，覆盖原有值。</code>
+      <p><strong>说明: </strong>myarr[0][1] ,0 表示表的行，1表示表的列。</p>
+    </li>
+  </ol>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var myarr=Array();
+    for(var i=0; i&lt;3; i++){
+      myarr[i] = new Array();
+      for(var j=0; j&lt;6; j++){
+        myarr[i][j] = i*j;
+        document.write(myarr[i][j] + "|");
+      }
+      document.write("&lt;br>");
+    }
+  </pre>
+  <script type="text/javascript">
+    var myarr=Array();
+    for(var i=0; i<3; i++){
+      myarr[i] = new Array();
+      for(var j=0; j<6; j++){
+        myarr[i][j] = i*j;
+        document.write(myarr[i][j] + "|");
+      }
+      document.write("<br>");
+    }
+  </script>
+</body>
+</html>

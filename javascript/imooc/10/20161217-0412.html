@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>switch语句</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/258">switch语句</a></h1>
+  <hr>
+  <p>当有很多种选项的时候，switch比if else使用更方便。</p>
+  <p>语法:</p>
+  <pre>
+    switch(表达式){
+      case值1:
+        执行代码块 1
+        break;
+      case值2:
+        执行代码块 2
+        break;
+      ...
+      case值n:
+        执行代码块 n
+        break;
+      default:
+        与 case值1 、 case值2...case值n 不同时执行的代码
+    }
+  </pre>
+  <p>语法说明:</p>
+  <pre>
+    Switch必须赋初始值，值与每个case值匹配。满足执行该 case 后的所有语句，并用break语句来阻止运行下一个case。如所有case值都不匹配，执行default后的语句。
+  </pre>
+  <p>假设评价学生的考试成绩，10分满分制，我们按照每一分一个等级将成绩分等，并根据成绩的等级做出不同的评价。</p>
+  <p>代码如下:</p>
+  <pre>
+    var myscore = 6;
+    switch(myscore){
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        degree = "继续努力！";
+        document.write("评语：" + degree + "&lt;br>");
+        break;
+      case 6:
+        degree = "及格，加油！";
+        document.write("评语：" + degree + "&lt;br>");
+        break;
+      case 7:
+        degree = "凑合，奋进！";
+        document.write("评语：" + degree + "&lt;br>");
+        break;
+      case 8:
+        degree = "很棒，很棒！";
+        document.write("评语：" + degree + "&lt;br>");
+        break;
+      case 9:
+      case 10:
+        degree = "高手，大牛！";
+        document.write("评语：" + degree + "&lt;br>");
+        break;
+    }
+  </pre>
+  <p>执行结果:</p>
+  <script>
+    var myscore = 6;
+    switch(myscore){
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        degree = "继续努力！";
+        document.write("评语：" + degree + "<br>");
+        break;
+      case 6:
+        degree = "及格，加油！";
+        document.write("评语：" + degree + "<br>");
+        break;
+      case 7:
+        degree = "凑合，奋进！";
+        document.write("评语：" + degree + "<br>");
+        break;
+      case 8:
+        degree = "很棒，很棒！";
+        document.write("评语：" + degree + "<br>");
+        break;
+      case 9:
+      case 10:
+        degree = "高手，大牛！";
+        document.write("评语：" + degree + "<br>");
+        break;
+    }
+  </script>
+  <p><strong>注意:记得在case所执行的语句后添加上一个break语句。否则就直接继续执行下面的case中的语句，看以下代码:</strong></p>
+  <pre>
+      var myscore = 4;
+      switch(myscore){
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+          degree = "继续努力！";
+          document.write("评语：" + degree + "&lt;br>");
+        case 6:
+          degree = "及格，加油！";
+          document.write("评语：" + degree + "&lt;br>");
+        case 7:
+          degree = "凑合，奋进！";
+          document.write("评语：" + degree + "&lt;br>");
+        case 8:
+          degree = "很棒，很棒！";
+          document.write("评语：" + degree + "&lt;br>");
+        case 9:
+        case 10:
+          degree = "高手，大牛！";
+          document.write("评语：" + degree + "&lt;br>");
+      }
+  </pre>
+  <p>执行结果:</p>
+  <script>
+    var myscore = 4;
+    switch(myscore){
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        degree = "继续努力！";
+        document.write("评语：" + degree + "<br>");
+      case 6:
+        degree = "及格，加油！";
+        document.write("评语：" + degree + "<br>");
+      case 7:
+        degree = "凑合，奋进！";
+        document.write("评语：" + degree + "<br>");
+      case 8:
+        degree = "很棒，很棒！";
+        document.write("评语：" + degree + "<br>");
+      case 9:
+      case 10:
+        degree = "高手，大牛！";
+        document.write("评语：" + degree + "<br>");
+    }
+    </script>
+  <p>在上面的代码中，没有break停止语句，如果成绩是4分，则case 5后面的语句将会得到执行，同样，case6、7-10后面的语句都会得到执行。</p>
+</body>
+</html>

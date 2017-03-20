@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery 子元素筛选选择器</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="../../jquery-2.2.0.js"></script>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/8348">JQuery 子元素筛选选择器</a></h1>
+  <hr>
+  <p>子元素筛选选择器不常使用，其筛选规则比起其它的选择器稍微要复杂点。</p>
+  <table>
+    <tr>
+      <th>选择器</th>
+      <th>描述</th>
+    </tr>
+    <tr>
+      <td>$(':first-child')</td>
+      <td>选择所有父级元素下的第一个子元素。</td>
+    </tr>
+    <tr>
+      <td>$(':last-child')</td>
+      <td>选择所有父级元素下的最后一个子元素。</td>
+    </tr>
+    <tr>
+      <td>$(':only-child')</td>
+      <td>如果某个元素是其父元素的唯一子元素，那么它就会被选中。</td>
+    </tr>
+    <tr>
+      <td>$(':nth-child')</td>
+      <td>选择所有父元素的第n个子元素</td>
+    </tr>
+    <tr>
+      <td>$(':nth-last-child')</td>
+      <td>选择所有父元素的第n个子元素。但计数器从最后一个元素开始到第一个元素倒序计数。</td>
+    </tr>
+  </table>
+  <ol>
+    注意事项：
+    <li>:first只匹配一个单独的元素，但是:first-child选择器可以匹配多个。即为每个父元素匹配第一个子元素。这相当于:nth-child(1)</li>
+    <li>:last-child同理选择最后一个子元素。</li>
+    <li>JQuery实现:nth-child(n)是严格来自CSS规范，所以n值是索引，也就是说，从1开始计数。</li>
+  </ol>
+</body>
+</html>

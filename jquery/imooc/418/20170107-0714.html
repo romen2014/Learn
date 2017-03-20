@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery 属性筛选选择器</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="../../jquery-2.2.0.js"></script>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/8347">JQuery 属性筛选选择器</a></h1>
+  <hr>
+  <p>属性选择器让你可以基于属性来定位一个元素。可以只指定该元素的某个属性，这样所有使用该属性而不管它的值，这个元素都将被定位，也可以更加明确并定位在这些属性上使用特定值的元素，这就是属性选择器展示它们的威力的地方。</p>
+  <table>
+    <tr>
+      <th>选择器</th>
+      <th>描述</th>
+    </tr>
+    <tr>
+      <td>$("[attribute='value']")</td>
+      <td>选择指定属性是指定值的元素。</td>
+    </tr>
+    <tr>
+      <td>$("[attribute!='value']")</td>
+      <td>选择不存在指定属性，或者指定属性的值不等于给定值的元素。</td>
+    </tr>
+    <tr>
+      <td>$("[attribute|='value']")</td>
+      <td>选择指定属性值等于给定字符串或以该字符串为前缀(该字符串后跟一个连字符"-")的元素。</td>
+    </tr>
+    <tr>
+      <td>$("[attribute*='value']")</td>
+      <td>选择指定属性值具有包含一个给定的子字符串的元素。</td>
+    </tr>
+    <tr>
+      <td>$("[attribute~='value']")</td>
+      <td>选择指定属性用空格分隔的值中包含一个给定值的元素。</td>
+    </tr>
+    <tr>
+      <td>$("[attribute^='value']")</td>
+      <td>选择指定属性是以给定字符串开始的元素。</td>
+    </tr>
+    <tr>
+      <td>$("[attribute$='value']")</td>
+      <td>选择指定属性是以给定字符串结尾的元素。区分大小写。</td>
+    </tr>
+    <tr>
+      <td>$("[attribute]")</td>
+      <td>选择所有具有指定属性的元素，该属性可以是任何值。</td>
+    </tr>
+    <tr>
+      <td>$("[attributeFilter1][attributeFilterN]")</td>
+      <td>选择匹配所有指定的属性筛选器的元素。</td>
+    </tr>
+  </table>
+</body>
+</html>

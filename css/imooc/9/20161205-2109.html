@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>盒子模型--边框（一）</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      li{
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2052">盒子模型--边框（一）</a></h1>
+    <hr>
+    <p>盒子模型的<span class="point">边框</span>就是围绕着 <span class="point">内容</span>及 <span class="point">补白</span>的线，这条线你可以设置它的 <span class="point">粗细</span>、 <span class="point">样式</span>样式和  <span class="point">颜色</span>(边框三个属性)。</p>
+    <p>如下面代码为 div 来设置边框粗细为 2px、样式为实心的、颜色为红色的边框：</p>
+    <pre>
+      div{
+        border:2px solid red;
+      }
+    </pre>
+    <p>上面是 border 代码的缩写形式，可以分开写：</p>
+    <pre>
+      div{
+        border-width:2px;
+        border-style:solid;
+        border-color:red;
+      }
+    </pre>
+    <ol>
+      注意：
+      <li>border-style（边框样式）常见样式有：dashed（虚线）| dotted（点线）| solid（实线）。</li>
+      <li>border-color（边框颜色）中的颜色可设置为十六进制颜色，如:border-color:#888;</li>
+      <li>border-width（边框宽度）中的宽度也可以设置为：thin | medium | thick（但不是很常用），最常还是用象素（px）。</li>
+    </ol>
+</body>
+</html>

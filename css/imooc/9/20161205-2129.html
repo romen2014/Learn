@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>盒子模型--宽度和高度</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      div{
+        width:200px;
+        padding:20px;
+        border:1px solid red;
+        margin:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2054">盒子模型--宽度和高度</a></h1>
+    <hr>
+    <p>盒模型宽度和高度和我们平常所说的物体的宽度和高度理解是不一样的，css内定义的宽（width）和高（height），指的是填充以里的内容范围。</p>
+    <p>因此一个元素实际宽度（盒子的宽度）=左边界+左边框+左填充+内容宽度+右填充+右边框+右边界。</p>
+    <img src="http://img.mukewang.com/539fbb3a0001304305570259.jpg" alt="">
+    <p>元素的高度也是同理。</p>
+    <p>比如：</p>
+    <p>css代码：</p>
+    <pre>
+      div{
+        width:200px;
+        padding:20px;
+        border:1px solid red;
+        margin:10px;
+      }
+    </pre>
+    <p>html代码：</p>
+    <pre>
+      &lt;body&gt;
+       &lt;div&gt;文本内容&lt;/div&gt;
+      &lt;/body&gt;
+    </pre>
+    <p>元素的实际长度为：10px+1px+20px+200px+20px+1px+10px=262px。在chrome浏览器下可查看元素盒模型，如下图：</p>
+    <img src="http://img.mukewang.com/543b4cae0001b34304300350.jpg" alt="">
+    <div>其实我就是示例用的盒子</div>
+</body>
+</html>

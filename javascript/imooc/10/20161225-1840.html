@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>getElementsByName()方法</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1583">getElementsByName()方法</a></h1>
+  <hr>
+  <p>返回带有指定名称的节点对象的集合。</p>
+  <p>语法：</p>
+  <code>document.getElementsByName(name)</code>
+  <p>与getElementById() 方法不同的是，通过元素的 name 属性查询元素，而不是通过 id 属性。</p>
+  <p><strong>注意:</strong></p>
+  <p>1. 因为文档中的 name 属性可能不唯一，所有 getElementsByName() 方法返回的是元素的数组，而不是一个元素。</p>
+  <p>2. 和数组类似也有length属性，可以和访问数组一样的方法来访问，从0开始。</p>
+  <p>看看下面的代码:</p>
+  <pre>
+    &lt;a href="#" name="alink">我是链接1&lt;/a>&lt;br>
+    &lt;a href="#" name="alink">我是链接2&lt;/a>&lt;br>
+    &lt;a href="#" name="alink">我是链接3&lt;/a>&lt;br>
+    &lt;script>
+      var aA = document.getElementsByName('alink');
+      document.write("name为alink的元素数组长度为：" + aA.length);
+    &lt;/script>
+  </pre>
+  <p>运行结果:</p>
+  <a href="#" name="alink">我是链接1</a><br>
+  <a href="#" name="alink">我是链接2</a><br>
+  <a href="#" name="alink">我是链接3</a><br>
+  <script>
+    var aA = document.getElementsByName('alink');
+    document.write("name为alink的元素数组长度为：" + aA.length);
+  </script>
+</body>
+</html>

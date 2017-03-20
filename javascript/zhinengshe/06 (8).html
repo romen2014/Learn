@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动条</title>
+	<style type="text/css">
+		#parent{
+			width: 800px;
+			height: 15px;
+			background-color: #CCC;
+			position: relative;
+			margin: 10px auto;
+		}
+		#sub{
+			width: 30px;
+			height: 15px;
+			background-color:red;
+			position: absolute;
+		}
+		#show1{
+			width: 800px;
+			height: 400px;
+			background-color: #CCC;
+			position: relative;
+			margin: 10px auto;
+		}
+		#div1{
+			width: 0;
+			height: 0;
+			background-color: red;
+			position: relative;
+			float: left;
+		}
+		#div2{
+			width: 400px;
+			height: 200px;
+			background-color: green;
+			position: relative;
+			float: left;
+			filter:alpha(opacity:0);
+			opacity: 0;
+		}
+		#div3{
+			width: 400px;
+			height: 200px;
+			background-color: blue;
+			position: relative;
+			float: left;
+			filter:alpha(opacity:0);
+			opacity: 0;
+		}
+		#div4{
+			width: 0;
+			height: 0;
+			background-color: yellow;
+			position: relative;
+			float: left;
+		}
+		#show2{
+			width: 800px;
+			height: 400px;
+			background-color: #CCC;
+			position: relative;
+			margin: 10px auto;
+			border:1px solid black;
+			overflow: hidden;
+		}
+		#wenzi{
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			oParent = document.getElementById('parent');
+			oSub = document.getElementById('sub');
+			oSub.onmousedown = function(ev){
+				var oEvent = ev||event;
+				var disX = oEvent.clientX - oSub.offsetLeft;
+
+				document.onmousemove = function(oEvent){
+					var divX = oEvent.clientX - disX;
+
+
+					if(divX<0){
+						divX = 0;
+					}else if(divX > oParent.offsetWidth - oSub.offsetWidth){
+						// 不限制范围的则需考虑可视区范围，即document.documentElement
+						divX = oParent.offsetWidth - oSub.offsetWidth;
+					}
+
+					oSub.style.left = divX + 'px';
+
+					// 拖拽比例
+					var scale = divX/(oParent.offsetWidth - oSub.offsetWidth);
+
+					// 应用比例
+					oDiv1 = document.getElementById('div1');
+					oDiv1.style.width = 400 * scale + 'px';
+					oDiv1.style.height = 200 * scale + 'px';
+
+					oDiv2 = document.getElementById('div2');
+					oDiv2.style.filter = 'alpha(opacity:' + scale*100 + ')';
+					oDiv2.style.opacity = scale;
+
+					oDiv3 = document.getElementById('div3');
+					oDiv3.style.filter = 'alpha(opacity:' + scale*100 + ')';
+					oDiv3.style.opacity = scale;
+
+					oDiv4 = document.getElementById('div4');
+					oDiv4.style.width = 400 * scale + 'px';
+					oDiv4.style.height = 200 * scale + 'px';
+
+					// 文字滚动
+					oShow2 = document.getElementById('show2');
+					oWenzi = document.getElementById('wenzi');
+					oWenzi.style.top =  -scale*(oWenzi.offsetHeight - oShow2.offsetHeight) + 'px';
+
+					// title监测
+					document.title = parseInt(scale*100) + '%';
+				};
+
+				document.onmouseup = function(){
+					document.onmousemove = null;
+					document.onmouseup = null;
+				}
+
+				// 此处屏蔽默认行为可以消除火狐浏览器下的重影bug
+				return false;
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="parent">
+		<div id="sub"></div>
+	</div>
+	<div id="show1">
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<div id="div4"></div>
+	</div>
+	<div id="show2">
+		<div id="wenzi">
+			中央农村工作会议闭幕 习近平作重要指示
+			<br>视察解放军报社 通过微博向官兵祝贺新年
+			<br>李克强：政府要开有效的会发管用的文
+			<br>房产去库存成国家任务 有地方政府补贴80万  补贴多为三四线城市
+			<br>手机销售量或不及预期 小米需重新估值
+			<br>无法回避净利润低  小米的加分项缩水  小米的未来不只是手机
+			<br>
+			<br>国务院：深圳滑坡不是自然灾害 深圳书记道歉(图)
+			<br>万庆良受审痛哭：对不起人民 和老搭档有公共情妇
+			<br>广州运钞车传出枪声 押钞员疑中枪身亡(图)
+			<br>新疆副检察长史少林涉嫌严重违纪被查(图/简历)
+			<br>社科院指户改不应只考虑精英 差别落户忌筛选
+			<br>教育局长称市委书记讲话是“狗屁” 被责令检讨
+			<br>
+			<br>山东平邑石膏矿垮塌19人失联 疑引发4.0级地震
+			<br>卫计委：全国受理单独二孩申请184万例 山东最多
+			<br>广东普宁建垃圾处理中心引抗议 人群冲击学校政府
+			<br>人大高官:计生法草案不应删除失独家庭扶助条款
+			<br>湖南985大学成传销窝点 警方抓获650名传销人员
+			<br>印尼警方25日宣布 逮捕两名疑似中国籍恐怖分子
+			<br>
+			<br>中泰铁路合作项目生变数 泰国要求中国增加投资
+			<br>云南被冤入狱13年女子：被强拉按下认罪手印
+			<br>市民选中66996吉祥车牌被追回 车管所致歉
+			<br>黑龙江在押犯猎艳案4狱警获刑 案犯在狱中裸聊
+			<br>广东少女遭数名同龄女生抽耳光 狂抽脸至晕倒
+			<br>48岁男子上电视道歉:对不起和你老婆暧昧(图)
+			<br>
+			<br>涉诱奸女生原厦大博导"满血复活" 成学会委员
+			<br>上海外滩电子屏现"最贵道歉":爸 对不起(图)
+			<br>直击车祸瞬间 女教师推开学生自己被撞飞
+			<br>洗发水牙膏行邮税调至50% 海淘客哭晕 海关回应
+			<br>男子有3本“结婚证”2个儿子 京沪苏各有一老婆
+			<br>杀10人保姆系低价主动应征 冷言:报警就报啊(图)
+			<br>
+			<br>阿里12.5亿美元投资饿了么 占股超27%成第一大股东
+			<br>2016年中国4G用户将达6亿 工信部开始讨论5G牌照
+			<br>难破4000元天花板？国产手机不会总生活在地板流世界
+			<br>冥币第一股登新三板 年入4000千万元要做互联网应用
+			<br>马斯克有望获年度妨碍科技进步奖 因担心AI导致灾难
+			<br>消费升级的2015年：跨境电商和农村网购冲出重围
+		</div>
+	</div>
+</body>
+</html>

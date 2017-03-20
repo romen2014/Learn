@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>退出循环break</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/323">退出循环break</a></h1>
+  <hr>
+  <p>在while、for、do...while、while循环中使用break语句退出当前循环，直接执行后面的代码。</p>
+  <p>格式如下：</p>
+  <pre>
+    for(初始条件;判断条件;循环后条件值更新){
+      if(特殊情况){
+        break;
+      }
+      循环代码
+    }
+  </pre>
+  <p>当遇到特殊情况的时候，循环就会立即结束。看看下面的例子，输出10个数，如果数值为5，就停止输出。</p>
+  <pre>
+    var num;
+    for(num = 1; num <= 10; num++){
+      if(num==5){
+        break;
+      }
+      document.write("数值：" + num + "&lt;br />")
+    }
+  </pre>
+  <p>执行结果：</p>
+  <script>
+    var num;
+    for(num = 1; num <= 10; num++){
+      if(num==5){
+        break;
+      }
+      document.write("数值：" + num + "<br />")
+    }
+  </script>
+  <p><strong>注:</strong>当num=5的时候循环就会结束，不会输出后面循环的内容。</p>
+</body>
+</html>

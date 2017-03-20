@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>较量较量(比较操作符)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/134">较量较量(比较操作符)</a></h1>
+  <hr>
+  <span>我们先来做道数学题，数学考试成绩中，小明考了90分，小红考了95分，问谁考的分数高?答: 因为“95 > 90”，所以小红考试成绩高。</span>
+  <p>其中大于号">" 就是比较操作符，小红考试成绩和小明考试成绩就是操作数，并且是两个操作数。</p>
+  <p>也就是说两个操作数通过比较操作符进行比较，得到值为真（true）和假(false)。</p>
+  <p>在JavaScript中，这样的比较操作符有很多，这些操作符的含义如下: </p>
+  <img src="http://img.mukewang.com/532a3c150001c65802010207.jpg" alt="">
+  <p>看看下面例子:</p>
+  <pre>
+    var a = 5;//定义a变量，赋值为5
+    var b = 9; //定义b变量，赋值为9
+    document.write (a&lt;b); //a小于b的值吗? 结果是真(true)
+    document.write (a>=b); //a大于或等于b的值吗? 结果是假(false)
+    document.write (a!=b); //a不等于b的值吗? 结果是真(true)
+    document.write (a==b); //a等于b的值吗? 结果是假(false)
+  </pre>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var numa,numb,jq1,jq2;
+    numa=1;
+    numb=7;
+    jq1 = numa > numb;
+    jq2 = numa != numb;
+    document.write("numa大于numb的分数吗？"+jq1+"&lt;br>")
+    document.write("numa不等于numb的分数吗？"+ jq2);
+  </pre>
+  <script type="text/javascript">
+    var numa,numb,jq1,jq2;
+    numa=1;
+    numb=7;
+    jq1 = numa > numb;
+    jq2 = numa != numb;
+    document.write("numa大于numb的分数吗？"+jq1+"<br>")
+    document.write("numa不等于numb的分数吗？"+ jq2);
+  </script>
+</body>
+</html>

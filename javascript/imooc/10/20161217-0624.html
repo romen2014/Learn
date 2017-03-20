@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>鼠标移出事件onmouseout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/642">鼠标移出事件onmouseout</a></h1>
+  <hr>
+  <p>鼠标移开事件，当鼠标移开当前对象时，执行onmouseout调用的程序。</p>
+  <p>当把鼠标移动到"登录"按钮上，然后再移开时，触发onmouseout事件，调用函数message()，代码如下:</p>
+  <pre>
+      &lt;html>
+        &lt;head>
+          &lt;script type="text/javascript">
+            function message(){
+              alert("鼠标已移出按钮！");
+            }
+          &lt;/script>
+        &lt;/head>
+        &lt;body>
+          &lt;form>
+            &lt;input name="button" type="button" value="确定" onmouseout="message()" />
+          &lt;/form>
+        &lt;/body>
+      &lt;/html>
+  </pre>
+  <p>运行结果（请将鼠标放到按钮上再移出按钮）：</p>
+  <script type="text/javascript">
+    function message(){
+      alert("鼠标已移出按钮！");
+    }
+  </script>
+  <input name="button" type="button" value="按钮" onmouseout="message()" />
+</body>
+</html>

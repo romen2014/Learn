@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编程练习</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1633">编程练习</a></h1>
+  <hr>
+  <p>制作一个跳转提示页面：</p>
+  <p><strong>要求：</strong></p>
+  <p>1. 如果打开该页面后，如果不做任何操作则5秒后自动跳转到一个新的地址，如慕课网主页。</p>
+  <p>2. 如果点击“返回”按钮则返回前一个页面。</p>
+  <hr>
+  <script type="text/javascript">
+    var second = 4;
+    timer = setInterval(function(){
+      document.getElementById('sec').innerHTML = second-- + "秒之后跳转到慕课网首页";
+      if(second < 0) {
+        clearInterval(timer);
+        window.location = "http://www.imooc.com";
+      }
+    }, 1000);
+  </script>
+  <span id="sec">5秒之后跳转到慕课网首页</span> | <a href="javascript:history.go(-1);">返回上一页</a>
+</body>
+</html>

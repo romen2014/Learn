@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>什么是对象</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/724">什么是对象</a></h1>
+  <hr>
+  <p>JavaScript 中的所有事物都是对象，如:字符串、数值、数组、函数等，每个对象带有属性和方法。</p>
+  <p>对象的属性：反映该对象某些特定的性质的，如：字符串的长度、图像的长宽等；</p>
+  <p>对象的方法：能够在对象上执行的动作。例如，表单的“提交”(Submit)，时间的“获取”(getYear)等；</p>
+  <p>JavaScript 提供多个内建对象，比如 String、Date、Array 等等，使用对象前先定义，如下使用数组对象：</p>
+  <pre>
+    //使用new关键字定义对象
+    var objectName =new Array();
+    // 或者
+    var objectName =[];
+  </pre>
+  <p>访问对象属性的语法:</p>
+  <pre>
+    objectName.propertyName
+  </pre>
+  <p>如使用 Array 对象的 length 属性来获得数组的长度：</p>
+  <pre>
+    //定义数组对象
+    var myarray=new Array(6);
+    //访问数组长度length属性
+    var myl=myarray.length;
+  </pre>
+  <p>以上代码执行后，myl的值将是：</p>
+  <script type="text/javascript">
+    //定义数组对象
+    var myarray=new Array(6);
+    //访问数组长度length属性
+    var myl=myarray.length;
+    document.write(myl);
+  </script>
+  <p>访问对象的方法：</p>
+  <pre>
+    objectName.methodName()
+  </pre>
+  <p>如使用string 对象的 toUpperCase() 方法来将文本转换为大写：</p>
+  <pre>
+    //创建一个字符串
+    var mystr="Hello world!";
+    //使用字符串对象方法
+    var request=mystr.toUpperCase();
+  </pre>
+  <p>以上代码执行后，request的值是：</p>
+  <script type="text/javascript">
+    //创建一个字符串
+    var mystr="Hello world!";
+    //使用字符串对象方法
+    var request=mystr.toUpperCase();
+    document.write(request);
+  </script>
+</body>
+</html>

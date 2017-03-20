@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Relative与Absolute组合使用</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      #box1{
+        width:200px;
+        height:200px;
+        border:2px blue solid;
+        position:relative;
+      }
+      #box2{
+        width:100px;
+        height:100px;
+        border:2px green solid;
+        position:absolute;
+        top:20px;
+        left:50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/3585">Relative与Absolute组合使用</a></h1>
+    <hr>
+    <p>学习了绝对定位的方法：使用position:absolute可以实现被设置元素相对于浏览器（body）设置定位以后，大家有没有想过可不可以相对于其它元素进行定位呢？答案是肯定的，当然可以。使用position:relative来帮忙，但是必须遵守下面规范：</p>
+    <ol>
+      <li>
+        参照定位的元素必须是相对定位元素的前辈元素：
+        <pre>
+          &lt;div id="box1"&gt;&lt;!--参照定位的元素--&gt;
+            &lt;div id="box2"&gt;相对参照元素进行定位&lt;/div&gt;&lt;!--相对定位元素--&gt;
+          &lt;/div&gt;
+        </pre>
+        <p>从上面代码可以看出box1是box2的父元素（父元素当然也是前辈元素了）。</p>
+      </li>
+      <li>
+        参照定位的元素必须加入position:relative;。核心代码:
+        <pre>
+          #box1{
+            position:relative;
+          }
+        </pre>
+      </li>
+      <li>
+        定位元素加入position:absolute，便可以使用top、bottom、left、right来进行偏移定位了。核心代码:
+        <pre>
+          #box2{
+            position:absolute;
+            top:30px;
+            left:60px;
+          }
+        </pre>
+        <p>这样box2就可以相对于父元素box1定位了（这里注意参照物就可以不是浏览器了，而可以自由设置了）。</p>
+      </li>
+    </ol>
+    <p>示例:蓝色边框div为被参考的父辈元素，绿色边框div为相对参照元素进行定位的目标元素</p>
+    <div id="box1"><!--参照定位的元素-->
+      <div id="box2"></div><!--相对定位元素-->
+    </div>
+  </body>
+</html>

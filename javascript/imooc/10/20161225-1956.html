@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>访问父节点parentNode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1592">访问父节点parentNode</a></h1>
+  <hr>
+  <p>获取指定节点的父节点</p>
+  <p>语法：</p>
+  <code>elementNode.parentNode</code>
+  <p><strong>注意:</strong>父节点只能有一个。</p>
+  <p>看看下面的例子,获取 P 节点的父节点，代码如下:</p>
+  <pre>
+    &lt;div id="text">
+      &lt;p id="con"> parentNode 获取指点节点的父节点&lt;/p>
+    &lt;/div>
+    &lt;script>
+      var oDiv= document.getElementById("con");
+      document.write(oDiv.parentNode.nodeName);
+    &lt;/script>
+  </pre>
+  <p>运行结果:</p>
+  <div id="text">
+    <p id="con"> parentNode 获取指点节点的父节点</p>
+  </div>
+  <script>
+    var oDiv= document.getElementById("con");
+    document.write(oDiv.parentNode.nodeName);
+  </script>
+  <hr>
+  <p>访问祖节点:</p>
+  <code>elementNode.parentNode.parentNode</code>
+  <p><strong>注意:</strong>浏览器兼容问题，chrome、firefox等浏览器标签之间的空白也算是一个文本节点。</p>
+</body>
+</html>

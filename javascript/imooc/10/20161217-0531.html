@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>返回值的函数</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/351">返回值的函数</a></h1>
+  <hr>
+  <p><strong>思考:</strong>上一节函数中，通过"document.write"把结果输出来，如果想对函数的结果进行处理怎么办呢？</p>
+  <p>我们只要把"document.write(sum)"这行改成如下代码：</p>
+  <pre>
+    function add2(x,y){
+      sum = x + y;
+      return sum; //返回函数值,return后面的值叫做返回值。
+    }
+  </pre>
+  <p>还可以通过变量存储调用函数的返回值，代码如下:</p>
+  <pre>
+    result = add2(3,4);//语句执行后,result变量中的值为7。
+  </pre>
+  <p><strong>注意:</strong>函数中参数和返回值不只是数字，还可以是字符串等其它类型。 </p>
+</body>
+</html>

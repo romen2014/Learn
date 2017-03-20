@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>取消计时器clearTimeout()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1026">取消计时器clearTimeout()</a></h1>
+  <hr>
+  <p>setTimeout()和clearTimeout()一起使用，停止计时器。</p>
+  <p>语法:</p>
+  <code>clearTimeout(id_of_setTimeout)</code>
+  <p>参数说明:</p>
+  <p>id_of_setTimeout：由 setTimeout() 返回的 ID 值。该值标识要取消的延迟执行代码块。</p>
+  <p>下面的例子和上节的无穷循环的例子相似。唯一不同是，现在我们添加了一个 "Stop" 按钮来停止这个计数器。</p>
+  <p>JS代码：</p>
+  <pre>
+    var num=0, timer;
+    function timedCount(){
+      document.getElementById('txt').value = num++;
+      timer=setTimeout(timedCount,1000);
+    }
+    function startCount(){
+      setTimeout(timedCount,1000);
+    }
+    function stopCount(){
+      clearTimeout(timer);
+    }
+  </pre>
+  <p>HTML代码：</p>
+  <pre>
+    &lt;input type="text" id="txt">
+    &lt;input type="button" value="Start" onClick="startCount()">
+    &lt;input type="button" value="Stop" onClick="stopCount()">
+  </pre>
+  <p></p>
+  <script>
+    var num=0, timer;
+    function timedCount(){
+      document.getElementById('txt').value = num++;
+      timer=setTimeout(timedCount,1000);
+    }
+    function startCount(){
+      setTimeout(timedCount,1000);
+    }
+    function stopCount(){
+      clearTimeout(timer);
+    }
+  </script>
+  <input type="text" id="txt">
+  <input type="button" value="Start" onClick="startCount()">
+  <input type="button" value="Stop" onClick="stopCount()">
+</body>
+</html>

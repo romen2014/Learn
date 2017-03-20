@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery 可见筛选选择器</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="../../jquery-2.2.0.js"></script>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/8346">JQuery 可见筛选选择器</a></h1>
+  <hr>
+  <p>元素有显示状态与隐藏状态，jQuery根据元素的状态扩展了可见性筛选选择器:visible与:hidden。</p>
+  <table>
+    <tr>
+      <th>选择器</th>
+      <th>描述</th>
+    </tr>
+    <tr>
+      <td>$(':visible')</td>
+      <td>选择所有显示的元素。</td>
+    </tr>
+    <tr>
+      <td>$(':hidden')</td>
+      <td>选择所有隐藏的元素。</td>
+    </tr>
+  </table>
+  <p>这2个选择器都是 jQuery 延伸出来的，看起来比较简单，但是元素可见性依赖于适用的样式。</p>
+  <p><span>:hidden选择器，不仅仅包含样式是display="none"的元素，还包括隐藏表单、visibility等等。</span></p>
+  <ol>
+    我们有几种方式可以隐藏一个元素：
+    <li>CSS display的值是none。JQuery视为不可见，因为该元素不占用空间布局。</li>
+    <li>type="hidden"的表单元素。JQuery视为不可见，因为该元素不占用空间布局。</li>
+    <li>宽度和高度都显式设置为0。JQuery视为不可见，因为该元素不占用空间布局。</li>
+    <li>一个祖先元素是隐藏的，该元素是不会在页面上显示。JQuery视为不可见，因为该元素不占用空间布局。</li>
+    <li>CSS visibility(可见属性)的值是hidden。<span>JQuery视为可见，因为该元素占用空间布局。</span></li>
+    <li>CSS opacity(透明度)的值是0。<span>JQuery视为可见，因为该元素占用空间布局。</span></li>
+  </ol>
+  <p><span>如果元素中占据文档中一定的空间,元素被认为是可见的。可见元素的宽度或高度，是大于零。元素的visibility:hidden或opacity:0被认为是可见的，因为他们仍然占用空间布局。
+</span></p>
+</body>
+</html>

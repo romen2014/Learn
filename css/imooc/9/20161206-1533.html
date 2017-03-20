@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>盒模型代码简写</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2088">盒模型代码简写</a></h1>
+    <hr>
+    <p>还记得在讲盒模型时外边距(margin)、内边距(padding)和边框(border)设置上下左右四个方向的边距是按照顺时针方向设置的：<span>上右下左</span>。具体应用在margin和padding的例子如下：</p>
+    <pre>
+      margin:10px 15px 12px 14px;/*上设置为10px、右设置为15px、下设置为12px、左设置为14px*/
+    </pre>
+    <ol>
+      通常有下面三种缩写方法:
+      <li>
+        <p>如果left和right的值相同，如下面代码：</p>
+        <code>margin:10px 20px 30px 20px;</code>
+        <p>可缩写为：</p>
+        <code>margin:10px 20px 30px;</code>
+        <p>可理解为:<span>如果第4值(左方向值)缺失,则该值以第2个值(右方向值)为准。</span></p>
+      </li>
+      <li>
+        <p>如果top和bottom值相同、left和 right的值相同，如下面代码：</p>
+        <code>margin:10px 20px 10px 20px;</code>
+        <p>可缩写为：</p>
+        <code>margin:10px 20px;</code>
+        <p>可理解为:<span>如果第3值(下方向值)缺失,则该值以第1个值(上方向值)为准。</span></p>
+      </li>
+      <li>
+        <p>如果top、right、bottom、left的值相同，如下面代码：</p>
+        <code>margin:10px 10px 10px 10px;</code>
+        <p>可缩写为：</p>
+        <code>margin:10px;</code>
+        <p>可理解为:<span>如果第2值(右方向值)缺失,则该值以第1个值(上方向值)为准。</span></p>
+      </li>
+    </ol>
+  </body>
+</html>

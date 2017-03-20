@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>使用表单标签，与用户交互</title>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/415">使用表单标签，与用户交互</a></h1>
+    <hr>
+    <p>网站怎样与用户进行交互？答案是使用HTML表单(form)。表单是可以把浏览者输入的数据传送到服务器端，这样服务器端程序就可以处理表单传过来的数据。</p>
+    <p>语法：</p>
+    <code>&lt;form method="传送方式" action="服务器文件"&gt;</code>
+    <ol>
+      讲解：
+      <li>
+        <strong>&lt;form&gt; ：</strong>&lt;form&gt;标签是成对出现的，以&lt;form&gt;开始，以&lt;/form&gt;结束。
+      </li>
+      <li>
+        <strong>action ：</strong>浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。
+      </li>
+      <li>
+        <strong>method ：</strong>数据传送的方式（get/post）。。
+      </li>
+    </ol>
+    <pre>
+      &lt;form method="post" action="save.php"&gt;
+        &lt;label for="username"&gt;用户名:&lt;/label&gt;
+        &lt;input type="text" name="username" /&gt;
+        &lt;label for="pass"&gt;密码:&lt;/label&gt;
+        &lt;input type="password" name="pass" /&gt;
+      &lt;/form&gt;
+    </pre>
+    <ol>
+      <strong>注意：</strong>
+      <li>
+        所有表单控件（文本框、文本域、按钮、单选框、复选框等）都必须放在 &lt;form&gt;&lt;/form&gt; 标签之间（否则用户输入的信息可提交不到服务器上哦！）。
+      </li>
+      <li>
+        method : post/get 的区别这一部分内容属于后端程序员考虑的问题。感兴趣的小伙伴可以查看本小节的 wiki，里面有详细介绍。
+      </li>
+    </ol>
+  </body>
+</html>

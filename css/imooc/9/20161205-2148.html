@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>盒子模型--填充</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      pre{
+          border: 1px dotted blue;
+      }
+      /*本节重点代码*/
+      pre{
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2055">盒子模型--填充</a></h1>
+    <hr>
+    <p>元素内容与边框之间是可以设置距离的，称之为“填充”。填充也可分为上、右、下、左(顺时针)。如下代码：</p>
+    <code>div{padding:20px 10px 15px 30px;}</code>
+    <p>顺序一定不要搞混。可以分开写上面代码：</p>
+    <pre>
+      div{
+        padding-top:20px;
+        padding-right:10px;
+        padding-bottom:15px;
+        padding-left:30px;
+      }
+    </pre>
+    <p>如果上、右、下、左的填充都为10px;可以这么写</p>
+    <code>div{padding:10px;}</code>
+    <p>如果上下填充一样为10px，左右一样为20px，可以这么写：</p>
+    <code>div{padding:10px 20px;}</code>
+</body>
+</html>

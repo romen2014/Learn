@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖拽</title>
+	<style type="text/css">
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: red;
+			position: absolute;
+		}
+		#div2{
+			width: 600px;
+			height: 400px;
+			background-color: #CCC;
+			position: relative;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			oDiv = document.getElementById('div1');
+			oDiv2 = document.getElementById('div2');
+			oDiv.onmousedown = function(ev){
+				var oEvent = ev||event;
+				var disX = oEvent.clientX - oDiv.offsetLeft;
+				var disY = oEvent.clientY - oDiv.offsetTop;
+
+				document.onmousemove = function(oEvent){
+					var divX = oEvent.clientX - disX;
+					var divY = oEvent.clientY - disY;
+
+
+					if(divX<0){
+						divX = 0;
+					}else if(divX > oDiv2.clientWidth - oDiv.offsetWidth){
+						// 不限制范围的则需考虑可视区范围，即document.documentElement
+						divX = oDiv2.clientWidth - oDiv.offsetWidth;
+					}
+
+					// 20为吸附值
+					if(divY<20){
+						divY = 0;
+					}else if(divY > oDiv2.clientHeight - oDiv.offsetHeight - 20){
+						divY = oDiv2.clientHeight - oDiv.offsetHeight;
+					}
+
+					oDiv.style.left = divX + 'px';
+					oDiv.style.top = divY + 'px';
+				};
+
+				document.onmouseup = function(){
+					document.onmousemove = null;
+					document.onmouseup = null;
+				}
+
+				// 此处屏蔽默认行为可以消除火狐浏览器下的重影bug
+				return false;
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="div2">
+		<div id="div1"></div>
+	</div>
+</body>
+</html>

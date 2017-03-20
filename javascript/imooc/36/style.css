@@ -1,0 +1,12 @@
+code, pre {
+  border: 1px #ccc solid;
+  background-color: #eee;
+  color: red;
+  font-size: 2em;
+}
+span{
+  color: red;
+}
+h3{
+  color: blue;
+}

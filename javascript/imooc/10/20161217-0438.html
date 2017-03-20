@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>do...while循环</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/322">do...while循环</a></h1>
+  <hr>
+  <p>do while结构的基本原理和while结构是基本相同的，但是它保证循环体至少被执行一次。因为它是先执行代码，后判断条件，如果条件为真，继续循环。</p>
+  <p>do...while语句结构：</p>
+  <pre>
+    do{
+      循环语句
+    }
+    while(判断条件)
+  </pre>
+  <p>我们试着输出5个数字。</p>
+  <pre>
+    num= 1;
+    do{
+      document.write("数值为:" +  num+"&lt;br />");
+      num++; //更新条件
+    }
+    while (num<=5)
+  </pre>
+  <p>执行结果:</p>
+  <script>
+    num= 1;
+    do{
+      document.write("数值为:" +  num+"<br />");
+      num++; //更新条件
+    }
+    while (num<=5)
+  </script>
+  <p>为什么呢?我们来看下执行思路：</p>
+  <ul>
+    <li>
+      <ul>
+        <strong>第1次</strong>
+        <li>输出：数值为1</li>
+        <li>条件值更新：num++，更新为2</li>
+        <li>判断：2<=5，条件成立，继续进行do...while循环</li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <strong>第2次</strong>
+        <li>输出：数值为2</li>
+        <li>条件值更新：num++，更新为3</li>
+        <li>判断：3<=5，条件成立，继续进行do...while循环</li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <strong>第3次</strong>
+        <li>输出：数值为3</li>
+        <li>条件值更新：num++，更新为4</li>
+        <li>判断：4<=5，条件成立，继续进行do...while循环</li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <strong>第4次</strong>
+        <li>输出：数值为4</li>
+        <li>条件值更新：num++，更新为5</li>
+        <li>判断：5<=5，条件成立，继续进行do...while循环</li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <strong>第5次</strong>
+        <li>输出：数值为5</li>
+        <li>条件值更新：num++，更新为6</li>
+        <li>判断：6<=5，条件不成立，结束do...while循环</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

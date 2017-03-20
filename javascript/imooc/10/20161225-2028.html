@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>删除节点removeChild()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1700">删除节点removeChild()</a></h1>
+  <hr>
+  <p>removeChild() 方法从子节点列表中删除某个节点。如删除成功，此方法可返回被删除的节点，如失败，则返回 NULL。</p>
+  <p>语法:</p>
+  <code>nodeObject.removeChild(node)</code>
+  <p><strong>参数:</strong>node ：必需，指定需要删除的节点。</p>
+  <p>我们来看看下面代码，删除子点。</p>
+  <pre>
+    &lt;div id="test">
+      &lt;p>HTML&lt;/p>
+      &lt;p>JavaScript&lt;/p>
+    &lt;/div>
+    &lt;script>
+      var oDiv = document.getElementById('test');
+      var oP = oDiv.removeChild(oDiv.childNodes[1]);
+      document.write("删除节点的内容为：" + oP.innerHTML);
+    &lt;/script>
+  </pre>
+  <p>运行结果:</p>
+  <div id="test">
+    <p>HTML</p>
+    <p>JavaScript</p>
+  </div>
+  <script>
+    var oDiv = document.getElementById('test');
+    var oP = oDiv.removeChild(oDiv.childNodes[1]);
+    document.write("删除节点的内容为：" + oP.innerHTML);
+  </script>
+  <p><strong>注意:</strong>把删除的子节点赋值给 oP，这个子节点不在DOM树中，但是还存在内存中，可通过 oP 操作。</p>
+  <p>如果要完全删除对象，给 oP 赋 null 值，代码如下:</p>
+  <pre>
+    var oP = oDiv.removeChild(oDiv.childNodes[1]);
+    oP = null;
+  </pre>
+  <hr>
+  <button onclick="clearText()">练习：点击按钮清除以下节点内容</button>
+  <div id="content">
+    <h4>html</h4>
+    <h4>php</h4>
+    <h4>javascript</h4>
+    <h4>jquery</h4>
+    <h4>java</h4>
+  </div>
+  <script type="text/javascript">
+  function clearText() {
+    var content=document.getElementById("content");
+    var a = content.childNodes;
+    for(var i=a.length; i>0;){
+        content.removeChild(a[--i]);
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我与你同在(逻辑与操作符)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/135">我与你同在(逻辑与操作符)</a></h1>
+  <hr>
+  <p>数学里面的“a>b”，在JavaScript中还表示为a>b；数学中的“b大于a，b小于c”是“a&lt;b<c”，那么在JavaScript中可以用&&表示，如下：</p>
+  <pre>b>a &amp;&amp; b&lt;c    //“&amp;&amp;”是并且的意思, 读法"b大于a"并且" b小于c "</pre>
+  <p>好比我们参加高考时,在进入考场前,必须出示准考证和身份证,两者缺一不可，否则不能参加考试，表示如下:</p>
+  <pre>
+    if(有准考证 &amp;&amp;有身份证){
+       进行考场考试
+    }
+  </pre>
+  <p><strong>&amp;&amp;</strong>是<span>逻辑与</span>操作符，只有“&amp;&amp;”两边值同时满足(同时为真)，整个表达式值才为真。</p>
+  <strong><span>逻辑与</span>操作符值表:</strong><br>
+  <img src="http://img.mukewang.com/52a16f880001d27803770180.jpg" alt="">
+  <p><strong>注意:</strong> 如果A为假，A &amp;&amp; B为假，不会在执行B; 反之，如果A为真，要由 B 的值来决定 A &amp;&amp; B 的值。</p>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var numa,numb;
+    numa=60;
+    numb=70;
+    if(numa>=60 &amp;&amp; numb>=60){
+      document.write("JavaScript考核通过！");
+    }
+  </pre>
+  <script type="text/javascript">
+    var numa,numb;
+    numa=60;
+    numb=70;
+    if(numa>=60 && numb>=60){
+      document.write("JavaScript考核通过！");
+    }
+  </script>
+</body>
+</html>

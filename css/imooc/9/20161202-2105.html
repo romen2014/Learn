@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>层叠</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      p{color:blue;}
+      p{color:green;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2040">层叠</a></h1>
+    <hr>
+    <p>我们来思考一个问题：如果在html文件中对于同一个元素可以有多个css样式存在并且这多个css样式具有 <span class="point">相同权重值</span>怎么办？好，这一小节中的 <span class="point">层叠</span>帮你解决这个问题。</p>
+    <p><span class="point">层叠</span>就是在html文件中对于同一个元素可以有多个css样式存在，当有相同权重的样式存在时，会根据这些css样式的前后顺序来决定，处于最后面的css样式会被应用。</p>
+    <p>如下面代码：</p>
+    <pre>
+      p{color:red;}
+      p{color:green;}
+      &lt;p class="first"&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;
+    </pre>
+    <p class="first">三年级时，我还是一个<span>胆小如鼠</span>的小女孩。</p>
+    <p>最后 p 中的文本会设置为green，这个层叠很好理解，理解为后面的样式会覆盖前面的样式。</p>
+    <p>所以前面的css样式优先级就不难理解了：</p>
+    <p><span class="point">内联样式表（标签内部）> 嵌入样式表（当前文件中）> 外部样式表（外部文件中）。</span></p>
+  </body>
+</html>

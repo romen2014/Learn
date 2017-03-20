@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>透明度</title>
+	<style type="text/css">
+	#div1{
+		width: 480px;
+		height: 320px;
+		background-color: blue;
+		filter:alpha(opacity:30); 
+		opacity:0.3;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		oDiv = document.getElementById('div1');
+		oDiv.onmouseover = function(){
+			changeOpacity(100);
+		};
+		oDiv.onmouseout = function(){
+			changeOpacity(30);
+		};
+	}
+	var alpha = 30;
+	var timer = null;
+	function changeOpacity(target){
+		oDiv = document.getElementById('div1');
+		clearInterval(timer);
+		timer = setInterval(function(){
+			speed = 3;
+			if(alpha > target){
+				speed = 0 - speed;
+			}
+
+			if(alpha == target){
+				clearInterval(timer);
+			}else{
+				alpha += speed;
+				oDiv.style.filter = 'alpha(opacity:' + alpha +')';
+				oDiv.style.opacity = alpha/100;
+			}
+		},30);
+	}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

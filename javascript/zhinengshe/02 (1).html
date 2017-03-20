@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			function sum(){
+				var result=0;
+				for (var i = arguments.length - 1; i >= 0; i--) {
+					result+=arguments[i];
+				};
+				return result;
+			}
+
+			alert(sum(1,2,3,4,5,6,7,8,9));
+		}
+	</script>
+</head>
+<body>
+	<h2>函数返回值</h2>
+	<p>函数返回值是函数向外传的值</p>
+	<p>return 返回值</p>
+	<h2>可变参、不定个数参</h2>
+	<p>arguments</p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IndexedDB</title>
+	<script>
+		window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB;
+		window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.moz || window.msIDBTransaction;
+		window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.mozIDBKeyRange || window.msIDBKeyRange;
+		window.IDBCursor = window.IDBCursor || window.webkitIDBCursor || window.mozIDBCursor || window.msIDBCursor;
+
+		function connectIDB(){
+			var dbName = "IDBTest";	//数据库名称
+			var dbVersion = 1;		//数据库版本
+			var idb;				//数据库对象
+			var dbConnect = indexedDB.open(dbName, dbVersion);	//数据库链接
+			dbConnect.onsuccess = function(e){
+				idb = e.target.result;
+				alert("数据库链接成功");
+			}
+			dbConnect.onerror = function(){
+				alert("数据库链接失败");
+			}
+
+		}
+
+		function versionUpdate(){
+			var dbName = "IDBTest";	//数据库名称
+			var dbVersion = 2;		//数据库版本
+			var idb;				//数据库对象
+			var dbConnect = indexedDB.open(dbName, dbVersion);	//数据库链接
+			dbConnect.onupgradeneeded = function(e){
+				idb = e.target.result;
+				var tx = e.target.transaction;
+				var oldVersion = e.oldVersion;
+				var newVersion = e.newVersion;
+				alert("数据库更新成功:" + oldVersion + " ---TO---" + newVersion);
+			}
+		}
+
+		function createObjectStore(){
+			var dbName = "IDBTest";	//数据库名称
+			var dbVersion = 3;		//数据库版本
+			var idb;				//数据库对象
+			var dbConnect = indexedDB.open(dbName, dbVersion);	//数据库链接
+			dbConnect.onupgradeneeded = function(e){
+				idb = e.target.result;
+				var name = "user";
+				var optionalParameters = {
+					keyPath:"userid",
+					autoIncrement:false
+				};
+				var store = idb.createObjectStore(name, optionalParameters);
+				alert("对象仓库创建成功");
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<h1><a target="_blank" href="http://www.jikexueyuan.com/course/1407.html">IndexedDB</a></h1>
+	<hr>
+	<input type="button" value="链接数据库" onclick="connectIDB()">
+	<input type="button" value="数据库更新" onclick="versionUpdate()">
+	<input type="button" value="创建仓库" onclick="createObjectStore()">
+</body>
+</html>

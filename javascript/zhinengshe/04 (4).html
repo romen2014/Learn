@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格、数据操作、搜索、筛选</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oTab = document.getElementById('tab1');
+		var oldColor;
+
+		// 获取张三
+		// alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);
+
+		// 隔行变色，鼠标移入高亮
+		for (var i = oTab.tBodies[0].rows.length - 1; i >= 0; i--) {
+			//隔行变色
+			if(i % 2 ==0){
+				oTab.tBodies[0].rows[i].style.background = '#CCC';
+			};
+
+			//鼠标高亮
+			//oldColor -存储变色前的行颜色
+			oTab.tBodies[0].rows[i].onmouseover = function(){
+				oldColor = this.style.background;
+				this.style.background = 'green';
+			};
+			oTab.tBodies[0].rows[i].onmouseout = function(){
+				this.style.background = oldColor;
+			};
+
+			//设置删除操作
+			oTab.tBodies[0].rows[i].getElementsByTagName('a')[0].onclick = function(){
+				oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+			}
+		};
+
+		//数据操作：添加与删除
+		var oBtn = document.getElementById('btn');
+		//设置ID
+		var id = parseFloat(oTab.tBodies[0].rows[oTab.tBodies[0].rows.length-1].cells[0].innerHTML) + 1;
+		oBtn.onclick = function(){
+			//添加
+			var oName = document.getElementById('name');
+			var oAge = document.getElementById('age');
+
+			//创建行
+			var oTr = document.createElement('tr');
+			//创建添加ID列
+			var oTdID = document.createElement('td');
+			oTdID.innerHTML = id++;
+			oTr.appendChild(oTdID);
+			//创建添加Name列
+			var oTdName = document.createElement('td');
+			oTdName.innerHTML = oName.value;
+			oTr.appendChild(oTdName);
+			//创建添加Age列
+			var oTdAge = document.createElement('td');
+			oTdAge.innerHTML = oAge.value;
+			oTr.appendChild(oTdAge);
+			//创建添加Delete列
+			var oTdDelte = document.createElement('td');
+			oTdDelte.innerHTML = '<a href="javascript:;">Delete</a>';
+			oTr.appendChild(oTdDelte);
+			oTdDelte.getElementsByTagName('a')[0].onclick = function(){
+				oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+			};
+
+			//添加行
+			oTab.tBodies[0].appendChild(oTr);
+		};
+
+		//搜索
+		var oBtn2 = document.getElementById('btn2');
+		oBtn2.onclick = function(){
+			// 获取搜索内容
+			var sKeyword = document.getElementById('keyword').value.toLowerCase();
+			// 空格分割
+			var aKeyword = sKeyword.split(' ');
+			for (var i = oTab.tBodies[0].rows.length - 1; i >= 0; i--) {
+				// 初始化隔行变色
+				if(i % 2 ==0){
+					oTab.tBodies[0].rows[i].style.background = '#CCC';
+				}else{
+					oTab.tBodies[0].rows[i].style.background = '';
+				}
+
+				//循环获取当前行内的名字
+				var sTab = oTab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();
+				for (var j = aKeyword.length - 1; j >= 0; j--) {
+					//循环获取搜索框内关键字词组内每一项关键字
+					//搜索比对
+					if(sTab.search(aKeyword[j])!= -1){
+						//高亮显示
+						oTab.tBodies[0].rows[i].style.background = 'yellow';
+					};
+				};
+			};
+		};
+
+		//筛选。表格排版样式错乱忽略不计
+		var oBtn3 = document.getElementById('btn3');
+		oBtn3.onclick = function(){
+			// 获取搜索内容
+			var sKeyword = document.getElementById('keyword').value.toLowerCase();
+			// 空格分割
+			var aKeyword = sKeyword.split(' ');
+			for (var i = oTab.tBodies[0].rows.length - 1; i >= 0; i--) {
+				// 初始化显示
+				oTab.tBodies[0].rows[i].style.display = 'none';
+
+				//循环获取当前行内的名字
+				var sTab = oTab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();
+				for (var j = aKeyword.length - 1; j >= 0; j--) {
+					//循环获取搜索框内关键字词组内每一项关键字
+					//搜索比对
+					if(sTab.search(aKeyword[j])!= -1){
+						//高亮显示
+						oTab.tBodies[0].rows[i].style.display = 'block';
+					};
+				};
+			};
+		};
+	};
+	</script>
+</head>
+<body>
+	<h2>表格</h2>
+	<pre>
+		tBodies	-获取tbody数组
+		tHead 	-获取表头
+		tFoot 	-获取表尾
+		rows	-获取行数组
+		cells	-获取行内单元数组
+	</pre>
+	<hr>
+	姓名<input type="text" id="name">
+	年龄<input type="text" id="age">
+	<input id="btn" type="button" value="添加">
+	<input type="text" id="keyword">
+	<input id="btn2" type="button" value="搜索名字">
+	<input id="btn3" type="button" value="筛选名字">
+	<hr>
+	<table id="tab1" border="1" width="500" cellspacing="1">
+		<thead>
+			<td>ID</td>
+			<td>Nmae</td>
+			<td>Age</td>
+			<td>Delete</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Blue</td>
+				<td>24</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>张三</td>
+				<td>28</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>李四</td>
+				<td>25</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>王五</td>
+				<td>22</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>张强</td>
+				<td>27</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>王四</td>
+				<td>23</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

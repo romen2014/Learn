@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>颜色值</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      #demo1 {
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/3884">颜色值</a></h1>
+    <hr>
+    <p>在网页中的颜色设置是非常重要，有字体颜色（color）、背景颜色（background-color）、边框颜色（border）等，设置颜色的方法也有很多种：</p>
+    <ol>
+      <li>
+        英文命令颜色
+        <p>前面几个小节中经常用到的就是这种设置方法：</p>
+        <code>p{color:red;}</code>
+      </li>
+      <li>
+        RGB颜色
+        <p>这个与 photoshop 中的 RGB 颜色是一致的，由 R(red)、G(green)、B(blue) 三种颜色的比例来配色。</p>
+        <code>p{color:rgb(133,45,200);}</code>
+        <p>每一项的值可以是 0~255 之间的整数，也可以是 0%~100% 的百分数。如：</p>
+        <code>p{color:rgb(20%,33%,25%);}</code>
+      </li>
+      <li>
+        十六进制颜色
+        <p><span>这种颜色设置方法是现在比较普遍使用的方法</span>，其原理其实也是 RGB 设置，但是其每一项的值由 0-255 变成了十六进制 00-ff。</p>
+        <code>p{color:#00ffff;}</code>
+        <p>示例配色表：</p>
+        <img src="http://img.mukewang.com/54c5b4120001f20808000902.jpg" alt="">
+      </li>
+    </ol>
+  </body>
+</html>

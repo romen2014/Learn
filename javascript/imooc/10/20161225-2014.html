@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>插入节点appendChild()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1698">插入节点appendChild()</a></h1>
+  <hr>
+  <p>在指定节点的最后一个子节点列表之后添加一个新的子节点。</p>
+  <p>语法:</p>
+  <code>appendChild(newnode)</code>
+  <p><strong>参数:</strong>newnode：指定追加的节点。</p>
+  <p>我们来看看，div标签内创建一个新的 P 标签，代码如下:</p>
+  <pre>
+    &lt;div id="test">
+      &lt;p>HTML&lt;/p>
+      &lt;p>JavaScript&lt;/p>
+    &lt;/div>
+    &lt;script>
+      var oDiv = document.getElementById('test');
+      var newnode = document.createElement("p");
+      newnode.innerHTML = "This is a new p";
+      // 通过appendChild()添加节点
+      oDiv.appendChild(newnode);
+    &lt;/script>
+  </pre>
+  <p>运行结果:</p>
+  <div id="test">
+    <p>HTML</p>
+    <p>JavaScript</p>
+  </div>
+  <script>
+    var oDiv = document.getElementById('test');
+    var newnode = document.createElement("p");
+    newnode.innerHTML = "This is a new p";
+    // 通过appendChild()添加节点
+    oDiv.appendChild(newnode);
+  </script>
+</body>
+</html>

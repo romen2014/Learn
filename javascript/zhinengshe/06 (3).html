@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>键盘事件</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oTxt1 = document.getElementById('txt1');
+		var oTxt2 = document.getElementById('txt2');
+
+		oTxt1.onkeydown = function(ev){
+			var oEvent = ev || event;
+			// ctrlKey、shiftKey、altKey
+			if(oEvent.keyCode == 13 && oEvent.ctrlKey){
+				oTxt2.value += oTxt1.value + '\n';
+				oTxt1.value = '';
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<h1>Ctrl+回车提交</h1><hr>
+	<input type="text" id="txt1"><br>
+	<textarea id="txt2" cols="80" rows="20"></textarea>
+</body>
+</html>

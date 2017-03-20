@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标提示框</title>
+	<style>
+		#div1{
+			width: 200px;
+			height: 24px;
+			background-color: red;
+			display: none;
+			text-align: center;
+		}
+		#div2{
+			width: 200px;
+			height: 24px;
+			background-color: green;
+			color: white;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		function toBlock(){
+			document.getElementById('div1').style.display='block';
+		}
+		function toNone(){
+			document.getElementById('div1').style.display='none';
+		}
+	</script>
+</head>
+<body>
+	<div id="div2" onmouseover="toBlock();" onmouseout="toNone();">请将鼠标移入和移出</div>
+	<div id="div1">
+		来观察DIV的显示与隐藏
+	</div>
+</body>
+</html>

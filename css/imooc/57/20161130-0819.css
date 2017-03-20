@@ -1,0 +1,16 @@
+.main{
+  height: 300px;
+  width: 800px;
+  background-color: #CCC;
+  margin: 0 auto;
+}
+.header{
+  height: 100px;
+  background-color: #00F;
+}
+.footer{
+  height: 100px;
+  width: 800px;
+  background-color: #F00;
+  margin: 0 auto;
+}

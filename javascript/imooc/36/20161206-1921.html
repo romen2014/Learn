@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript-什么是函数</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/490">JavaScript-什么是函数</a></h1>
+  <hr>
+  <p>函数是完成某个特定功能的一组语句。如没有函数，完成任务可能需要五行、十行、甚至更多的代码。这时我们就可以把完成特定功能的代码块放到一个函数里，直接调用这个函数，就省重复输入大量代码的麻烦。</p>
+  <strong>如何定义一个函数呢？基本语法如下:</strong>
+  <pre>
+    function 函数名()
+    {
+         函数代码;
+    }
+  </pre>
+  <strong>说明:</strong>
+  <ol>
+    <li>function定义函数的关键字。</li>
+    <li>"函数名"你为函数取的名字。</li>
+    <li>"函数代码"替换为完成特定功能的代码。</li>
+  </ol>
+  <p>我们来编写一个实现两数相加的简单函数,并给函数起个有意义的名字：“add2”，代码如下：</p>
+  <pre>
+    function add2(){
+      var sum = 3 + 2;
+      alert(sum);
+    }
+  </pre>
+  <strong>函数调用:</strong>
+  <p>函数定义好后，是不能自动执行的，所以需调用它,只需直接在需要的位置写函数就ok了,<strong>代码如下:</strong></p>
+  <img src="http://img.mukewang.com/5419430400012de808370459.jpg" alt="">
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function add2(){
+      var sum = 3 + 2;
+      alert("3 + 2 = " + sum);
+    }
+  </script>
+  <input type="button" value="点击我" onclick="add2();">
+</body>
+</html>

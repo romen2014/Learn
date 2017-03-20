@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>通过ID获取元素</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/469">通过ID获取元素</a></h1>
+  <hr>
+  <p>学过HTML/CSS样式，都知道，网页由标签将信息组织起来，而标签的id属性值是唯一的，就像是每人有一个身份证号一样，只要通过身份证号就可以找到相对应的人。那么在网页中，我们通过id先找到标签，然后进行操作。</p>
+  <p>语法:</p>
+  <pre>document.getElementById(“id”)</pre>
+  <p>看看下面代码:</p>
+  <img src="http://img.mukewang.com/52e4c5950001054207900423.jpg" alt="">
+  <p>结果:<span>null(获取失败)</span>或<span>[object HTMLParagraphElement](获取成功)</span></p>
+  <img src="http://img.mukewang.com/52e4c6080001734c03800275.jpg" alt=""><br>
+  <strong>注:获取的元素是一个对象，如想对元素进行操作，我们要通过它的属性或方法。</strong>
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function myFun(){
+      var oTxt = document.getElementById('txt');
+      var oBtn = document.getElementById(oTxt.value);
+      if(oBtn){
+        oTxt.value = "获取失败";
+      }else{
+        oTxt.value = "获取失败";
+      }
+    }
+  </script>
+  <input type="text" id="txt" placeholder="填写要获取的元素ID"></input>
+  <input type="button" id="btn" value="点击按钮查看效果" onclick="myFun();">
+</body>
+</html>

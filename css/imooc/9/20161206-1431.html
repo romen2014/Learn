@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>层模型--相对定位</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      #div1 {
+        /*div自身属性*/
+        width:200px;
+        height:200px;
+        border:2px blue solid;
+        /*div定位属性*/
+        position:relative;
+        left:100px;
+        top:50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2074">层模型--相对定位</a></h1>
+    <hr>
+    <p>如果想为元素设置层模型中的相对定位，需要设置 <span>position:relative</span>（表示相对定位），它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。</p>
+    <p>相对定位完成的过程是首先按static(float)方式生成一个元素(并且元素像层一样浮动了起来)，然后相对于 <span>以前的位置移动</span>，移动的方向和幅度由 <span>left、right、top、bottom</span>属性确定， <span>偏移前的位置保留不动。</span></p>
+    <p>如下代码实现相对于以前位置向下移动50px，向右移动100px;</p>
+    <pre>
+      #div1{
+        width:200px;
+        height:200px;
+        border:2px red solid;
+        position:relative;
+        left:100px;
+        top:50px;
+      }
+    </pre>
+    <p>效果图：</p>
+    <div id="div1"></div>
+    <img src="http://img.mukewang.com/53a00d2b00015c4b06190509.jpg" alt="">
+    <p>什么叫做<span>偏移前的位置保留不动</span>呢？</p>
+    <p>div元素相对于以前的位置产生了偏移，但是div元素以前的位置还是保留着，所以上面示例中的img元素是显示在了div元素以前位置的后面。</p>
+  </body>
+</html>

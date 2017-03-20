@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编程练习</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1484">编程练习</a></h1>
+  <hr>
+  <p>在一个大学的编程选修课班里，我们得到了一组参加该班级的学生数据，分别是姓名、性别、年龄和年级，接下来呢，我们要利用JavaScript的知识挑出其中所有是大一的女生的的名字哦。</p>
+  <p>学生信息如下：</p>
+  <pre style="color:black;font-size:14px;">
+    ('小A','女',21,'大一'),
+    ('小B','男',23,'大三'),
+    ('小C','男',24,'大四'),
+    ('小D','女',21,'大一'),
+    ('小E','女',22,'大四'),
+    ('小F','男',21,'大一'),
+    ('小G','女',22,'大二'),
+    ('小H','女',20,'大三'),
+    ('小I','女',20,'大一'),
+    ('小J','男',20,'大三')
+  </pre>
+  <ol>
+    <strong>任务</strong>
+    <li>把这些数据组成一个数组，方便我们之后操作哦</li>
+    <li>筛选数据吧，首先找出都是大一的所有信息</li>
+    <li>最后再一次筛选上一步得到的数据，打印出都是女生的姓名</li>
+  </ol>
+  <hr>
+  <p>代码：请使用<span>查看网页源代码</span>的方式进行查看</p>
+  <p>执行结果：</p>
+  <script>
+    var infos = new Array();
+    infos[0] = new Array();
+    infos[0][0] = '小A';
+    infos[0][1] = '女';
+    infos[0][2] = '21';
+    infos[0][3] = '大一';
+
+    infos[1] = new Array();
+    infos[1][0] = '小B';
+    infos[1][1] = '男';
+    infos[1][2] = '23';
+    infos[1][3] = '大三';
+
+    infos[2] = new Array();
+    infos[2][0] = '小C';
+    infos[2][1] = '男';
+    infos[2][2] = '24';
+    infos[2][3] = '大四';
+
+    infos[3] = new Array();
+    infos[3][0] = '小D';
+    infos[3][1] = '女';
+    infos[3][2] = '21';
+    infos[3][3] = '大一';
+
+    infos[4] = new Array();
+    infos[4][0] = '小E';
+    infos[4][1] = '女';
+    infos[4][2] = '22';
+    infos[4][3] = '大四';
+
+    infos[5] = new Array();
+    infos[5][0] = '小F';
+    infos[5][1] = '男';
+    infos[5][2] = '21';
+    infos[5][3] = '大一';
+
+    infos[6] = new Array();
+    infos[6][0] = '小G';
+    infos[6][1] = '女';
+    infos[6][2] = '22';
+    infos[6][3] = '大二';
+
+    infos[7] = new Array();
+    infos[7][0] = '小H';
+    infos[7][1] = '女';
+    infos[7][2] = '20';
+    infos[7][3] = '大三';
+
+    infos[8] = new Array();
+    infos[8][0] = '小I';
+    infos[8][1] = '女';
+    infos[8][2] = '20';
+    infos[8][3] = '大一';
+
+    infos[9] = new Array();
+    infos[9][0] = '小J';
+    infos[9][1] = '男';
+    infos[9][2] = '20';
+    infos[9][3] = '大三';
+
+    var i;
+    for(i = 0; i <= 9; i++){
+      if(infos[i][3] == '大一' && infos[i][1] == '女'){
+        document.write(infos[i][0]);
+        document.write("<br />");
+      }
+    }
+  </script>
+</body>
+</html>

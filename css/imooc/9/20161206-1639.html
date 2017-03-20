@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>水平居中设置-不定宽块状元素方法（二）</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      .container{
+        border: 1px blue solid;
+        text-align:center;
+      }
+      /* margin:0;padding:0（消除文本与div边框之间的间隙）*/
+      .container ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+        display:inline;
+      }
+      /* margin-right:8px（设置li文本之间的间隔）*/
+      .container li{
+        margin-right:8px;
+        display:inline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/6364">水平居中设置-不定宽块状元素方法（二）</a></h1>
+    <hr>
+    <p>除了上一节讲到的插入table标签，可以使不定宽块状元素水平居中之外，本节介绍第2种实现这种效果的方法，改变元素的display类型为行内元素，利用其属性直接设置。</p>
+    <p>第二种方法：改变块级元素的 display 为 inline 类型（设置为 行内元素 显示），然后使用 text-align:center 来实现居中效果。如下例子：</p>
+    <p>html代码：</p>
+    <pre>
+      &lt;div class="container"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    </pre>
+    <p>css代码：</p>
+    <pre>
+      .container{
+        text-align:center;
+      }
+      /* margin:0;padding:0（消除文本与div边框之间的间隙）*/
+      .container ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+        display:inline;
+      }
+      /* margin-right:8px（设置li文本之间的间隔）*/
+      .container li{
+        margin-right:8px;
+        display:inline;
+      }
+    </pre>
+    <p>这种方法相比第一种方法的优势是不用增加无语义标签，但也存在着一些问题：它将块状元素的 display 类型改为 inline，变成了行内元素，所以少了一些功能，比如设定长度值。</p>
+    <p>示例：</p>
+    <div class="container">
+      <ul>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

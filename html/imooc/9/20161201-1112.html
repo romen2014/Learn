@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>使用&lt;pre&gt;标签为你的网页加入大段代码</title>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/145">使用&lt;pre&gt;标签为你的网页加入大段代码</a></h1>
+    <hr>
+    <p>在上节中介绍加入一行代码的标签为&lt;code&gt;，但是在大多数情况下是需要加入大段代码的，如下图：</p>
+    <img src="http://img.mukewang.com/52a519bd0001441604710369.jpg" alt="">
+    <p>怎么办？不会是每一代码都加入一个&lt;code&gt;标签吧，没有这么复杂，这时候就可以使用&lt;pre&gt;标签。</p>
+    <p>语法：&lt;pre&gt;语言代码段&lt;/pre&gt;</p>
+    <p>&lt;pre&gt;标签的主要作用:预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。</p>
+    <p>如下代码：</p>
+    <pre>
+      &lt;pre&gt;
+          var message="欢迎";
+          for(var i=1;i<=10;i++)
+          {
+              alert(message);
+          }
+      &lt;/pre&gt;
+    </pre>
+    <p>在浏览器中的显示结果为：</p>
+    <img src="http://img.mukewang.com/52a51a4f000118c403790224.jpg" alt="">
+    <p>在上面的例子中可以看到代码中的空格，换行符都保留下来。如果用以前的方法，回车需要输入&lt;br&gt;签，空格需要输入&amp;nbsp;</p>
+    <strong>注意：&lt;pre&gt; 标签不只是为显示计算机的源代码时用的，在你需要在网页中预显示格式时都可以使用它，只是&lt;pre&gt;标签的一个常见应用就是用来展示计算机的源代码。</strong>
+  </body>
+</html>

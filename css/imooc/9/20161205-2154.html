@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>盒子模型--边界</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2056">盒子模型--边界</a></h1>
+    <hr>
+    <p>元素与其它元素之间的距离可以使用边界（margin）来设置。边界也是可分为上、右、下、左。如下代码：</p>
+    <code>div{margin:20px 10px 15px 30px;}</code>
+    <p>也可以分开写：</p>
+    <pre>
+      div{
+        margin-top:20px;
+        margin-right:10px;
+        margin-bottom:15px;
+        margin-left:30px;
+      }
+    </pre>
+    <p>如果上右下左的边界都为10px;可以这么写：</p>
+    <code>div{ margin:10px;}</code>
+    <p>如果上下边界一样为10px，左右一样为20px，可以这么写：</p>
+    <code>div{ margin:10px 20px;}</code>
+    <p class="point">总结一下：padding和margin的区别，padding在边框里，margin在边框外。</p>
+</body>
+</html>

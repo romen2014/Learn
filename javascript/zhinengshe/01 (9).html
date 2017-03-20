@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>求和</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oTxt1=document.getElementById('txt1');
+			var oTxt2=document.getElementById('txt2');
+			var oBtn=document.getElementById('btn');
+
+			oBtn.onclick=function(){
+				if(isNaN(oTxt1.value)){
+					alert('您输入的第一个数字有误');
+				}else if(oTxt1.value==''){
+					alert('请输入第一个数字');
+				}else if(isNaN(oTxt2.value)){
+					alert('您输入的第二个数字有误');
+				}else if(oTxt2.value==''){
+					alert('请输入第二个数字');
+				}else{
+					//parseInt不适用于小数，parseFloat适用于小数和整数
+					alert(parseFloat(oTxt1.value)+parseFloat(oTxt2.value)); // .5+.5=1
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txt1">
+	<input type="text" id="txt2">
+	<input type="button" id="btn" value="求和">
+</body>
+</html>

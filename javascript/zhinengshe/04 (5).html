@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom排序</title>
+	<style type="text/css">
+	#ul1{
+		background: green;
+	}
+
+	#ul2{
+		background: yellow;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oUl1 = document.getElementById('ul1');
+		var oUl2 = document.getElementById('ul2');
+
+		btn1.onclick = function(){
+			//将Ul1中的第一个Li移动到Ul2底部
+			oLi = oUl1.children[0];
+			oUl1.removeChild(oLi);
+			oUl2.appendChild(oLi);
+		};
+
+		btn2.onclick = function(){
+			//将Ul1中的第一个Li移动到Ul2底部，同btn1功能，但不需要remove步骤
+			//原理。Li[0]首先会被从Ul1中移除，再被插入到Ul2底部
+			oLi = oUl1.children[0];
+			oUl2.appendChild(oLi);
+		};
+
+		btn3.onclick = function(){
+			//将Ul1中的第一个Li移动到Ul1底部
+			//原理。Li[0]首先会被从Ul1中移除，再被插入到Ul1底部
+			oLi = oUl1.children[0];
+			oUl1.appendChild(oLi);
+		};
+
+		btn4.onclick = function(){
+			var aLi = oUl1.getElementsByTagName('li');
+			var arr = [];
+			for (var i = aLi.length - 1; i >= 0; i--) {
+				arr[i] = aLi[i];
+			};
+
+			arr.sort(function (li1, li2){
+				n1 = parseFloat(li1.innerHTML);
+				n2 = parseFloat(li2.innerHTML);
+				return n1-n2;
+			});
+
+			for (var i = 0 ; i < arr.length; i++) {
+				oUl2.appendChild(arr[i]);
+			};
+		};
+
+	};
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li>3</li>
+		<li>5</li>
+		<li>2</li>
+		<li>1</li>
+		<li>4</li>
+	</ul>
+	<input id='btn1' type="button" value="移动">
+	<input id='btn2' type="button" value="移动">
+	<input id='btn3' type="button" value="移动">
+	<input id='btn4' type="button" value="排序">
+	<ul id="ul2">
+	</ul>
+</body>
+</html>

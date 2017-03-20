@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>访问子结点的第一和最后项</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1591">访问子结点的第一和最后项</a></h1>
+  <hr>
+  <p>一、firstChild 属性返回‘childNodes’数组的第一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。</p>
+  <p>语法：</p>
+  <code>node.firstChild</code>
+  <p><strong>说明：</strong>与elementNode.childNodes[0]是同样的效果。 </p>
+  <p>二、 lastChild 属性返回‘childNodes’数组的最后一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。</p>
+  <p>语法：</p>
+  <code>node.lastChild</code>
+  <p><strong>说明：</strong>与elementNode.childNodes[elementNode.childNodes.length-1]是同样的效果。 </p>
+  <p><strong>注意：</strong>上一节中，我们知道IE会忽略节点之间生成的空白文本节点，而其它浏览器不会。我们可以通过检测节点类型，过滤子节点。 (以后章节讲解)</p>
+</body>
+</html>

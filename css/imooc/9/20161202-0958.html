@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>嵌入式css样式，写在当前的文件中</title>
+    <style media="screen">
+      span{
+        color: red;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/623">嵌入式css样式，写在当前的文件中</a></h1>
+    <hr>
+    <p>现在有一任务，把下面文字中的“超酷的互联网”、“服务及时贴心”、“有趣易学”这三个短词文字字号修改为18px。如果用上节课我们学习的内联式css样式的方法进行设置将是一件很头疼的事情（为每一个&lt;span&gt;标签加入sytle="font-size:18px"语句），本小节讲解一种新的方法嵌入式css样式来实现这个任务。</p>
+    <p>『慕课网，<span>超酷的互联网</span>、IT技术免费学习平台，创新的网络一站式学习、实践体验；<span>服务及时贴心</span>，内容专业、<span>有趣易学</span>。专注服务互联网工程师快速成为技术高手！』</p>
+    <p>嵌入式css样式，就是可以把css样式代码写在&lt;style type="text/css"&gt;&lt;/style&gt;标签之间。如下面代码实现把三个&lt;span&gt;标签中的文字设置为红色：</p>
+    <pre>
+      &lt;style type="text/css"&gt;
+        span{
+          color:red;
+        }
+      &lt;/style&gt;
+    </pre>
+    <p>嵌入式css样式必须写在&lt;style&gt;&lt;/style&gt;之间，并且一般情况下嵌入式css样式写在&lt;head&gt;&lt;/head&gt;之间。通过查看网页源代码可查看本页嵌入式css样式。</p>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+	<form action="controller.php" method="get">
+		<input type="text" name="account" required placeholder="Account">
+		<input type="password" name="password" required placeholder="Password">
+		<input type="submit" value="doGet"><br>
+	</form>
+	<br>
+	<form action="controller.php" method="post">
+		<input type="text" name="number1" required placeholder="number1">
+		<input type="text" name="number2" required placeholder="number2">
+		<input type="submit" value="doPost"><br>
+	</form>
+	<br>
+	<form action="controller.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="file" required>
+		<input type="submit" value="doPost"><br>
+	</form>
+</body>
+</html>

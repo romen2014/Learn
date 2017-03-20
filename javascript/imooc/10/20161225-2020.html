@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>插入节点insertBefore()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1699">插入节点insertBefore()</a></h1>
+  <hr>
+  <p>insertBefore() 方法可在已有的子节点前插入一个新的子节点。</p>
+  <p>语法:</p>
+  <code>insertBefore(newnode,node);</code>
+  <p><strong>参数:</strong>newnode: 要插入的新节点。</p>
+  <p><strong>参数:</strong>node: 指定此节点前插入节点。</p>
+  <p>我们在来看看下面代码，在指定节点前插入节点。</p>
+  <pre>
+    &lt;div id="test">
+      &lt;p id="p1">HTML&lt;/p>
+      &lt;p>JavaScript&lt;/p>
+    &lt;/div>
+    &lt;script>
+      var oDiv = document.getElementById('test');
+      var oP = document.getElementById('p1');
+      var newnode = document.createElement("p");
+      newnode.innerHTML = "This is a new p";
+      oDiv.insertBefore(newnode, oP);
+    &lt;/script>
+  </pre>
+  <p>运行结果:</p>
+  <div id="test">
+    <p id="p1">HTML</p>
+    <p>JavaScript</p>
+  </div>
+  <script>
+    var oDiv = document.getElementById('test');
+    var oP = document.getElementById('p1');
+    var newnode = document.createElement("p");
+    newnode.innerHTML = "This is a new p";
+    oDiv.insertBefore(newnode, oP);
+  </script>
+  <p><strong>注意:</strong> otest.insertBefore(newnode,node); 也可以改为:  otest.insertBefore(newnode,otest.childNodes[0]); </p>
+</body>
+</html>

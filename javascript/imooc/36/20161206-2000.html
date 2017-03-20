@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript-警告（alert 消息对话框）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/408">JavaScript-警告（alert 消息对话框）</a></h1>
+  <hr>
+  <p>我们在访问网站的时候，有时会突然弹出一个小窗口，上面写着一段提示信息文字。如果你不点击“确定”，就不能对网页做任何操作，这个小窗口就是使用alert实现的。</p>
+  <strong>语法: </strong>
+  <pre>
+    alert(字符串或变量);
+  </pre>
+  <strong>看下面的代码:</strong>
+  <pre>
+    var mynum = 30;
+    alert("hello!");
+    alert(mynum);
+  </pre>
+  <p><strong>注:</strong>alert弹出消息对话框(包含一个确定按钮)。</p>
+  <strong>结果:按顺序弹出消息框</strong><br>
+  <img src="http://img.mukewang.com/52e362430001bdd204850354.jpg" alt=""><br>
+  <img src="http://img.mukewang.com/52e362850001024d04840353.jpg" alt=""><br>
+  <ol>
+    <strong>注意</strong>
+    <li>在点击对话框"确定"按钮前，不能进行任何其它操作。</li>
+    <li>消息对话框通常可以用于调试程序。(非常不建议！)</li>
+    <li>alert输出内容，可以是字符串或变量，与document.write 相似。</li>
+  </ol>
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function myAlert(){
+      var mynum = 30;
+      alert("hello!");
+      alert(mynum);
+    }
+  </script>
+  <input type="button" value="点击按钮查看效果" onclick="myAlert();">
+</body>
+</html>

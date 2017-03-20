@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>事件流</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>事件流</h1>
+  <hr>
+  <h3>一、事件流：<span>从页面中接受事件的顺序</span></h3>
+  <p><a href="http://www.imooc.com/video/2130" target="_blank">事件冒泡</a>：即事件最开始由最具体的元素（文档中嵌套层次最深的那个节点）接收，然后逐级向上传播至最不具体的那个节点（文档）。</p>
+  <p><a href="http://www.imooc.com/video/2131" target="_blank">事件捕获</a>：不太具体的节点应当更早接收到事件，而最具体的节点最后接收到事件。</p>
+
+  <hr>
+  <div id="box">
+    <input type="button" value="按钮" id="btn">
+    <script type="text/javascript">
+      // 添加按钮点击事件
+      function showMes(){
+        alert("按钮被点击。");
+      }
+      oBtn = document.getElementById('btn');
+      oBtn.onclick = function(){
+        showMes();
+      }
+
+      // 添加DIV点击事件
+      function showBox(){
+        alert("Box被点击。");
+      }
+      oDiv = document.getElementById('box');
+      oDiv.onclick = function(){
+        showBox();
+      }
+
+    </script>
+  </div>
+</body>
+</html>

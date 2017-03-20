@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Array 数组对象</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/871">Array 数组对象</a></h1>
+  <hr>
+  <p>数组对象是一个对象的集合，里边的对象可以是不同类型的。数组的每一个成员对象都有一个“下标”，用来表示它在数组中的位置，是从零开始的</p>
+  <p>数组定义的方法：</p>
+  <p>1. 定义了一个空数组:</p>
+  <pre>
+    var  数组名= new Array();
+  </pre>
+  <p>2. 定义时指定有n个空元素的数组：</p>
+  <pre>
+    var 数组名 =new Array(n);
+  </pre>
+  <p>3.定义数组的时候，直接初始化数据：</p>
+  <pre>
+    var  数组名 = [<元素1>, <元素2>, <元素3>...];
+  </pre>
+  <p>我们定义myArray数组，并赋值，代码如下：</p>
+  <pre>
+    var myArray = [2, 8, 6];
+  </pre>
+  <p>说明：定义了一个数组 myArray，里边的元素是：myArray[0] = 2; myArray[1] = 8; myArray[2] = 6。</p>
+  <p>数组元素使用：</p>
+  <pre>
+    数组名[下标] = 值;
+  </pre>
+  <p>注意: 数组的下标用方括号括起来，从0开始。</p>
+  <p>数组属性：</p>
+  <p>length</p>
+  <p>用法：<数组对象>.length；</p>
+  <p>返回：数组的长度，即数组里有多少个元素。它等于数组里最后一个元素的下标加一。</p>
+  <p>数组方法</p>
+  <table>
+    <thead>
+      <tr>
+        <td>方法</td>
+        <td>描述</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>concat()</td>
+        <td>连接两个或更多的数组，并返回结果</td>
+      </tr>
+      <tr>
+        <td>join()</td>
+        <td>把数组的所有元素放入一个字符串。元素通过指定的分割符进行分隔</td>
+      </tr>
+      <tr>
+        <td>pop()</td>
+        <td>删除并返回数组的最后一个元素</td>
+      </tr>
+      <tr>
+        <td>push()</td>
+        <td>向数组的末尾添加一个或更多元素，并返回新的长度</td>
+      </tr>
+      <tr>
+        <td>reverse()</td>
+        <td>颠倒数组中元素的顺序</td>
+      </tr>
+      <tr>
+        <td>shift()</td>
+        <td>删除并返回数组的第一个元素</td>
+      </tr>
+      <tr>
+        <td>slice()</td>
+        <td>从某个已有的数组返回选定的元素</td>
+      </tr>
+      <tr>
+        <td>sort()</td>
+        <td>对数组的元素进行排序</td>
+      </tr>
+      <tr>
+        <td>splice()</td>
+        <td>删除元素，并向数组添加新元素</td>
+      </tr>
+      <tr>
+        <td>toSource()</td>
+        <td>返回该对象的源代码</td>
+      </tr>
+      <tr>
+        <td>toString()</td>
+        <td>把数组转换为字符串，并返回结果</td>
+      </tr>
+      <tr>
+        <td>toLocaleString()</td>
+        <td>把数组转换为本地数组，并返回结果</td>
+      </tr>
+      <tr>
+        <td>unshift()</td>
+        <td>向数组的开头添加一个或更多元素，并返回新的长度</td>
+      </tr>
+      <tr>
+        <td>valueOf()</td>
+        <td>返回数组对象的原始值</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

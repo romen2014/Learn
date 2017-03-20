@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<style type="text/css">
+		.xxk{
+			width:100px;
+			height: 20px;
+			border:1px solid black;
+			float: left;
+		}
+		.show{
+			width:406px;
+			height: 200px;
+			border:1px solid black;
+			float: none;
+			display: none;
+		}
+		#xxk1{
+			background-color: red;
+		}
+		#xxk2{
+			background-color: blue;
+		}
+		#xxk3{
+			background-color: green;
+		}
+		#xxk4{
+			background-color: yellow;
+		}
+		#show1{
+			background-color: red;
+		}
+		#show2{
+			background-color: blue;
+		}
+		#show3{
+			background-color: green;
+		}
+		#show4{
+			background-color: yellow;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			//自定义数组，主要用于选项卡便签下边框颜色变更
+			var aBBC=['red','blue','green','yellow'];
+			//获取所有选项卡(标签)
+			var aXXK=document.getElementById('div1').getElementsByTagName('div');
+			//获取所有显示卡
+			var aShow=document.getElementById('div2').getElementsByTagName('div');
+
+			//初始化选项卡、选项卡下边框颜色、显示卡内部内容
+			aXXK[0].style.borderBottomColor='red';
+			aShow[0].style.display='block';
+			aShow[0].innerHTML='<center><h1>'+aBBC[0]+'</h1><p>选项卡'+(0+1)+'</p></center>';
+
+			for (var i = aXXK.length - 1; i >= 0; i--) {
+				//初始化所有标签的标题
+				aXXK[i].innerHTML='<center>The'+(i+1)+'</center>';
+				//自定义标签索引
+				aXXK[i].index=i;
+				//为每个标签添加鼠标移入事件
+				aXXK[i].onmouseover=function(){
+					//重置所有选项卡样式
+					for (var i = aShow.length - 1; i >= 0; i--) {
+						//标签下边框颜色变回黑色
+						aXXK[i].style.borderBottomColor='black';
+						//所有显示卡变为隐藏
+						aShow[i].style.display='none';
+					};
+					//当前标签(this)下边框颜色变为应有颜色，从数组中取出
+					aXXK[this.index].style.borderBottomColor=aBBC[this.index];
+					//当前显示卡(下标为this.index)设置为显示
+					aShow[this.index].style.display='block';
+					//通过innerHTML为当前显示卡设置一些内部文本
+					aShow[this.index].innerHTML='<center><h1>'+aBBC[this.index]+'</h1><p>选项卡'+(this.index+1)+'</p></center>';
+				}
+			};
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<div id="xxk1" class="xxk"></div>
+		<div id="xxk2" class="xxk"></div>
+		<div id="xxk3" class="xxk"></div>
+		<div id="xxk4" class="xxk"></div>
+	</div>
+	<div id="div2">
+		<div id="show1" class="show"></div>
+		<div id="show2" class="show"></div>
+		<div id="show3" class="show"></div>
+		<div id="show4" class="show"></div>
+	</div>
+</body>
+</html>

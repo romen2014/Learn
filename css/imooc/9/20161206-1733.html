@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>隐性改变display类型</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      .container a{
+        position:absolute;
+        width:100px;
+        background:#ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/6107">隐性改变display类型</a></h1>
+    <hr>
+    <ol>
+      有一个有趣的现象就是当为元素（不论之前是什么类型元素，display:none 除外）设置以下 2 个句之一：
+      <li><code>position : absolute </code></li>
+      <li><code>float : left 或 float:right </code></li>
+      元素的display显示类型就会自动变为以 display:inline-block（块状元素）的方式显示，当然就可以设置元素的 width 和 height 了，且默认宽度不占满父元素。
+    </ol>
+    <p>如下面的代码，小伙伴们都知道 a 标签是 行内元素 ，所以设置它的 width 是 没有效果的，但是设置为 position:absolute 以后，就可以了。</p>
+    <p>html代码：</p>
+    <pre>
+        &lt;div class="container"&gt;
+          &lt;a href="#" title=""&gt;A标签可以设置长度啦&lt;/a&gt;
+        &lt;/div&gt;
+    </pre>
+    <p>css代码：</p>
+    <pre>
+      .container a{
+        position:absolute;
+        width:100px;
+        background:#ccc;
+      }
+    </pre>
+    <p>想不起 display:inline-block 是做什么的小伙伴们，单击“元素分类--内联块状元素”可返回到前面小节进行复习。</p>
+    <p>示例：</p>
+    <div class="container">
+      <a href="#" title="">A标签可以设置长度啦</a>
+    </div>
+  </body>
+</html>

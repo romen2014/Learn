@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>访问子结点childNodes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1590">访问子结点childNodes</a></h1>
+  <hr>
+  <p>访问选定元素节点下的所有子节点的列表，返回的值可以看作是一个数组，他具有length属性。</p>
+  <p>语法：</p>
+  <code>elementNode.childNodes</code>
+  <p>注意：</p>
+  <p>如果选定的节点没有子节点，则该属性返回不包含节点的 NodeList。</p>
+  <p>我们来看看下面的代码:</p>
+  <pre>
+    &lt;ul>
+      &lt;li>javascript&lt;/li>
+      &lt;li>jQuery&lt;/li>
+      &lt;li>PHP&lt;/li>
+    &lt;/ul>
+    &lt;script>
+      var aLi = document.getElementsByTagName('ul')[0].childNodes;
+      document.write("ul子节点个数：" + aLi.length + "&lt;br>");
+      document.write("ul子节点类型：" + aLi[0].nodeType + "&lt;br>");
+    &lt;/script>
+  </pre>
+  <p>运行结果：</p>
+  <ul>
+    <li>javascript</li>
+    <li>jQuery</li>
+    <li>PHP</li>
+  </ul>
+  <script>
+    var aLi = document.getElementsByTagName('ul')[0].childNodes;
+    document.write("ul子节点个数：" + aLi.length + "<br>");
+    document.write("ul子节点类型：" + aLi[0].nodeType + "<br>");
+  </script>
+  <p><strong>注意:</strong></p>
+  <p>IE全系列、firefox、chrome、opera、safari兼容问题</p>
+  <p>节点之间的空白符，在firefox、chrome、opera、safari浏览器是文本节点，所以IE是3，其它浏览器是7，如下图所示:</p>
+  <img src="http://img.mukewang.com/538d2b8a000163e303430127.jpg" alt="">
+</body>
+</html>

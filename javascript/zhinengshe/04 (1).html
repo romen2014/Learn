@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var aA = document.getElementsByTagName('a');
+			for (var i = aA.length - 1; i >= 0; i--) {
+				aA[i].onclick = function(){
+					//将每个a标签的父节点li隐藏
+					this.parentNode.style.display = 'none';
+				};
+			};
+
+			var oUl = document.getElementById('ul1')
+			if(oUl.firstElementChild){
+				//高版本浏览器
+				oUl.firstElementChild.style.background = 'red';
+			}else{
+				//低版本浏览器
+				oUl.firstChild.style.background = 'red';
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>Document Object Model</h2>
+	<h3>父子节点</h3>
+	<pre>
+		parentNode	-父节点
+		offsetParent	-获取元素在页面上的实际位置(同CSS定位的父级)
+		childNodes	-子节点(含文本节点与元素节点交替)
+		children	-元素子节点
+	</pre>
+	<h3>首尾子节点</h3>
+	<pre>
+		firstChild	-第一子节点(有兼容问题)
+		fitstElementChild	-第一个元素节点(有兼容问题，高级浏览器支持)
+		lastChild	-最后一个子节点(有兼容问题)
+		lastElementChild	-最后一个元素节点(有兼容问题，高级浏览器支持)
+	</pre>
+	<h3>兄弟节点</h3>
+	<pre>
+		nextSibling	-下一个同级节点(有兼容问题)
+		nextElementSibling	-下一个同级元素节点(有兼容问题，高级浏览器支持)
+		previousSibling	-上一个同级节点(有兼容问题)
+		previousElementSibling	-上一个同级元素节点(有兼容问题，高级浏览器支持)
+	</pre>
+	<hr>
+	<ul id='ul1'>
+		<li>111<a href="javascript:;">隐藏</a></li>
+		<li>222<a href="javascript:;">隐藏</a></li>
+		<li>333<a href="javascript:;">隐藏</a></li>
+		<li>444<a href="javascript:;">隐藏</a></li>
+		<li>555<a href="javascript:;">隐藏</a></li>
+	</ul>
+</body>
+</html>

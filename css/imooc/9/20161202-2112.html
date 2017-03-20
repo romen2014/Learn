@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>重要性</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      p{color:blue!important;}
+      p{color:green;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2042">重要性</a></h1>
+    <hr>
+    <p>我们在做网页代码的时，有些特殊的情况需要为某些样式设置具有最高权值，怎么办？这时候我们可以使用!important来解决。</p>
+    <p>如下代码：</p>
+    <pre>
+      p{color:blue!important;}
+      p{color:green;}
+      &lt;p class="first"&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;
+    </pre>
+    <p class="first">三年级时，我还是一个<span>胆小如鼠</span>的小女孩。</p>
+    <p><span class="point">注意：!important要写在分号的前面</span></p>
+    <p>这里注意当网页制作者不设置css样式时，浏览器会按照自己的一套样式来显示网页。并且用户也可以在浏览器中设置自己习惯的样式，比如有的用户习惯把字号设置为大一些，使其查看网页的文本更加清楚。这时注意样式优先级为：<span class="point">浏览器默认的样式 < 网页制作者样式 < 用户自己设置的样式</span>，但记住!important优先级样式是个例外，权值高于用户自己设置的样式。</p>
+  </body>
+</html>

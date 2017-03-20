@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自加一，自减一 ( ++和--)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/128">自加一，自减一 ( ++和--)</a></h1>
+  <hr>
+  <p>算术操作符除了(+、-、*、/)外，还有两个非常常用的操作符，自加一“<code>++</code>”；自减一“<code>--</code>”。首先来看一个例子：</p>
+  <pre>
+    mynum = 10;
+    mynum++; //mynum的值变为11
+    mynum--; //mynum的值又变回10
+  </pre>
+  <p>上面的例子中，mynum++使mynum值在原基础上增加1，mynum--使mynum在原基础上减去1,其实也可以写成:</p>
+  <pre>
+    mynum = mynum + 1;//等同于mynum++
+    mynum = mynum - 1;//等同于mynum--
+  </pre>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var numa=1;
+    var numb=7;
+    numa++;
+    numb--;
+    document.write("numa的值:"+numa);
+    document.write("numb的值:"+numb);
+  </pre>
+  <script type="text/javascript">
+    var numa=1;
+    var numb=7;
+    numa++;
+    numb--;
+    document.write("numa的值:"+numa);
+    document.write("numb的值:"+numb);
+  </script>
+</body>
+</html>

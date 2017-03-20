@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript深入浅出</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 style="text-align:center"><a href="http://www.imooc.com/learn/277" target="_blank">JavaScript深入浅出</a></h2>
+  <hr>
+  <ul>
+    <li>
+      <h3>第1章 数据类型</h3>
+      <ol>
+        <li>
+          <strong>数据类型</strong>
+          <p>五种基元类型：number、string、boolean、null、undefined</p>
+          <p>一种对象类型：包括Function、Array、Date等</p>
+        </li>
+        <li>
+          <strong>隐式转换</strong>
+          <p>等于==：类型不同时，尝试类型转换再进行内容判断。</p>
+          <code>“1.23” == 1.23、</code>
+          <code>0 == false、</code>
+          <code>null == undefined、</code>
+          <code>new Object() == new Object()、</code>
+          <code>[1,2] == [1,2]</code>
+          <p>严格等于===：先判断类型、再判断内容。类型不同直接返回false</p>
+          <code>null === null</code>
+          <code>undefined === undefined</code>
+          <code><span>*</span>NaN != NaN</code>
+          <code><span>*</span>new Object() != new Object()</code>
+        </li>
+        <li>
+          <strong>包装类型</strong>
+          <p>原始类型number、string、boolean都有对应的包装对象类型。</p>
+          <p>当对基本类型进行类似属性操作，比如"abc".length的时候，js会临时创建基本类型的对应包装类型，当该操作完成后，这个临时对象会被立即销毁。</p>
+          <pre>
+            > "abc".t = 10;
+            < 10
+            > "abc".t;
+            < undefined
+          </pre>
+        </li>
+        <li>
+          <strong>类型检测</strong>
+          <p>typeof、instanceof、Object.prototype.toString、constructor(构造器检测)、duck type(特征检测)</p>
+          <strong>typeof</strong>
+          <code>typeof 100 --> "number"</code>
+          <code>typeof true --> "boolean"</code>
+          <code>typeof function --> "function"</code>
+          <code>typeof(undefined) --> "undefined"</code>
+          <code>typeof new Object() --> "object"</code>
+          <code>typeof [1,2] --> "object"</code>
+          <code><span>*</span>typeof NaN --> "number"。<span>NaN是特殊的number</span></code>
+          <code><span>*</span>typeof null --> "object"。<span>历史遗留问题，妥协网站兼容性</span></code>
+          <p>适合基本类型及function检测。<span>遇到null失效。</span></p>
+
+          <strong>instanceof</strong>
+          <code>obj instanceof Object</code>
+          <p>判断左操作数对象的圆形链上是否有右操作数上的prototype属性。基于此可进行子类对象与父类类型的比较，结果为true。</p>
+          <p>适合自定义对象，也可以用来检测原生对象。<span>但不支持跨window、iframe进行判断。坑！</span></p>
+
+          <strong>Object.prototype.toString</strong>
+          <code>Object.prototype.toString([]) --> "object Array"</code>
+          <code>Object.prototype.toString(function(){}) --> "object Function"</code>
+          <code>Object.prototype.toString(null) --> "object Null"</code>
+          <code>Object.prototype.toString(undefined) --> "object Undefined"</code>
+          <code><span>IE6/7/8</span>Object.prototype.toString(null) --> "object Object"</code>
+          <p>适合内置对象和基元类型。<span>遇到nullhe undefined失效，返回结果为Object</span></p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <h3>第2章 表达式和运算符</h3>
+      <ol>
+        <li>
+          <strong>表达式</strong>
+          <code>wiki：表达式是指能计算出<span>值</span>得任何可用程序单元</code>
+          <code>JS权威指南：表达式是一种JS短语，可使JS解释器用来产生一个<span>值</span>。</code>
+        </li>
+        <li>
+          <strong>运算符</strong>
+          <p>根据操作数的数量可分为一元、二元、三元运算符。</p>
+          <p>根据功能可分为赋值、比较、算术、位、逻辑、字符串、特殊运算符。</p>
+          <p>三元运算符。如下例，当c为true时，取值a，否则取值b</p>
+          <cdoe>c? a: b</cdoe>
+          <code>var val = true? 1: 2; //val = 1</code>
+          <p>逗号运算符。如下例，从前到后依次计算各值，最终取最后值。</p>
+          <code>a, b</code>
+          <code>var val = (1, 2, 3); //val = 3</code>
+          <p>delete运算符。如下例</p>
+          <code>delete obj.x</code>
+          <pre>
+            var obj = {x:1};
+            obj.x;  // 1
+            delete obj.x;
+            obj.x;  // undefined
+          </pre>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <h3>第3章 语句</h3>
+    </li>
+    <li>
+      <h3>第4章 对象</h3>
+    </li>
+    <li>
+      <h3>第5章 数组</h3>
+    </li>
+    <li>
+      <h3>第6章 函数和作用域</h3>
+    </li>
+    <li>
+      <h3>第8章 OOP</h3>
+    </li>
+    <li>
+      <h3>第10章 正则与模型匹配</h3>
+    </li>
+  </ul>
+</body>
+</html>

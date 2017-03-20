@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件绑定</title>
+	<script type="text/javascript">
+		function myAddEvent(obj, ev, fn){
+			if(obj.attachEvent){
+				obj.attachEvent('on'+ev, fn);
+			}else{
+				obj.addEventListener(ev, fn, false);
+			}
+		}
+		// function myDelEvent(obj, ev, fn){
+		// 	if(obj.detachEvent){
+		// 		obj.detachEvent('on'+ev, fn);
+		// 	}else{
+		// 		obj.removeEventListener(ev, fn, false);
+		// 	}
+		// }
+
+		myAddEvent(window,'load',function(){
+			alert('a')
+		});
+		myAddEvent(window,'load',function(){
+			alert('b')
+		});
+		// myDelEvent(window,'load',function(){
+		// 	alert('b')
+		// });
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

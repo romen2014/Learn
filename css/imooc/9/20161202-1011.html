@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>三种方法的优先级</title>
+    <link rel="stylesheet" type="text/css" href="20161202-1011.css">
+    <style>
+      p{
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/628">三种方法的优先级</a></h1>
+    <hr>
+    <p>有的小伙伴问了，如果有一种情况：对于同一个元素我们同时用了三种方法设置css样式，那么哪种方法真正有效呢？</p>
+    <p>三种样式是有优先级的，记住他们的优先级：<strong>内联式 > 嵌入式 > 外部式</strong></p>
+    <p>但是<strong>嵌入式 > 外部式</strong>有一个前提：嵌入式css样式的位置一定在外部式的后面。如右代码编辑器就是这样，&lt;link href="style.css" ...&gt;代码在&lt;style type="text/css"&gt;...&lt;/style&gt;代码的前面</p>
+    <p>其实总结来说，就是--就近原则（离被设置元素越近优先级别越高）。</p>
+    <p style="color:green;"><em>但注意上面所总结的优先级是有一个前提：内联式、嵌入式、外部式样式表中css样式是在的相同权值的情况下，什么是权值呢？在后面的9-2小节中会讲解到。</em></p>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>水平居中设置-定宽块状元素</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      div{
+        border:1px solid red;/*为了显示居中效果明显为 div 设置了边框*/
+
+        width:200px;/*定宽*/
+        margin:20px auto;/* margin-left 与 margin-right 设置为 auto */
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/4336">水平居中设置-定宽块状元素</a></h1>
+    <hr>
+    <p>当被设置元素为 块状元素 时用 text-align：center 就不起作用了，这时也分两种情况：定宽块状元素和不定宽块状元素。</p>
+    <p>这一小节我们先来讲一讲定宽块状元素。(定宽块状元素：块状元素的宽度width为固定值。)</p>
+    <p>满足定宽和块状两个条件的元素是可以通过设置“左右margin”值为“auto”来实现居中的。我们来看个例子就是设置 div 这个块状元素水平居中：</p>
+    <p>html代码：</p>
+    <pre>
+      &lt;div&gt;我是定宽块状元素，哈哈，我要水平居中显示。&lt;/div&gt;
+    </pre>
+    <p>css代码：</p>
+    <pre>
+      div{
+        border:1px solid red;/*为了显示居中效果明显为 div 设置了边框*/
+
+        width:200px;/*定宽*/
+        margin:20px auto;/* margin-left 与 margin-right 设置为 auto */
+      }
+    </pre>
+    <p>也可以写成：</p>
+    <pre>
+      margin-left:auto;
+      margin-right:auto;
+    </pre>
+    <p>注意：元素的“上下 margin” 是可以随意设置的。</p>
+    <p>示例：</p>
+    <div>我是定宽块状元素，哈哈，我要水平居中显示。</div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>显示和隐藏（display属性）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/472">显示和隐藏（display属性）</a></h1>
+  <hr>
+  <p>网页中经常会看到显示和隐藏的效果，可通过display属性来设置。</p>
+  <p>语法：</p>
+  <pre>Object.style.display = value</pre>
+  <p><strong>注意:</strong>Object是获取的元素对象，如通过document.getElementById("id")获取的元素。</p>
+  <strong>value取值:</strong>
+  <img src="http://img.mukewang.com/52e4dba5000179da04110095.jpg" alt="">
+  <p>看看下面代码:</p>
+  <pre>
+    &lt;script type="text/javascript">
+      var show = true;
+      function myFun(){
+        var oP = document.getElementById('con');
+        if(show){
+          oP.style.display = "none";
+        }else{
+          oP.style.display = "block";
+        }
+        show = !show;
+      }
+    &lt;/script>
+    &lt;input type="button" id="btn" value="点击按钮查看效果" onclick="myFun();">
+    &lt;p id="con">点击按钮切换显示与隐藏&lt;/p>
+  </pre>
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    var show = true;
+    function myFun(){
+      var oP = document.getElementById('con');
+      if(show){
+        oP.style.display = "none";
+      }else{
+        oP.style.display = "block";
+      }
+      show = !show;
+    }
+  </script>
+  <input type="button" id="btn" value="点击按钮查看效果" onclick="myFun();">
+  <p id="con">点击按钮切换显示与隐藏</p>
+</body>
+</html>

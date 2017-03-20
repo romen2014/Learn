@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>History 对象</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1149">History 对象</a></h1>
+  <hr>
+  <p>history对象记录了用户曾经浏览过的页面(URL)，并可以实现浏览器前进与后退相似导航的功能。</p>
+  <p><strong>注意:</strong><span>从窗口被打开的那一刻开始记录，每个浏览器窗口、每个标签页乃至每个框架，都有自己的history对象与特定的window对象关联。</span></p>
+  <p>语法：</p>
+  <code>window.history.[属性|方法]</code>
+  <p>注意：window可以省略。</p>
+  <p>History 对象属性</p>
+  <table>
+    <thead>
+      <tr>
+        <td>属性</td>
+        <td>描述</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>length</td>
+        <td>返回浏览器历史列表中的URL数量</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>History 对象方法</p>
+  <table>
+    <thead>
+      <tr>
+        <td>方法</td>
+        <td>描述</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>back()</td>
+        <td>加载history列表中的前一个URL</td>
+      </tr>
+      <tr>
+        <td>forward()</td>
+        <td>加载history列表中的后一个URL</td>
+      </tr>
+      <tr>
+        <td>go()</td>
+        <td>加载history()列表中的某个具体URL</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>使用length属性，当前窗口的浏览历史总长度，代码如下：</p>
+  <pre>
+    var HL = window.history.length;
+    document.write(HL);
+  </pre>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript-提问（prompt 消息对话框）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/411">JavaScript-提问（prompt 消息对话框）</a></h1>
+  <hr>
+  <p>prompt弹出消息对话框,通常用于询问一些需要与用户交互的信息。弹出消息对话框（包含一个确定按钮、取消按钮与一个文本输入框）。</p>
+  <p>语法:</p>
+  <pre>prompt(str1, str2);</pre>
+  <p>参数说明：</p>
+  <pre>
+    str1: 要显示在消息对话框中的文本，不可修改
+    str2：文本框中的内容，可以修改
+  </pre>
+  <p>返回值:</p>
+  <pre>
+    1. 点击确定按钮，文本框中的内容将作为函数返回值
+    2. 点击取消按钮，将返回null
+  </pre>
+  <p>看看下面代码:</p>
+  <pre>
+    var myname=prompt("请输入你的姓名:");
+    if(myname!=null){
+      alert("你好"+myname);
+    }else{
+      alert("你好 my friend.");
+    }
+  </pre>
+  <p>结果:</p>
+  <img src="http://img.mukewang.com/52e360780001ede107090353.jpg" alt=""><br>
+  <strong>注:在用户点击对话框的按钮前，不能进行任何其它操作。</strong>
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function myPrompt(){
+      var myname=prompt("请输入你的姓名:");
+      if(myname!=null){
+        alert("你好"+myname);
+      }else{
+        alert("你好 my friend.");
+      }
+    }
+  </script>
+  <input type="button" value="点击按钮查看效果" onclick="myPrompt();">
+</body>
+</html>

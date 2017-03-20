@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组赋值</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/235">数组赋值</a></h1>
+  <hr>
+  <p>数组创建好，接下来我们为数组赋值。我们把数组看似旅游团的大巴车，大巴车里有很多位置，每个位置都有一个号码，顾客要坐在哪个位置呢？ </p>
+  <pre>
+    第一步：组个大巴车
+    第二步：按票对号入座
+      大巴车的1号座位是张三
+      大巴车的2号座位是李四
+  </pre>
+  <p>数组的表达方式：</p>
+  <pre>
+    第一步：创建数组var myarr=new Array();
+    第二步：给数组赋值
+      myarr[1]=" 张三";
+      myarr[2]=" 李四";
+  </pre>
+  <p>下面创建一个数组，用于存储5个人的数学成绩。</p>
+  <pre>
+    var myarray=new Array(); //创建一个新的空数组
+    myarray[0]=66; //存储第1个人的成绩
+    myarray[1]=80; //存储第2个人的成绩
+    myarray[2]=90; //存储第3个人的成绩
+    myarray[3]=77; //存储第4个人的成绩
+    myarray[4]=59; //存储第5个人的成绩
+  </pre>
+  <p><strong>注意：</strong>数组每个值有一个索引号，从0开始。</p>
+  <p>我们还可以用简单的方法创建上面的数组和赋值：</p>
+  <p>第一种方法：</p>
+  <pre>
+    var myarray = new Array(66,80,90,77,59);//创建数组同时赋值
+  </pre>
+  <p>第二种方法：</p>
+  <pre>
+    var myarray = [66,80,90,77,59];//直接输入一个数组（称 “字面量数组”）
+  </pre>
+  <p><strong>注意：</strong>数组存储的数据可以是任何类型（数字、字符、布尔值等）</p>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var myarr = new Array();
+    myarr[0] = 88;
+    myarr[1] = 90;
+    myarr[2] = 68;
+    document.write("数组第一个值是:"+myarr[0]+"&lt;br>");
+    document.write("数组第二个值是:"+myarr[1]+"&lt;br>");
+    document.write("数组第三个值是:"+myarr[2]+"&lt;br>");
+  </pre>
+  <script type="text/javascript">
+    var myarr = new Array();
+    myarr[0] = 88;
+    myarr[1] = 90;
+    myarr[2] = 68;
+    document.write("数组第一个值是:"+myarr[0]+"<br>");
+    document.write("数组第二个值是:"+myarr[1]+"<br>");
+    document.write("数组第三个值是:"+myarr[2]+"<br>");
+  </script>
+</body>
+</html>

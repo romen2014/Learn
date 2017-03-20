@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>控制类名（className 属性）</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .one{
+      width: 200px;
+      background-color: #ccc;
+    }
+    .two{
+      font-size: 18px;
+      color: #F00;
+    }
+  </style>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/473">控制类名（className 属性）</a></h1>
+  <hr>
+  <p>className 属性设置或返回元素的class 属性。</p>
+  <p>语法：</p>
+  <pre>object.className = classname</pre>
+  <ol>
+    <strong>作用:</strong>
+    <li>获取元素的class 属性</li>
+    <li>为网页内的某个元素指定一个css样式来更改该元素的外观</li>
+  </ol>
+  <strong>看看下面代码，获得 &lt;p> 元素的 class 属性和改变className：</strong>
+  <pre>
+    &lt;style>
+      .one{
+        width: 200px;
+        background-color: #ccc;
+      }
+      .two{
+        font-size: 18px;
+        color: #F00;
+      }
+    &lt;/style>
+
+    &lt;script type="text/javascript">
+      var isOne = true;
+      function myFun(){
+        var oP = document.getElementById('con');
+        if(isOne){
+          oP.className = "two";
+        }else{
+          oP.className = "one";
+        }
+        isOne = !isOne;
+      }
+    &lt;/script>
+
+    &lt;input type="button" id="btn" value="点击按钮查看效果" onclick="myFun();">
+    &lt;p id="con" class="one">点击按钮切换样式</p>
+  </pre>
+  <h3>结果:</h3>
+  <script type="text/javascript">
+    var isOne = true;
+    function myFun(){
+      var oP = document.getElementById('con');
+      if(isOne){
+        oP.className = "two";
+      }else{
+        oP.className = "one";
+      }
+      isOne = !isOne;
+    }
+  </script>
+  <input type="button" id="btn" value="点击按钮查看效果" onclick="myFun();">
+  <p id="con" class="one">点击按钮切换样式</p>
+</body>
+</html>

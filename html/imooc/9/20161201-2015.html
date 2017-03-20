@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>使用提交按钮，提交数据</title>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/501">使用提交按钮，提交数据</a></h1>
+    <hr>
+    <p>在表单中有两种按钮可以使用，分别为：提交按钮、重置。这一小节讲解提交按钮：当用户需要提交表单信息到服务器时，需要用到<strong>提交按钮</strong>。</p>
+    <p>语法：</p>
+    <code>&lt;input type="reset" value="重置"&gt;</code>
+    <ol>
+      <li>
+        type：只有当type值设置为<strong>submit</strong>时，按钮才有提交作用
+      </li>
+      <li>
+        value：按钮上显示的文字
+      </li>
+    </ol>
+    <p>举例：</p>
+    <img src="http://img.mukewang.com/52e613350001461604820109.jpg" alt="">
+    <p>在浏览器中显示的结果：</p>
+    <form class="" action="save.php" method="post">
+      <label for="myName">姓名：</label>
+      <input type="text" name="myName" value="">
+      <input type="submit" name="submitBtn" value="提交">
+    </form>
+  </body>
+</html>

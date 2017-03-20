@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用ClassName选择元素</title>
+	<script type="text/javascript">
+	function getElementsByClassName(oParent, sClass){
+		var aResult = [];
+		var aEle = oParent.getElementsByTagName('*');
+		for (var i = aEle.length - 1; i >= 0; i--) {
+			if(aEle[i].className == sClass){
+				aResult.push(aEle[i]);
+			}
+		};
+		return aResult;
+	}
+
+	window.onload = function(){
+		var oUl = document.getElementById('ul1');
+		var aLi = getElementsByClassName(oUl, 'box');
+		for (var i = aLi.length - 1; i >= 0; i--) {
+			aLi[i].style.background = 'red';
+		};
+		aLi = getElementsByClassName(oUl, 'hahaha');
+		for (var i = aLi.length - 1; i >= 0; i--) {
+			aLi[i].style.background = 'blue';
+		};
+	}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li class="box"></li>
+		<li></li>
+		<li class="hahaha"></li>
+		<li class="hahaha"></li>
+		<li></li>
+		<li></li>
+		<li class="box"></li>
+		<li></li>
+		<li class="hahaha"></li>
+		<li></li>
+		<li class="box"></li>
+		<li class="hahaha"></li>
+		<li class="box"></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>改变 HTML 样式</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/471">改变 HTML 样式</a></h1>
+  <hr>
+  <p>HTML DOM 允许 JavaScript 改变 HTML 元素的样式。如何改变 HTML 元素的样式呢？</p>
+  <p>语法：</p>
+  <pre>Object.style.property=new style;</pre>
+  <p><strong>注意:</strong>Object是获取的元素对象，如通过document.getElementById("id")获取的元素。</p>
+  <strong>基本属性表（property）:</strong>
+  <br>
+  <img src="http://img.mukewang.com/52e4d4240001dd6c04850229.jpg" alt="">
+  <p><strong>注意:</strong>该表只是一小部分CSS样式属性，其它样式也可以通过该方法设置和修改。</p>
+  <strong>看看下面的代码:</strong>
+  <p>改变 &lt;p> 元素的样式，将颜色改为红色，字号改为20,背景颜色改为蓝：</p>
+  <pre>
+    &lt;p id="pcon">Hello World!&lt;/p>
+    &lt;script>
+       var mychar = document.getElementById("pcon");
+       mychar.style.color="red";
+       mychar.style.fontSize="20";
+       mychar.style.backgroundColor ="blue";
+    &lt;/script>
+  </pre>
+  <p>结果：</p>
+  <img src="http://img.mukewang.com/52e4d6ae000177d203770253.jpg" alt="">
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function myFun(){
+      var mychar = document.getElementById("pcon");
+      mychar.style.color="red";
+      mychar.style.fontSize="20";
+      mychar.style.backgroundColor ="blue";
+    }
+  </script>
+  <p id="pcon">Hello World!</p>
+  <input type="button" id="btn" value="点击按钮查看效果" onclick="myFun();">
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery 内容筛选选择器</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="../../jquery-2.2.0.js"></script>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/8345">JQuery 内容筛选选择器</a></h1>
+  <hr>
+  <p>基本筛选选择器针对的都是元素DOM节点，如果我们要通过内容来过滤，jQuery也提供了一组内容筛选选择器，当然其规则也会体现在它所包含的子元素或者文本内容上。</p>
+  <p>内容过滤器描述如下表：</p>
+  <table>
+    <tr>
+      <th>选择器</th>
+      <th>描述</th>
+    </tr>
+    <tr>
+      <td>$(':contains(text)')</td>
+      <td>选择所有包含指定文本的元素。</td>
+    </tr>
+    <tr>
+      <td>$(':parent')</td>
+      <td>选择所有含有子元素或者文本的元素。</td>
+    </tr>
+    <tr>
+      <td>$(':empty')</td>
+      <td>选择所有没有子元素的元素(包含文本节点)。</td>
+    </tr>
+    <tr>
+      <td>$(':has(selector)')</td>
+      <td>选择元素中至少包含指定选择器的元素。</td>
+    </tr>
+  </table>
+  <ol>
+    注意事项
+    <li>:contains与:has都有查找的意思，但是contains查找包含<span>'指定文本'</span>的元素，has查找包含<span>'指定元素'</span>的元素。</li>
+    <li>如果:contains匹配的文本包含再元素的子元素中，同样认为是符合条件的。</li>
+    <li>:parent与:empty是相反的，两者所涉及的子元素，包括文本节点。</li>
+  </ol>
+</body>
+</html>

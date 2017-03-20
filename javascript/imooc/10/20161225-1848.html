@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>getElementsByTagName()方法</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1586">getElementsByTagName()方法</a></h1>
+  <hr>
+  <p>返回带有指定标签名的节点对象的集合。返回元素的顺序是它们在文档中的顺序。</p>
+  <p>语法:</p>
+  <code>document.getElementsByTagName(Tagname)</code>
+  <p>说明:</p>
+  <p>1. Tagname是标签的名称，如p、a、img等标签名。</p>
+  <p>2. 和数组类似也有length属性，可以和访问数组一样的方法来访问，所以从0开始。</p>
+  <p>看看下面代码，通过getElementsByTagName()获取节点。</p>
+  <pre>
+    &lt;ul>
+      &lt;li>JavaScript&lt;/li>
+      &lt;li>JQuery&lt;/li>
+      &lt;li>HTML&lt;/li>
+      &lt;li>JAVA&lt;/li>
+      &lt;li>PHP&lt;/li>
+    &lt;/ul>
+    &lt;script>
+      var aLi = document.getElementsByTagName('li');
+      document.write("tagname为li的元素数组长度为：" + aLi.length + "&lt;br>");
+      document.write("tagname为li的元素数组每一项内容如下：&lt;br>");
+      for (var i = 0; i &lt; aLi.length; i++) {
+        var li = aLi[i];
+        document.write(li.innerHTML + "&lt;br>");
+      }
+    &lt;/script>
+  </pre>
+  <p>运行结果:</p>
+  <ul>
+    <li>JavaScript</li>
+    <li>JQuery</li>
+    <li>HTML</li>
+    <li>JAVA</li>
+    <li>PHP</li>
+  </ul>
+  <script>
+    var aLi = document.getElementsByTagName('li');
+    document.write("tagname为li的元素数组长度为：" + aLi.length + "<br>");
+    document.write("tagname为li的元素数组每一项内容如下：<br>");
+    for (var i = 0; i < aLi.length; i++) {
+      var li = aLi[i];
+      document.write(li.innerHTML + "<br>");
+    }
+  </script>
+</body>
+</html>

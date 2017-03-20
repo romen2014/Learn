@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>有参数的函数</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/350">有参数的函数</a></h1>
+  <hr>
+  <p>上节中add2()函数不能实现任意指定两数相加。其实，定义函数还可以如下格式：</p>
+  <pre>
+    function 函数名(参数1,参数2){
+      函数代码
+    }
+  </pre>
+  <p><strong>注意:参数可以多个</strong>，根据需要增减参数个数。参数之间用(逗号，）隔开。</p>
+  <p>按照这个格式，函数实现任意两个数的和应该写成：</p>
+  <pre>
+    function add2(x,y){
+      sum = x + y;
+      alert(sum);
+    }
+  </pre>
+  <p>x和y则是函数的两个参数，调用函数的时候，我们可通过这两个参数把两个实际的加数传递给函数了。</p>
+  <p>例如，add2(3，4)会求3+4的和，add2(60,20)则会求出60和20的和。</p>
+</body>
+</html>

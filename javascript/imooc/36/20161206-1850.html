@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>找到你的位置（JS在页面中的位置）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/2311">找到你的位置（JS在页面中的位置）</a></h1>
+  <hr>
+  <ol>
+    我们可以将JavaScript代码放在html文件中任何位置，但是我们一般放在网页的head或者body部分。
+    <li>
+      <strong>放在&lt;head>部分</strong>
+      <p>最常用的方式是在页面中head部分放置&lt;script>元素，浏览器解析head部分就会执行这个代码，然后才解析页面的其余部分。</p>
+    </li>
+    <li>
+      <strong>放在&lt;body>部分</strong>
+      <p>JavaScript代码在网页读取到该语句的时候就会执行。</p>
+    </li>
+    <li>
+      <strong>图示：</strong><br>
+      <img src="http://img.mukewang.com/52a6ad240001086506440600.jpg" alt="">
+    </li>
+    <li>
+      <strong>注意</strong>
+      <p> javascript作为一种脚本语言可以放在html页面中任何位置，但是浏览器解释html时是按先后顺序的，所以前面的script就先被执行。比如进行页面显示初始化的js必须放在head里面，因为初始化都要求提前进行（如给页面body设置css等）；而如果是通过事件调用执行的function那么对位置没什么要求的。</p>
+    </li>
+  </ol>
+</body>
+</html>

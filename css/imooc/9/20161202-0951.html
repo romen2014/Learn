@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>内联式css样式，直接写在现有的HTML标签中</title>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/622">内联式css样式，直接写在现有的HTML标签中</a></h1>
+    <hr>
+    <p>CSS样式可以写在哪些地方呢？从CSS 样式代码插入的形式来看基本可以分为以下3种：内联式、嵌入式和外部式三种。这一小节先来讲解内联式。</p>
+    <p><strong>内联式css样式表</strong>就是把css代码直接写在现有的HTML标签中，如下面代码：</p>
+    <code>&lt;p style="color:red"&gt;这里文字是红色。&lt;/p&gt;</code>
+    <p>显示效果如下：</p>
+    <p style="color:red">这里文字是红色。</p>
+    <p>注意要写在元素的开始标签里，下面这种写在结束标签里写法是错误的：</p>
+    <code>&lt;p"&gt;这里文字是红色。&lt;/p style="color:red&gt;</code>
+    <p>并且css样式代码要写在style=""双引号中，如果有多条css样式代码设置可以写在一起，中间用分号隔开。如下代码：</p>
+    <code>&lt;p style="color:red;font-size:40px"&gt;这里文字是红色。&lt;/p&gt;</code>
+    <p>显示效果如下：</p>
+    <p style="color:red;font-size:40px">这里文字是红色。</p>
+  </body>
+</html>

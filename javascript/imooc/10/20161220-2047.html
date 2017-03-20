@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>计时器setTimeout()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1025">计时器setTimeout()</a></h1>
+  <hr>
+  <p>setTimeout()计时器，在载入后延迟指定时间后,去执行一次表达式,仅执行一次。</p>
+  <p>语法:</p>
+  <code>setTimeout(代码,延迟时间);</code>
+  <p>参数说明：</p>
+  <p>1. 要调用的函数或要执行的代码串。</p>
+  <p>2. 延时时间：在执行代码前需等待的时间，以毫秒为单位（1s=1000ms)。</p>
+  <p>当我们打开网页3秒后，在弹出一个提示框，代码如下:</p>
+  <pre>
+    setTimeout("alert('Hello!')", 3000 );
+  </pre>
+  <p>当按钮start被点击时，setTimeout()调用函数，在5秒后弹出一个提示框。</p>
+  <p>JS代码：</p>
+  <pre>
+    function tinfo(){
+      var t=setTimeout("alert('Hello!')",5000);
+    }
+  </pre>
+  <p>HTML代码：</p>
+  <pre>
+    &lt;input type="button" value="start" onClick="tinfo()">
+  </pre>
+  <p>效果如下：</p>
+  <script type="text/javascript">
+    function tinfo(){
+      var t=setTimeout("alert('Hello!')",5000);
+    }
+  </script>
+  <input type="button" value="start" onClick="tinfo()">
+  <p>要创建一个运行于无穷循环中的计数器，我们需要编写一个函数来调用其自身。在下面的代码，当按钮被点击后，输入域便从0开始计数。</p>
+  <p>JS代码：</p>
+  <pre>
+    var num=0;
+    function numCount(){
+      document.getElementById('txt').value=num;
+      num=num+1;
+      setTimeout("numCount()",1000);
+    }
+  </pre>
+  <p>HTML代码：</p>
+  <pre>
+    &lt;input type="text" id="txt" />
+    &lt;input type="button" value="Start" onClick="numCount()" />
+  </pre>
+  <p>效果如下：</p>
+  <script type="text/javascript">
+    var num=0;
+    function numCount(){
+      document.getElementById('txt').value=num;
+      num=num+1;
+      setTimeout("numCount()",1000);
+    }
+  </script>
+  <input type="text" id="txt" />
+  <input type="button" value="Start" onClick="numCount()" />
+</body>
+</html>

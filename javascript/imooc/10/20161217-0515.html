@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>什么是函数</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/347">什么是函数</a></h1>
+  <hr>
+  <p>函数的作用，可以写一次代码，然后反复地重用这个代码。</p>
+  <p>如:我们要完成多组数和的功能。</p>
+  <pre>
+    var sum;
+    sum = 3 + 2;
+    alert(sum);
+
+    sum = 7 + 8 ;
+    alert(sum);
+
+    ....  //不停重复两行代码
+  </pre>
+  <p>如果要实现8组数的和，就需要16行代码，实现的越多，代码行也就越多。所以我们可以把完成特定功能的代码块放到一个函数里，直接调用这个函数，就省去重复输入大量代码的麻烦。</p>
+  <p>使用函数完成:</p>
+  <pre>
+    function add2(a,b){
+      sum = a + b;
+      alert(sum);
+    } //  只需写一次就可以
+
+    add2(3,2);
+    add2(7,8);
+    ....  //只需调用函数就可以
+  </pre>
+</body>
+</html>

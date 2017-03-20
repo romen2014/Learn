@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Date 日期对象</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/725">Date 日期对象</a></h1>
+  <hr>
+  <p>日期对象可以储存任意一个日期，并且可以精确到毫秒数（1/1000 秒）。</p>
+  <p>定义一个时间对象 :</p>
+  <pre>
+    var Udate=new Date();
+  </pre>
+  <p><strong>注意:</strong>使用关键字new，Date()的首字母必须大写。 </p>
+  <p>使 Udate 成为日期对象，并且已有初始值：当前时间(当前电脑系统时间)。</p>
+  <p>如果要自定义初始值，可以用以下方法：</p>
+  <pre>
+    //2012年10月1日
+    var d = new Date(2012, 10, 1);
+    //2012年10月1日
+    var d = new Date('Oct 1, 2012');
+  </pre>
+  <p>我们最好使用下面介绍的“方法”来严格定义时间。</p>
+  <p>访问方法语法：“<日期对象>.<方法>”</p>
+  <p>Date对象中处理时间和日期的常用方法：</p>
+  <table>
+    <thead>
+      <tr>
+        <td>方法名称</td>
+        <td>功能描述</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>get/setFullYear()</td>
+        <td>返回/设置年份，用四位数字表示</td>
+      </tr>
+      <tr>
+        <td>get/setMonth()</td>
+        <td>返回/设置月份，0-11代表一至十二月</td>
+      </tr>
+      <tr>
+        <td>get/setDate()</td>
+        <td>返回/设置一个月中的某一天</td>
+      </tr>
+      <tr>
+        <td>get/setDay()</td>
+        <td>返回/设置星期，0-6代表星期日、星期一至星期六</td>
+      </tr>
+      <tr>
+        <td>get/setHours()</td>
+        <td>返回/设置小时，24小时制</td>
+      </tr>
+      <tr>
+        <td>get/setMinutes()</td>
+        <td>返回/设置分钟数</td>
+      </tr>
+      <tr>
+        <td>get/setSeconds()</td>
+        <td>返回/设置秒钟数</td>
+      </tr>
+      <tr>
+        <td>get/setTime()</td>
+        <td>返回/设置时间，单位为毫秒</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

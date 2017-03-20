@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我或你都可以(逻辑或操作符)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/137">我或你都可以(逻辑或操作符)</a></h1>
+  <hr>
+  <p>"<code>||</code>"<span>逻辑或</span>操作符，相当于生活中的“或者”，当两个条件中有任一个条件满n><足，“<spa/span>逻辑或”的运算结果就为“真”。</p>
+  <p>例如：本周我们计划出游,可是周一至周五工作,所以周六或者周日哪天去都可以。即两天中只要有一天有空，就可以出游了。</p>
+  <pre>
+    var a=3;
+    var b=5;
+    var c;
+    c=b>a ||a>b;  //b>a是true，a>b是false，c是true
+  </pre>
+  <strong><span>逻辑或</span>操作符值表:</strong>
+  <br>
+  <img src="http://img.mukewang.com/530a9d2b0001a33e03770178.jpg" alt="">
+  <p><strong>注意: </strong>如果A为真，A || B为真，不会在执行B; 反之，如果A为假，要由 B 的值来决定 A || B 的值。</p>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var numa,numb,jq1;
+    numa=50;
+    numb=55;
+    jq1=numa>numb || numa==numb;
+    document.write("jq1的值是:"+jq1);
+  </pre>
+  <script type="text/javascript">
+    var numa,numb,jq1;
+    numa=50;
+    numb=55;
+    jq1=numa>numb || numa==numb;
+    document.write("jq1的值是:"+jq1);
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>阶段练习</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1642">阶段练习</a></h1>
+  <h3>任务</h3>
+  <ol>
+    <li>新窗口打开时弹出确认框，是否打开</li>
+    <li>通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/</li>
+    <li>打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。</li>
+  </ol>
+  <h3>练习：</h3>
+  <script type="text/javascript">
+    function test(){
+      var doOpen = window.confirm("是否打开新窗口?");
+      if(doOpen){
+        var url = window.prompt("请输入要打开的网址");
+        if(url.trim() == ""){
+          url = "http://www.imooc.com/";
+        }
+        window.open(url, "_blank", "width=400px,height=500px,menubar=no,toolbar=no");
+      }
+    }
+  </script>
+  <input type="button" value="点击按钮查看效果" onclick="test();">
+</body>
+</html>

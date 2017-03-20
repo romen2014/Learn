@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript-什么是变量</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/404">JavaScript-什么是变量</a></h1>
+  <hr>
+  <p>什么是变量? 从字面上看，变量是可变的量；从编程角度讲，变量是用于存储某种/某些数值的存储器。我们可以把变量看做一个盒子，为了区分盒子，可以用BOX1,BOX2等名称代表不同盒子，BOX1就是盒子的名字（也就是变量的名字）。</p>
+  <img src="http://img.mukewang.com/52e32dc90001140c04120228.jpg" alt=""><br>
+  <strong>定义变量使用关键字var,语法如下：</strong>
+  <pre>var 变量名</pre>
+  <strong>变量名可以任意取名，但要遵循命名规则:</strong>
+  <ol>
+    <li>变量必须使用字母、下划线(_)或者美元符($)开始。</li>
+    <li>然后可以使用任意多个英文字母、数字、下划线(_)或者美元符($)组成。</li>
+    <li>不能使用JavaScript关键词与JavaScript保留字。</li>
+  </ol>
+  <strong>变量要先声明再赋值，如下：</strong>
+  <pre>
+    var mychar;
+    mychar="javascript";
+    var mynum = 6;
+  </pre>
+  <strong>变量可以重复赋值，如下：</strong>
+  <pre>
+    var mychar;
+    mychar="javascript";
+    mychar="hello";
+  </pre>
+  <ol>
+    <strong>注意:</strong>
+    <li>在JS中区分大小写，如变量mychar与myChar是不一样的，表示是两个变量。</li>
+    <li>变量虽然也可以不声明，直接使用，但不规范，需要先声明，后使用。</li>
+  </ol>
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    var mychar;
+    mychar="javascript";
+    mychar="hello";
+    document.write(mychar);
+  </script>
+</body>
+</html>

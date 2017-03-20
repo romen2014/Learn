@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>元素分类--内联元素</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      div{
+        display:inline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2049">元素分类--内联元素</a></h1>
+    <hr>
+    <p>在html中，&lt;span&gt;、&lt;a&gt;、&lt;label&gt;、 &lt;strong&gt; 和&lt;em&gt;就是典型的内联元素（行内元素）（inline）元素。</p>
+    <ol>
+      内联元素特点：
+      <li>和其他元素都在一行上；</li>
+      <li>元素的<span class="point">高度</span>、<span class="point">宽度</span>及顶部和底部边距<span class="point">不可设置</span>；</li>
+      <li>元素的宽度就是它包含的文字或图片的宽度，不可改变。</li>
+    </ol>
+    <p>当然块状元素也可以通过代码display:inline将元素设置为内联元素。如下代码就是将块状元素div转换为内联元素，从而使 div 元素具有内联元素特点。</p>
+    <pre>
+      div{
+        display:inline;
+      }
+    </pre>
+    <div>示例：内联元素div</div> |
+    <div>示例：内联元素div</div>
+</body>
+</html>

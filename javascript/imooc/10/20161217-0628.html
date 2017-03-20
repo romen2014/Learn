@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>焦点事件onfocus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/670">焦点事件onfocus</a></h1>
+  <hr>
+  <p>当网页中的对象获得聚点时，执行onfocus调用的程序就会被执行。</p>
+  <p>如下代码, 当将光标移到文本框内时，即焦点在文本框内，触发onfocus 事件，并调用函数message()。</p>
+  <pre>
+      &lt;html>
+        &lt;head>
+          &lt;script type="text/javascript">
+            function message(){
+              var oTxt = document.getElementById('username');
+              oTxt.focus();    //获取焦点
+              oTxt.value = "已获得焦点";
+              oTxt.select();  //选中已有内容，可直接输入相关信息替换选中的内容
+            }
+          &lt;/script>
+        &lt;/head>
+        &lt;body>
+          &lt;form>
+            &lt;input id="username" type="text" value="" onfocus="message()" />
+          &lt;/form>
+        &lt;/body>
+      &lt;/html>
+  </pre>
+  <p>运行结果（请点击输入框，获得焦点后可输入信息）：</p>
+  <script type="text/javascript">
+    function message(){
+      var oTxt = document.getElementById('username');
+      oTxt.focus();    //获取焦点
+      oTxt.value = "已获得焦点";
+      oTxt.select();  //选中已有内容，可直接输入相关信息替换选中的内容
+    }
+  </script>
+  <input id="username" type="text" value="" onfocus="message()" />
+</body>
+</html>

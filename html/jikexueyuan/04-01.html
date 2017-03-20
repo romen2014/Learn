@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web SQL</title>
+	<script>
+	/**
+	 * openDatabase	创建本地数据库
+	 * @param 数据库名称
+	 * @param 数据库版本
+	 * @param 数据库描述
+	 * @param 数据库空间大小
+	 * return 访问对象
+	 */
+	var db = openDatabase("mydb", "1.0", "test db", 1024*100);
+
+	/**
+	 * transaction 事务控制
+	 * @param function 回调函数
+	 */
+	db.transaction(function(tx){
+		tx.executeSql("");
+	});
+
+	/**
+	 * executeSql 数据库执行方法
+	 * @param  执行语句
+	 * @param  参数数组
+	 * @param  成功回调函数
+	 * @param  异常回调函数
+	 * @return {[type]}                 [description]
+	 */
+	transaction.executeSql("sqlquery",[],function(){
+
+	},function(){
+
+	});
+	</script>
+</head>
+<body>
+	<h1><a target="_blank" href="http://www.jikexueyuan.com/course/1395_1.html?ss=1">Web SQL</a></h1>
+	<hr>
+	<pre>
+操作系统Win7 32位
+
+IE11   不支持
+FF 32.0.2 错误: ReferenceError: openDatabase is not defined  不支持
+
+Chrome 37.0.2  支持
+
+============================================
+三星手机I9082i,Android 4.1.2
+
+
+UC Brower 9.9 支持
+
+三星自带浏览器，支持
+	</pre>
+</body>
+</html>

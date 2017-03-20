@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>运动框架</title>
+	<style type="text/css">
+		div{
+			width:100px;
+			height:100px;
+			background-color:yellow;
+			float: left;
+			margin:10px;
+			border:10px solid black;
+			font-size: 14px;
+		}
+		#div4{
+			filter:alpha(opacity:30);
+			opacity:0.3;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var aDiv = document.getElementsByTagName('div');
+		aDiv[0].onmouseover = function(){
+			move(this,'height', 300);
+		}
+		aDiv[0].onmouseout = function(){
+			move(this,'height', 100);
+		}
+		aDiv[1].onmouseover = function(){
+			move(this,'width', 300);
+		}
+		aDiv[1].onmouseout = function(){
+			move(this,'width', 100);
+		}
+		aDiv[2].onmouseover = function(){
+			move(this,'fontSize', 40);
+		}
+		aDiv[2].onmouseout = function(){
+			move(this,'fontSize', 14);
+		}
+		aDiv[3].onmouseover = function(){
+			move(this,'opacity', 100);
+		}
+		aDiv[3].onmouseout = function(){
+			move(this,'opacity', 30);
+		}
+	}
+
+
+	// 通用运动框架
+	function move(obj,attribute,to){
+		var styleValue = null;
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			if(obj.currentStyle){
+				styleValue = obj.currentStyle[attribute];
+			}else{
+				styleValue = getComputedStyle(obj, false)[attribute];
+			}
+			if(attribute == 'opacity'){
+				styleValue = Math.round(parseFloat(styleValue)*100);
+			}else{
+				styleValue = parseInt(styleValue);
+			}
+			var speed = (to - styleValue)/10;
+			speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);
+			if(styleValue == to){
+				clearInterval(obj.timer);
+			}else{
+				if(attribute == 'opacity'){
+					obj.style.filter = 'alpha(opacity:' + (styleValue + speed) + ')';
+					obj.style.opacity = (styleValue + speed)/100;
+				}else{
+					obj.style[attribute] = styleValue + speed + 'px';
+					// title观察
+					// document.title = obj.style[attribute];
+				}
+			}
+		},30);
+	}
+	</script>
+</head>
+<body>
+	<div id="div1">变高</div>
+	<div id="div2">变宽</div>
+	<div id="div3">字变大</div>
+	<div id="div4">淡入淡出</div>
+</body>
+</html>

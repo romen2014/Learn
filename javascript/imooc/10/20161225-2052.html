@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>替换元素节点replaceChild()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1701">替换元素节点replaceChild()</a></h1>
+  <hr>
+  <p>replaceChild 实现子节点(对象)的替换。返回被替换对象的引用。 </p>
+  <p>语法：</p>
+  <code>node.replaceChild (newnode,oldnew )</code>
+  <p><strong>参数：</strong>newnode : 必需，用于替换 oldnew 的对象。</p>
+  <p><strong>参数：</strong>oldnew : 必需，被 newnode 替换的对象。</p>
+  <p>我们来看看下面的代码:</p>
+  <pre>
+    &lt;button onclick="replaceMessage()">点击按钮 将Apple替换为Banana&lt;/button>
+    &lt;h4 id="old">Apple&lt;/h4>
+    &lt;script>
+      function replaceMessage(){
+        var newnode = document.createElement("h4");
+        newnode.innerHTML = "Banana";
+        var oldnode = document.getElementById('old');
+        oldnode.parentNode.replaceChild(newnode, oldnode);
+      }
+    &lt;/script>
+  </pre>
+  <p>运行结果:</p>
+  <button onclick="replaceMessage()">点击按钮 将Apple替换为Banana</button>
+  <h4 id="old">Apple</h4>
+  <script>
+    function replaceMessage(){
+      var newnode = document.createElement("p");
+      newnode.innerHTML = "Banana";
+      var oldnode = document.getElementById('old');
+      oldnode.parentNode.replaceChild(newnode, oldnode);
+    }
+  </script>
+  <p><strong>注意: </strong>1. 当 oldnode 被替换时，所有与之相关的属性内容都将被移除。</p>
+  <p><strong>注意: </strong>2. newnode 必须先被建立。</p>
+</body>
+</html>

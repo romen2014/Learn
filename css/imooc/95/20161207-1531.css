@@ -1,0 +1,32 @@
+*{margin: 0;padding: 0}
+.clear{
+  clear: both;
+}
+#wrap{
+  margin: 0 auto;
+  background-color: #ccc;
+}
+#header{
+  width: 100%;
+  background-color: red;
+}
+#mainbody{
+  background-color: blue;
+  width: 100%;
+  position: relative;
+}
+#left{
+  width: 150px;
+  height: 800px;
+  background-color: #00e;
+}
+#right{
+  background-color: #00d;
+  position: absolute;
+  top: 0;
+  margin-left: 160px;
+}
+#footer{
+  width: 100%;
+  background-color: green;
+}

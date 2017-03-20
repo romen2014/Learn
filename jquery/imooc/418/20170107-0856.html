@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery 表单元素筛选选择器</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="../../jquery-2.2.0.js"></script>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/8350">JQuery 表单元素筛选选择器</a></h1>
+  <hr>
+  <p>无论是提交还是传递数据，表单元素在动态交互页面的作用是非常重要的。
+    jQuery中专门加入了表单选择器，从而能够极其方便地获取到某个类型的表单元素。</p>
+  <table>
+    <tr>
+      <th>选择器</th>
+      <th>描述</th>
+    </tr>
+    <tr>
+      <td>$(':input')</td>
+      <td>选择所有input,textarea,select,button元素。</td>
+    </tr>
+    <tr>
+      <td>$(':text')</td>
+      <td>匹配所有文本框</td>
+    </tr>
+    <tr>
+      <td>$(':password')</td>
+      <td>匹配所有密码框</td>
+    </tr>
+    <tr>
+      <td>$(':radio')</td>
+      <td>匹配所有单选按钮</td>
+    </tr>
+    <tr>
+      <td>$(':checkbox')</td>
+      <td>匹配所有复选框</td>
+    </tr>
+    <tr>
+      <td>$(':submit')</td>
+      <td>匹配所有提交按钮</td>
+    </tr>
+    <tr>
+      <td>$(':image')</td>
+      <td>匹配所有图像域</td>
+    </tr>
+    <tr>
+      <td>$(':reset')</td>
+      <td>匹配所有重置按钮</td>
+    </tr>
+    <tr>
+      <td>$(':button')</td>
+      <td>匹配所有按钮</td>
+    </tr>
+    <tr>
+      <td>$(':file')</td>
+      <td>匹配所有文件域</td>
+    </tr>
+  </table>
+  <p>除了input筛选选择器，几乎每个表单类别筛选器都对应一个input元素的type值。大部分表单类别筛选器可以使用属性筛选器替换。比如 $(':password') == $('[type=password]')。</p>
+</body>
+</html>

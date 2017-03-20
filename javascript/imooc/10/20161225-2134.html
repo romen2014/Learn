@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网页尺寸offsetHeight</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1704">网页尺寸offsetHeight</a></h1>
+  <hr>
+  <p>offsetHeight和offsetWidth，获取网页内容高度和宽度(包括滚动条等边线，会随窗口的显示大小改变)。</p>
+  <p><strong>一、值</strong></p>
+  <p>offsetHeight = clientHeight + 滚动条 + 边框。</p>
+  <p><strong>二、浏览器兼容性</strong></p>
+  <pre>
+  var w= document.documentElement.offsetWidth || document.body.offsetWidth;
+  var h= document.documentElement.offsetHeight || document.body.offsetHeight;
+  </pre>
+  <p>运行结果:</p>
+  <script type="text/javascript">
+    var w= document.documentElement.offsetWidth || document.body.offsetWidth;
+    var h= document.documentElement.offsetHeight || document.body.offsetHeight;
+    document.write("网页尺寸offsetHeight宽度：" + w + "px，高度："+ h + "px。");
+  </script>
+</body>
+</html>

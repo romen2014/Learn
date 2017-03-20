@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>认识DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1575">认识DOM</a></h1>
+  <hr>
+  <p>文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</p>
+  <p>先来看看下面代码:</p>
+  <img src="http://img.mukewang.com/5375ca640001c67307860420.jpg" alt="">
+  <p>将HTML代码分解为DOM节点层次图:</p>
+  <img src="http://img.mukewang.com/5375ca7e0001dd8d04830279.jpg" alt="">
+  <ol>
+    <strong>HTML文档可以说由节点构成的集合，DOM节点有:</strong>
+    <li>元素节点：上图中&lt;html>、&lt;body>、&lt;p>等都是元素节点，即标签。</li>
+    <li>文本节点:向用户展示的内容，如&lt;li>...&lt;/li>中的JavaScript、DOM、CSS等文本。</li>
+    <li>属性节点:元素属性，如&lt;a>标签的链接属性href="http://www.imooc.com"。</li>
+  </ol>
+  <p>节点属性:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>方法</td>
+        <td>说明</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>nodeName</td>
+        <td>返回一个字符串，其内容是给定节点的名字</td>
+      </tr>
+      <tr>
+        <td>nodeType</td>
+        <td>返回一个整数，这个数值代表给定节点的类型</td>
+      </tr>
+      <tr>
+        <td>nodeValue</td>
+        <td>返回给定节点的当前值</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>遍历节点树:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>方法</td>
+        <td>说明</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>childNodes</td>
+        <td>返回一个数组，这个数组由给定的元素节点的子节点构成</td>
+      </tr>
+      <tr>
+        <td>firstChild</td>
+        <td>返回第一个子节点</td>
+      </tr>
+      <tr>
+        <td>lastChild</td>
+        <td>返回最后一个子节点</td>
+      </tr>
+      <tr>
+        <td>parentNode</td>
+        <td>返回一个给定节点的父节点</td>
+      </tr>
+      <tr>
+        <td>nextSibling</td>
+        <td>返回给定节点的下一个子节点</td>
+      </tr>
+      <tr>
+        <td>previousSibling</td>
+        <td>返回给定节点的上一个子节点</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>以上图ul为例，它的父级节点body,它的子节点3个li,它的兄弟结点h2、P。</p>
+  <p>DOM操作:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>方法</td>
+        <td>说明</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>createElement(element)</td>
+        <td>创建一个新的元素节点</td>
+      </tr>
+      <tr>
+        <td>createTextNode()</td>
+        <td>创建一个包含着给定文本的新文本节点</td>
+      </tr>
+      <tr>
+        <td>appendChild()</td>
+        <td>指定节点的最后一个子节点列表之后添加一个新的子节点</td>
+      </tr>
+      <tr>
+        <td>insertBefore()</td>
+        <td>将一个给定节点插入到一个给定元素节点的给定子节点的前面</td>
+      </tr>
+      <tr>
+        <td>removeChild()</td>
+        <td>从一个给定元素中删除一个子节点</td>
+      </tr>
+      <tr>
+        <td>replaceChild()</td>
+        <td>把一个给定父元素李的一个子节点替换为另外一个节点</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>注意:前两个是document方法。</p>
+</body>
+</html>

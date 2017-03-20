@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript-关闭窗口（window.close）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/413">JavaScript-关闭窗口（window.close）</a></h1>
+  <hr>
+  <p>close()关闭窗口</p>
+  <p>用法：</p>
+  <pre>window.close();   //关闭本窗口</pre>
+  <p>或：</p>
+  <pre><窗口对象>.close();   //关闭指定的窗口</pre>
+  <p>例如:关闭新建的窗口。</p>
+  <pre>
+    var mywin=window.open('http://www.imooc.com'); //将新打的窗口对象，存储在变量mywin中
+    mywin.close();
+  </pre>
+  <strong>注意:上面代码在打开新窗口的同时，关闭该窗口，看不到被打开的窗口。</strong>
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function myClose(){
+      var mywin = window.open('http://www.imooc.com','_blank','width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes'); //将新打的窗口对象，存储在变量mywin中
+      mywin.close();
+    }
+  </script>
+  <input type="button" value="点击按钮查看效果" onclick="myClose();">
+</body>
+</html>

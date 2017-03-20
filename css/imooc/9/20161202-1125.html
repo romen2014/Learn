@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>子选择器</title>
+    <style media="screen">
+      code{
+        color: red;
+        font-size: 2em;
+      }
+      .food>li{
+        /*添加边框样式（粗细为1px， 颜色为红色的实线）*/
+        border:1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2023">子选择器</a></h1>
+    <hr>
+    <p>还有一个比较有用的选择器 <strong>子选择器</strong>，即大于符号(>), <strong>用于选择指定标签元素的第一代子元素</strong>。如下面的代码：</p>
+    <code>.food>li{border:1px solid red;}</code>
+    <p>这行代码会使class名为food下的子元素li（水果、蔬菜）加入红色实线边框。</p>
+    <hr>
+    <h1>食物</h1>
+    <ul class="food">
+      <li>水果
+        <ul>
+          <li>香蕉</li>
+          <li>苹果</li>
+          <li>梨</li>
+        </ul>
+      </li>
+      <li>蔬菜
+        <ul>
+          <li>白菜</li>
+          <li>油菜</li>
+          <li>卷心菜</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

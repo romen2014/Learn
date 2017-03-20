@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>伸缩菜单——改变宽度</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    *{ margin: 0; padding: 0; }
+    /*伸缩菜单——改变宽度 样式*/
+    #menu5 ul{
+      list-style: none;
+      font-size: 14px;
+      height: 50px;
+      border-bottom: 5px solid #f60;
+      padding-left: 30px;
+    }
+    #menu5 li{
+      float:left;
+      margin-top: 20px;
+    }
+    #menu5 a{
+      text-decoration: none;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      width: 100px;
+      background-color: #ccc;
+      margin-bottom: 1px;
+      text-align: center;
+    }
+    #menu5 a:hover{background-color: #f60;
+      color: #fff;
+      background-color: #f60;
+    }
+    #menu5 a.active{background-color: #f60;
+      color: #fff;
+      background-color: #f60;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = function(){
+      var aA = document.getElementsByTagName('a');
+      for(var i = 0; aA.length; i++){
+        aA[i].onmouseover = function(){
+          var one = this;
+			    clearInterval(one.timer);
+          one.timer = setInterval(function(){
+            one.style.width = one.offsetWidth + 8 + 'px';
+            if(one.offsetWidth >= 160){
+              one.style.width = "160px";
+              clearInterval(one.timer);
+            };
+          }, 30);
+        };
+
+        aA[i].onmouseout = function(){
+          var one = this;
+			    clearInterval(one.timer);
+          one.timer = setInterval(function(){
+            one.style.width = one.offsetWidth - 8 + 'px';
+            if(one.offsetWidth <= 120){
+              one.style.width = "120px";
+              clearInterval(one.timer);
+            };
+          }, 30);
+        };
+      };
+    }
+  </script>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/video/68">伸缩菜单——改变宽度</a></h1>
+  <hr>
+  <div id="menu5">
+    <ul>
+      <li><a href="#" class="active">菜单1</a></li>
+      <li><a href="#">菜单2</a></li>
+      <li><a href="#">菜单3</a></li>
+      <li><a href="#">菜单4</a></li>
+      <li><a href="#">菜单5</a></li>
+      <li><a href="#">菜单6</a></li>
+      <li><a href="#">菜单7</a></li>
+    </ul>
+  </div>
+  <strong>本节js并没有采用完美运动框架，可能存在bug</strong>
+</body>
+</html>

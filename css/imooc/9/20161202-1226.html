@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>继承</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2038">继承</a></h1>
+    <hr>
+    <p>CSS的 <span class="point">某些样式</span>是具有继承性的，那么什么是继承呢？继承是一种规则，它允许样式不仅应用于某个特定html标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p标签，这个颜色设置不仅应用p标签，还应用于p标签中的所有子元素文本，这里子元素为span标签。</p>
+    <pre>
+      p{color:blue;}
+
+      &lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;
+    </pre>
+    <p>可见下面示例中p中的文本与span中的文本都设置为了蓝色。</p>
+    <p style="color:blue;">三年级时，我还是一个<span>胆小如鼠</span>的小女孩。</p>
+    <p>但注意有一些css样式是不具有继承性的。如border:1px solid red;</p>
+    <pre>
+      p{border:1px solid blue;}
+
+      &lt;p&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;
+    </pre>
+    <p style="border:1px solid blue;">三年级时，我还是一个<span>胆小如鼠</span>的小女孩。</p>
+    <p>在上面例子中它代码的作用只是给p标签设置了边框为1像素、红色、实心边框线，而对于子元素span是没用起到作用的。</p>
+  </body>
+</html>

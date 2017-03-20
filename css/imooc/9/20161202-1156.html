@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>分组选择器</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      /*本节重点代码*/
+      h2, span{color:blue;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2037">分组选择器</a></h1>
+    <hr>
+    <p>当你想为html中多个标签元素设置同一个样式时，可以使用分组选择符（，），如下代码为下面的h2、span标签同时设置字体颜色为蓝色：</p>
+    <code>h2, span{color:blue;}</code>
+    <p>它相当于下面两行代码：</p>
+    <pre>
+      h2{color:blue;}
+      span{color:blue;}
+    </pre>
+    <hr>
+    <h2>勇气</h2>
+    <p class="first">三年级时，我还是一个<span>胆小如鼠</span>的小女孩，上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个勇气来回答老师提出的问题。学校举办的活动我也没勇气参加。</p>
+    <p id="second">到了三年级下学期时，我们班上了一节公开课，老师提出了一个很<span>简单</span>的问题，班里很多同学都举手了，甚至成绩比我差很多的，也举手了，还说着："我来，我来。"我环顾了四周，就我没有举手。</p>
+    <img src="http://img.mukewang.com/52b4113500018cf102000200.jpg" >
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>字体缩写</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      #demo1 {
+        /*font-style:italic;
+        font-variant:small-caps;
+        font-weight:bold;
+        font-size:12px;
+        line-height:1.5em;
+        font-family:"宋体",sans-serif;*/
+        font:italic small-caps bold 12px/1.5em "宋体",sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2094">字体缩写</a></h1>
+    <hr>
+    <p>网页中的字体css样式代码也有他自己的缩写方式，下面是给网页设置字体的代码：</p>
+    <pre>
+      body{
+        font-style:italic;
+        font-variant:small-caps;
+        font-weight:bold;
+        font-size:12px;
+        line-height:1.5em;
+        font-family:"宋体",sans-serif;
+      }
+    </pre>
+    <p>这么多行的代码其实可以缩写为一句：</p>
+    <pre>
+      body{
+        font:italic small-caps bold 12px/1.5em "宋体",sans-serif;
+      }
+    </pre>
+    <ol>
+      <strong>注意：</strong>
+      <li>
+        使用这一简写方式你至少要指定 font-size 和 font-family 属性，其他的属性(如 font-weight、font-style、font-varient、line-height)如未指定将自动使用默认值。
+      </li>
+      <li>
+        在缩写时 font-size 与 line-height 中间要加入“/”斜扛。
+      </li>
+    </ol>
+    <p>示例：</p>
+    <div id="demo1">
+      <p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible DOMs, broken CSS support, and abandoned browsers.</p>
+      <p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the W3C, WaSP, and the major browser creators.</p>
+      <p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.</p>
+    </div>
+    <p>一般情况下因为对于中文网站，英文还是比较少的，所以下面缩写代码比较常用：</p>
+    <pre>
+      body{
+        font:12px/1.5em  "宋体",sans-serif;
+      }
+    </pre>
+    <p>只是有字号、行间距、中文字体、英文字体设置。</p>
+  </body>
+</html>

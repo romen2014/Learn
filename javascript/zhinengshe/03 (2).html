@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+	<style type="text/css">
+		div{
+			font-size: 5em;
+			float: left;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var aDiv=document.getElementsByTagName('div');
+			var oDate = null;
+			var sTime = '';
+			function getTimeStr(num){
+				if(num<10){
+					return '0'+num;
+				}else{
+					return ''+num;
+				}
+			};
+			function showTime(){
+				oDate=new Date();
+				sTime=getTimeStr(oDate.getHours())+":"+getTimeStr(oDate.getMinutes())+":"+getTimeStr(oDate.getSeconds());
+				for (var i = aDiv.length - 1; i >= 0; i--) {
+					//str[index]按为取值只在高版本浏览器适用，低版本浏览器兼容性问题则需要使用str.charAt(index)方法
+					aDiv[i].innerHTML=sTime[i];
+				};
+			};
+			//setInterval(fun,sss)
+			//1、当fun非全局函数时不可以用"fun()"作为参数
+			//2、不可以用fun()作为参数，否则fun()会在setInterval()之前执行，除非fun()返回值也是一个fun()否则setInterval()会执行报错,but然并卵
+			//3、直接fun做为参数，则执行正常
+			setInterval(showTime,1000);
+			showTime();
+		};
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3">:</div>
+	<div id="div4"></div>
+	<div id="div5"></div>
+	<div id="div6">:</div>
+	<div id="div7"></div>
+	<div id="div8"></div>
+</body>
+</html>

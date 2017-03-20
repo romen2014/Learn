@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>继续循环continue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/324">继续循环continue</a></h1>
+  <hr>
+  <p>continue的作用是仅仅跳过本次循环，而整个循环体继续执行。</p>
+  <p>语句结构：</p>
+  <pre>
+    for(初始条件;判断条件;循环后条件值更新){
+      if(特殊情况){
+        continue;
+      }
+      循环代码
+    }
+  </pre>
+  <p>上面的循环中，当特殊情况发生的时候，本次循环将被跳过，而后续的循环则不会受到影响。好比输出10个数字，如果数字为5就不输出了。</p>
+  <pre>
+    var num;
+    for(num = 1; num <= 10; num++){
+      if(num==5){
+        continue;
+      }
+      document.write("数值：" + num + "&lt;br />")
+    }
+  </pre>
+  <p>执行结果：</p>
+  <script>
+    var num;
+    for(num = 1; num <= 10; num++){
+      if(num==5){
+        continue;
+      }
+      document.write("数值：" + num + "<br />")
+    }
+  </script>
+  <p><strong>注:</strong>上面的代码中，num=5的那次循环将被跳过。</p>
+</body>
+</html>

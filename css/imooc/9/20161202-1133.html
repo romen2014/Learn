@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>包含(后代)选择器</title>
+    <style media="screen">
+      code{
+        color: red;
+        font-size: 2em;
+      }
+      .point span{
+        color: red;
+        font-size: 1.5em;
+      }
+      /*本节重点代码*/
+      .first span{color:blue;}
+      #food1 li{border:1px solid red;}
+      #food2>li{border:1px solid red;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2024">包含(后代)选择器</a></h1>
+    <hr>
+    <p>包含选择器，即加入空格,用于选择指定标签元素下的后辈元素。如下面的代码：</p>
+    <code>.first span{color:blue;}</code>
+    <p>这行代码会使下面一段文字内容中的“胆小如鼠”字体颜色变为蓝色。</p>
+    <p class="first">三年级时，我还是一个<span>胆小如鼠</span>的小女孩，上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个勇气来回答老师提出的问题。学校举办的活动我也没勇气参加。</p>
+    <p class="point">请注意这个选择器与子选择器的区别，子选择器（child selector）仅是指它的 <span>直接后代</span>，或者你可以理解为作用于子元素的第一代后代。而后代选择器是作用于 <span>所有子后代元素</span>。后代选择器通过 <span>空格</span>来进行选择，而子选择器是通过“>”进行选择。</p>
+    <p class="point">总结： <span>></span>作用于元素的 <span>第一代后代</span>， <span>空格</span>作用于元素的 <span>所有</span>后代。</p>
+    <hr>
+    <h2>食物(ID后代选择器效果)</h2>
+    <ul id="food1">
+      <li>水果
+        <ul>
+          <li>香蕉</li>
+          <li>苹果</li>
+          <li>梨</li>
+        </ul>
+      </li>
+      <li>蔬菜
+        <ul>
+          <li>白菜</li>
+          <li>油菜</li>
+          <li>卷心菜</li>
+        </ul>
+      </li>
+    </ul>
+    <hr>
+    <h2>食物(ID子选择器效果)</h2>
+    <ul id="food2">
+      <li>水果
+        <ul>
+          <li>香蕉</li>
+          <li>苹果</li>
+          <li>梨</li>
+        </ul>
+      </li>
+      <li>蔬菜
+        <ul>
+          <li>白菜</li>
+          <li>油菜</li>
+          <li>卷心菜</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

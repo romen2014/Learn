@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>失去焦点事件onblur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/673">失去焦点事件onblur</a></h1>
+  <hr>
+  <p>onblur事件与onfocus是相对事件，当光标离开当前获得聚焦对象的时候，触发onblur事件，同时执行被调用的程序。</p>
+  <p>如下代码, 网页中有用户和密码两个文本框。当前光标在用户文本框内时（即焦点在文本框），在光标离开该文本框后（即失焦时），触发onblur事件，并调用函数message()。</p>
+  <pre>
+      &lt;html>
+        &lt;head>
+          &lt;script type="text/javascript">
+            function message(){
+              var oTxt = document.getElementById('username');
+              alert("文本框已失去焦点，目前内容为：" + oTxt.value);
+            }
+          &lt;/script>
+        &lt;/head>
+        &lt;body>
+          &lt;form>
+            &lt;input id="username" type="text" value="" onblur="message()" />
+          &lt;/form>
+        &lt;/body>
+      &lt;/html>
+  </pre>
+  <p>运行结果（请点击输入框输入相关信息，再将焦点移除(按Tab键或鼠标点击页面其他区域)）：</p>
+  <script type="text/javascript">
+    function message(){
+      var oTxt = document.getElementById('username');
+      alert("文本框已失去焦点，目前内容为：" + oTxt.value);
+    }
+  </script>
+  <input id="username" type="text" value="" onblur="message()" />
+</body>
+</html>

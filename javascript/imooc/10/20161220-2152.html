@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>screen 对象</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1156">screen 对象</a></h1>
+  <hr>
+  <p>screen对象用于获取用户的屏幕信息。</p>
+  <p>语法：</p>
+  <code>window.screen.属性</code>
+  <p>对象属性:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>属性</td>
+        <td>描述</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>availHeight</td>
+        <td>窗口可以使用的屏幕高度，单位像素</td>
+      </tr>
+      <tr>
+        <td>availWidth</td>
+        <td>窗口可以使用的屏幕宽度，单位像素</td>
+      </tr>
+      <tr>
+        <td>colorDepth</td>
+        <td>用户浏览器标识的颜色位数，通常为32位（每像素的位数）</td>
+      </tr>
+      <tr>
+        <td>pixelDepth</td>
+        <td>用户浏览器标识的颜色位数，通常为32位（每像素的位数）IE不支持此属性</td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>屏幕的高度，单位像素</td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>屏幕的宽度，单位像素</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <p>screen.height 返回屏幕分辨率的高</p>
+  <p>screen.width 返回屏幕分辨率的宽</p>
+  <p>效果如下：</p>
+  <script type="text/javascript">
+    document.write( "屏幕宽度："+screen.width);
+    document.write( "屏幕高度："+screen.height);
+  </script>
+  <hr>
+  <p>availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如任务栏。</p>
+  <p>screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如任务栏。</p>
+  <p>效果如下：</p>
+  <script type="text/javascript">
+    document.write( "可用宽度："+screen.availWidth);
+    document.write( "可用高度："+screen.availHeight);
+  </script>
+</body>
+</html>

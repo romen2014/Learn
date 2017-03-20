@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取样式</title>
+	<style type="text/css">
+		div{
+			width: 400px;
+		}
+		#div1{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+	<script type="text/javascript">
+	/**
+	只适合取简单样式值，不适合取符合样式（如background，因为含backgroundColor等简单样式）值
+	object	-DOM元素
+	styleName	-样式名称
+	return 样式值
+	*/
+	function getStyle(object,styleName){
+		if (object.currentStyle) {
+				// 低版本IE
+				return object.currentStyle[styleName];
+			}else{
+				// 高版本IE、Edge、FF、Chrome
+				return getComputedStyle(object,false)[styleName];
+			}
+		}
+
+		window.onload=function(){
+			var oDiv=document.getElementById('div1');
+			alert(getStyle(oDiv,'width'));
+			alert(getStyle(oDiv,'backgroundColor'));
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

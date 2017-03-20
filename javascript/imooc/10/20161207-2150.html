@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>如何创建数组</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/234">如何创建数组</a></h1>
+  <hr>
+  <p>使用数组之前首先要创建，而且需要把数组本身赋至一个变量。好比我们出游，要组团，并给团定个名字“云南之旅”。</p>
+  <strong>创建数组语法：</strong>
+  <br>
+  <code>var myarray=new Array();</code>
+  <br>
+  <img src="http://img.mukewang.com/52ca004b0001c81103980228.jpg" alt="">
+  <p>我们创建数组的同时，还可以为数组指定长度，长度可任意指定。</p>
+  <code>var myarray= new Array(8); //创建数组，存储8个数据。</code>
+  <br>
+  <strong>注意：</strong>
+  <ol>
+    <li>创建的新数组是空数组，没有值，如输出，则显示undefined。</li>
+    <li>虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规定长度以外。</li>
+  </ol>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var myarr= new Array(8);
+    document.write("数组的第一个值："+myarr[0]);
+  </pre>
+  <script type="text/javascript">
+    var myarr= new Array(8);
+    document.write("数组的第一个值："+myarr[0]);
+  </script>
+</body>
+</html>

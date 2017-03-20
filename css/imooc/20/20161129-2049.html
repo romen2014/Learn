@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>微博结构</title>
+    <link href="20161129-2049.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <p>结构——HTML。好比盖房子的时候，先要确定房屋整体的结构。</p>
+    <p>表现——CSS。好比房子盖好以后的装修。</p>
+    <p>行为——JavaScript。好比房屋各个部分的功能，如门和窗等。</p>
+    <p>
+      一般遵循原则：先考虑设计图中的文字内容和内容模块之间的关系，重点放在编写html结构和语义化，然后考虑布局和表现形式。
+    </p>
+    <p>
+      网页换肤: 相同的html结构，不同的css样式。
+    </p><hr>
+    <div class="demo01">
+      <div class="left">
+        <img src="headimg.jpg" alt="">
+      </div>
+      <div class="right">
+        <h3>初级制作者思路</h3>
+        <p>首先定义一个大的div，然后在其内部定义一左一右两个小div。左边div放置图片，右边div
+        放置流言内容。其中用于显示时间的span采用绝对定位。</p>
+        <span>10分钟之前</span>
+      </div>
+    </div>
+
+    <div class="demo02">
+      <img src="headimg.jpg" alt="">
+      <div class="right">
+        <h3>中级制作者思路</h3>
+        <p>将左侧div去除，将图片向左浮动，其余部分同demo01</p>
+        <span>10分钟之前</span>
+      </div>
+    </div>
+
+    <div class="demo03">
+      <img src="headimg.jpg" alt="">
+      <h3>高级制作者思路</h3>
+      <p>先按结构和语义编写代码</p>
+      <p>然后进行CSS样式设置</p>
+      <p>减少HTML与CSS契合度</p>
+      <p>思路：在只有一层DIV的情况下，将整个文档向右移动，将头像图片向左移出文档。</p>
+      <span>10分钟之前</span>
+    </div>
+  </body>
+</html>

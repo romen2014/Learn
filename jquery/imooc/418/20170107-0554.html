@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery 全选择器</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="../../jquery-2.2.0.js"></script>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/8318">JQuery 全选择器</a></h1>
+  <hr>
+  <div class="aaron">
+    <p>class="aaron"</p>
+    <p>选中</p>
+  </div>
+  <div class="aaron">
+    <p>class="aaron"</p>
+    <p>选中</p>
+  </div>
+  <div class="imooc">
+    <p>class="imooc"</p>
+    <p>jQuery选中</p>
+  </div>
+  <div class="imooc">
+    <p>class="imooc"</p>
+    <p>jQuery选中</p>
+  </div>
+  <script type="text/javascript">
+    // JQuery方式
+    $("*").css("border", "1px solid red");
+  </script>
+</body>
+</html>

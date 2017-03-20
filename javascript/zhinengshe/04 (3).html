@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>创建、插入、删除元素</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oUl = document.getElementById('ul1');
+		var aLi = oUl.getElementsByTagName('li');
+		var oTxt = document.getElementById('txt1');
+		var oBtn1 = document.getElementById('btn1');
+		var oBtn2 = document.getElementById('btn2');
+
+		oBtn1.onclick = function(){
+			//创建li元素
+			var oLi = document.createElement('li');
+			//设置li内容
+			oLi.innerHTML = oTxt.value;
+			//父级.appendChild(子节点);
+			oUl.appendChild(oLi);
+		};
+
+		oBtn2.onclick = function(){
+			//创建li元素
+			var oLi = document.createElement('li');
+			//设置li内容，包含一个含删除操作的控制A标签
+			oLi.innerHTML = oTxt.value;
+			var oA = document.createElement('a');
+			oA.href = 'javascript:;';
+			oA.innerHTML = '删除';
+			oA.onclick = function(){
+				oUl.removeChild(this.parentNode);
+			};
+			oLi.appendChild(oA);
+
+			//将元素插入指定位置
+			if(aLi.length>0){
+				oUl.insertBefore(oLi, aLi(0));
+			}else{
+				oUl.appendChild(oLi);
+			}
+		};
+	};
+	</script>
+</head>
+<body>
+	<input type="text" id="txt1">
+	<input type="button" id="btn1" value="追加创建">
+	<input type="button" id="btn2" value="更新创建">
+	<ul id='ul1'></ul>
+</body>
+</html>

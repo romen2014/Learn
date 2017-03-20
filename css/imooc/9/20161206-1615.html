@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>水平居中设置-行内元素</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      .txtCenter {
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/4339">水平居中设置-行内元素</a></h1>
+    <hr>
+    <p>我们在实际工作中常会遇到需要设置水平居中的场景，比如为了美观，文章的标题一般都是水平居中显示的。</p>
+    <p>这里我们又得分两种情况：行内元素 还是 块状元素 ，块状元素里面又分为定宽块状元素，以及不定宽块状元素。今天我们先来了解一下行内元素怎么进行水平居中？</p>
+    <p>如果被设置元素为文本、图片等行内元素时，水平居中是通过给父元素设置 text-align:center 来实现的。(父元素和子元素：如下面的html代码中，div是“我想要在父容器中水平居中显示”这个文本的父元素。反之这个文本是div的子元素 )如下代码：</p>
+    <p>html代码：</p>
+    <pre>
+      &lt;div class="txtCenter"&gt;我想要在父容器中水平居中显示。&lt;/div&gt;
+    </pre>
+    <p>css代码：</p>
+    <pre>
+      .txtCenter{
+        text-align:center;
+      }
+    </pre>
+    <p>示例：</p>
+    <div class="txtCenter">我想要在父容器中水平居中显示。</div>
+  </body>
+</html>

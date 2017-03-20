@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编程练习：成绩表</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1504">编程练习：成绩表</a></h1>
+  <hr>
+  <p>某班的成绩出来了，现在老师要把班级的成绩打印出来。</p>
+  <p>效果图:</p>
+  <code>XXXX年XX月X日 星期X--班级总分为:81</code>
+  <p>格式要求：</p>
+  <p>1、显示打印的日期。 格式为类似“XXXX年XX月XX日 星期X” 的当前的时间。</p>
+  <p>2、计算出该班级的平均分（保留整数）。</p>
+  <p>同学成绩数据如下：</p>
+  <p>"小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76"</p>
+  <hr>
+  <script type="text/javascript">
+    var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+    var scoreArr = scoreStr.split(";");
+    var sum = 0;
+    for(i = 0; i < scoreArr.length; i++){
+      sum += parseInt(scoreArr[i].substring(scoreArr[i].indexOf(":")+1));
+    }
+    var svg = Math.floor(sum/scoreArr.length);
+    var now = new Date();
+    function showWeekday(day){
+      switch (day) {
+        case 1:
+          return "星期一";
+          break;
+        case 2:
+          return "星期二";
+          break;
+        case 3:
+          return "星期三";
+          break;
+        case 4:
+          return "星期四";
+          break;
+        case 5:
+          return "星期五";
+          break;
+        case 6:
+          return "星期六";
+          break;
+        default:
+          return "星期日";
+      }
+    }
+    document.write(now.getFullYear() + "年" + (now.getMonth()+1) + "月" + now.getDate() + "日 " + showWeekday(now.getDay()) + " 班级总分为：" + sum + " 班级平均分：" + svg);
+  </script>
+</body>
+</html>

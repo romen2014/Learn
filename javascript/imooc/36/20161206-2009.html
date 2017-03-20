@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript-确认（confirm 消息对话框）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/409">JavaScript-确认（confirm 消息对话框）</a></h1>
+  <hr>
+  <p>confirm 消息对话框通常用于允许用户做选择的动作，如：“你对吗？”等。弹出对话框(包括一个确定按钮和一个取消按钮)。</p>
+  <strong>语法:</strong>
+  <pre>confirm(str);</pre>
+  <strong>参数说明:</strong>
+  <pre>
+    str：在消息对话框中要显示的文本
+    返回值: Boolean值
+  </pre>
+  <strong>返回值:</strong>
+  <pre>
+    当用户点击"确定"按钮时，返回true
+    当用户点击"取消"按钮时，返回false
+  </pre>
+  <strong>注: 通过返回值可以判断用户点击了什么按钮</strong>
+  <p>看下面的代码:</p>
+  <pre>
+    var mymessage=confirm("你喜欢JavaScript吗?");
+    if(mymessage==true){
+      alert("很好,加油!");
+    }else{
+      alert("JS功能强大，要学习噢!");
+    }
+  </pre>
+  <strong>结果:</strong><br>
+  <img src="http://img.mukewang.com/52e35bc60001f01a04230353.jpg" alt=""><br>
+  <strong>注: 消息对话框是排它的，即用户在点击对话框按钮前，不能进行任何其它操作。</strong>
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function myConfirm(){
+      var mymessage=confirm("你喜欢JavaScript吗?");
+      if(mymessage==true){
+        alert("很好,加油!");
+      }else{
+        alert("JS功能强大，要学习噢!");
+      }
+    }
+  </script>
+  <input type="button" value="点击按钮查看效果" onclick="myConfirm();">
+</body>
+</html>

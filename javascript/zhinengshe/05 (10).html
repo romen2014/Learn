@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>链式运动</title>
+	<style>
+		div{
+			width:100px;
+			height:100px;
+			background-color:yellow;
+			float: left;
+			margin:10px;
+			border:2px solid black;
+			filter:alpha(opacity:30);
+			opacity:0.3;
+		}	
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oDiv = document.getElementById('div1');
+		oDiv.onmouseover = function(){
+			move(oDiv, 'width' , 300, function(){
+				move(oDiv, 'height', 300, function(){
+					move(oDiv, 'opacity', 100);
+				});
+			});
+		}
+		oDiv.onmouseout = function(){
+			move(oDiv, 'width' , 100, function(){
+				move(oDiv, 'height', 100, function(){
+					move(oDiv, 'opacity', 30);
+				});
+			});
+		}
+	}
+
+
+	// 添加运动完成后的回调函数构成运动链条
+	function move(obj,attribute,to,funEnd){
+		var styleValue = null;
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			if(obj.currentStyle){
+				styleValue = obj.currentStyle[attribute];
+			}else{
+				styleValue = getComputedStyle(obj, false)[attribute];
+			}
+			if(attribute == 'opacity'){
+				styleValue = Math.round(parseFloat(styleValue)*100);
+			}else{
+				styleValue = parseInt(styleValue);
+			}
+			var speed = (to - styleValue)/10;
+			speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);
+			if(styleValue == to){
+				clearInterval(obj.timer);
+				if(funEnd){
+					funEnd();
+				}
+			}else{
+				if(attribute == 'opacity'){
+					obj.style.filter = 'alpha(opacity:' + (styleValue + speed) + ')';
+					obj.style.opacity = (styleValue + speed)/100;
+				}else{
+					obj.style[attribute] = styleValue + speed + 'px';
+					// title观察
+					// document.title = obj.style[attribute];
+				}
+			}
+		},30);
+	}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

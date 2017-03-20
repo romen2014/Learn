@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>鼠标移入事件onmouseover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/641">鼠标移入事件onmouseover</a></h1>
+  <hr>
+  <p>鼠标经过事件，当鼠标移到一个对象上时，该对象就触发onmouseover事件，并执行onmouseover事件调用的程序。</p>
+  <p>现实鼠标经过"确定"按钮时，触发onmouseover事件，调用函数message()，弹出消息框，代码如下:</p>
+  <pre>
+      &lt;html>
+        &lt;head>
+          &lt;script type="text/javascript">
+            function message(){
+              alert("鼠标进入按钮！");
+            }
+          &lt;/script>
+        &lt;/head>
+        &lt;body>
+          &lt;form>
+            &lt;input name="button" type="button" value="确定" onmouseover="message()" />
+          &lt;/form>
+        &lt;/body>
+      &lt;/html>
+  </pre>
+  <p>运行结果（请将鼠标放到按钮上）：</p>
+  <script type="text/javascript">
+    function message(){
+      alert("鼠标进入按钮！");
+    }
+  </script>
+  <input name="button" type="button" value="按钮" onmouseover="message()" />
+</body>
+</html>

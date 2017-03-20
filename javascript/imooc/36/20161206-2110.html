@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>innerHTML 属性</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/470">innerHTML 属性</a></h1>
+  <hr>
+  <p>innerHTML 属性用于获取或替换 HTML 元素的内容。</p>
+  <p>语法:</p>
+  <pre>Object.innerHTML</pre>
+  <ol>
+    <strong>注意</strong>
+    <li>Object是获取的元素对象，如通过document.getElementById("ID")获取的元素。</li>
+    <li>注意书写，innerHTML区分大小写。</li>
+  </ol>
+  <strong>我们通过id="con"获取&lt;p> 元素，并将元素的内容输出和改变元素内容，代码如下: </strong>
+  <p>html代码：</p>
+  <pre>
+    &lt;p id="con">Hello World!&lt;/p>
+  </pre>
+  <p>js代码：</p>
+  <pre>
+    var oP = document.getElementById('con');
+    oP.innerHTML = "id为con的p标签内容已被更改。";
+  </pre>
+  <p>结果:</p>
+  <img src="http://img.mukewang.com/52e4cb5c000187ce03740251.jpg" alt="">
+  <hr>
+  <h3>示例：</h3>
+  <script type="text/javascript">
+    function myFun(){
+      var oP = document.getElementById('con');
+      oP.innerHTML = "id为con的p标签内容已被更改。";
+    }
+  </script>
+  <p id="con">Hello World!</p>
+  <input type="button" id="btn" value="点击按钮查看效果" onclick="myFun();">
+</body>
+</html>

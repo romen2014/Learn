@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>区别getElementByID,getElementsByName,getElementsByTagName</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/3251">区别getElementByID,getElementsByName,getElementsByTagName</a></h1>
+  <hr>
+  <ol>
+    <strong>以人来举例说明，人有能标识身份的身份证，有姓名，有类别(大人、小孩、老人)等。</strong>
+    <li>ID 是一个人的身份证号码，是唯一的。所以通过getElementById获取的是指定的一个人。</li>
+    <li>Name 是他的名字，可以重复。所以通过getElementsByName获取名字相同的人集合。</li>
+    <li>TagName可看似某类，getElementsByTagName获取相同类的人集合。如获取小孩这类人，getElementsByTagName("小孩")。</li>
+  </ol>
+  <p>把上面的例子转换到HTML中，如下:</p>
+  <code>&lt;input type="checkbox" name="hobby" id="hobby1">音乐</code>
+  <p>input标签就像人的类别。</p>
+  <p>name属性就像人的姓名。</p>
+  <p>id属性就像人的身份证。</p>
+  <p>方法总结如下:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>方法</td>
+        <td>说明</td>
+        <td>获得</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>getElementById</td>
+        <td>通过指定ID获得元素</td>
+        <td>一个</td>
+      </tr>
+      <tr>
+        <td>getElementsByName</td>
+        <td>通过元素名称name属性获得元素集合</td>
+        <td>一组</td>
+      </tr>
+      <tr>
+        <td>getElementsByTagName</td>
+        <td>通过元素标签名称获得元素集合</td>
+        <td>一组</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>注意：方法区分大小写</strong></p>
+  <p>通过下面的例子(6个name="hobby"的复选项，两个按钮)来区分三种方法的不同:</p>
+  <pre>
+    &lt;input type="checkbox" name="hobby" id="hobby1">  音乐
+    &lt;input type="checkbox" name="hobby" id="hobby2">  登山
+    &lt;input type="checkbox" name="hobby" id="hobby3">  游泳
+    &lt;input type="checkbox" name="hobby" id="hobby4">  阅读
+    &lt;input type="checkbox" name="hobby" id="hobby5">  打球
+    &lt;input type="checkbox" name="hobby" id="hobby6">  跑步
+    &lt;input type="button" value = "全选" id="button1">
+    &lt;input type="button" value = "全不选" id="button1">
+  </pre>
+  <input type="checkbox" name="hobby" id="hobby1">  音乐
+  <input type="checkbox" name="hobby" id="hobby2">  登山
+  <input type="checkbox" name="hobby" id="hobby3">  游泳
+  <input type="checkbox" name="hobby" id="hobby4">  阅读
+  <input type="checkbox" name="hobby" id="hobby5">  打球
+  <input type="checkbox" name="hobby" id="hobby6">  跑步
+  <input type="button" value = "全选" id="button1">
+  <input type="button" value = "全不选" id="button1">
+  <p>document.getElementsByTagName("input")，结果为获取所有标签为input的元素，共<script>document.write(document.getElementsByTagName('input').length);</script>个。</p>
+  <p>document.getElementsByName("hobby")，结果为获取属性name="hobby"的元素，共<script>document.write(document.getElementsByName('hobby').length);</script>个。</p>
+  <p>document.getElementById("hobby6")，结果为获取属性id="hobby6"的元素，只有一个，"跑步"这个复选项。</p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>垂直居中-父元素高度确定的多行文本（方法一）</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point, span{
+        color: red;
+      }
+      /*本节重点代码*/
+      table td{height:500px;background:#ccc}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/6370">垂直居中-父元素高度确定的多行文本（方法一）</a></h1>
+    <hr>
+    <p>父元素高度确定的多行文本、图片等的竖直居中的方法有两种：</p>
+    <p>方法一：使用插入 table  (包括tbody、tr、td)标签，同时设置 vertical-align：middle。</p>
+    <p>css 中有一个用于竖直居中的属性 vertical-align，在父元素设置此样式时，会对inline-block类型的子元素都有用。下面看一下例子：</p>
+    <p>html代码：</p>
+    <pre>
+      &lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="wrap"&gt;
+        &lt;div&gt;
+          &lt;p&gt;看我是否可以居中。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+    </pre>
+    <p>css代码：</p>
+    <pre>
+      table td{height:500px;background:#ccc}
+    </pre>
+    <p>因为 td 标签默认情况下就默认设置了 vertical-align 为 middle，所以我们不需要显式地设置了。</p>
+    <p>示例：</p>
+    <table><tbody><tr><td class="wrap">
+      <div>
+        <p>看我是否可以居中。</p>
+        <p>看我是否可以居中。看我是否可以居中。</p>
+        <p>看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。看我是否可以居中。</p>
+        <p>看我是否可以居中。看我是否可以居中。</p>
+        <p>看我是否可以居中。</p>
+      </div>
+    </td></tr></tbody></table>
+  </body>
+</html>

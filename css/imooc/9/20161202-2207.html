@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文字排版--中文字间距、字母间距</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      .demo1 {letter-spacing:50px;color:blue;}
+      .demo2 {word-spacing:50px;color:blue;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2084">文字排版--中文字间距、字母间距</a></h1>
+    <hr>
+    <p class="point">中文字间隔、字母间隔设置：</p>
+    <p>如果想在网页排版中设置文字间隔或者字母间隔就可以使用 letter-spacing 来实现，如下面代码：</p>
+    <code>letter-spacing:50px;</code>
+    <p>注意：这个样式使用在英文单词时，是设置字母与字母之间的间距。</p>
+    <p><h3 class="demo1">示例：hello world!你好！</h3></p>
+
+    <p class="point">单词间距设置：</p>
+    <p>如果我想设置英文单词之间的间距呢？可以使用 word-spacing 来实现。如下代码：</p>
+    <code>word-spacing:50px;</code>
+    <p><h3 class="demo2">示例：hello world!你好！</h3></p>
+  </body>
+</html>

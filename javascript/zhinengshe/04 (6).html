@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格、数据操作、搜索、筛选</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		var oBtn1 = document.getElementById('btnPX1');
+		//变序标识
+		var asc = 1;
+
+		oBtn1.onclick = function paixu(){
+			var oTab = document.getElementById('tab1');
+			var arr = [];
+			for (var i = oTab.tBodies[0].rows.length - 1; i >= 0; i--) {
+				arr[i] = oTab.tBodies[0].rows[i];
+			};
+			arr.sort(function(tr1, tr2){
+				n1 = parseFloat(tr1.getElementsByTagName('td')[2].innerHTML);
+				n2 = parseFloat(tr2.getElementsByTagName('td')[2].innerHTML);
+				return (n1-n2)*asc;
+			});
+
+			for(var i = 0 ; i < arr.length ; i++){
+				oTab.tBodies[0].appendChild(arr[i]);
+			};
+
+			//变更正序、倒序
+			asc = 0-asc;
+		};
+	};
+	</script>
+</head>
+<body>
+	<input id="btnPX1" type="button" value="按年龄排序">
+	<table id="tab1" border="1" width="500" cellspacing="1">
+		<thead>
+			<td>ID</td>
+			<td>Nmae</td>
+			<td>Age</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Blue</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>张三</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>李四</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>王五</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>张强</td>
+				<td>17</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>王四</td>
+				<td>23</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>浮动模型</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      #div1, #div2{
+        width:200px;
+        height:200px;
+        border:2px red solid;
+        float:left;
+      }
+      #div3, #div4{
+        width:200px;
+        height:200px;
+        border:2px red solid;
+        float:right;
+      }
+      #div5, #div6{
+        width:200px;
+        height:200px;
+        border:2px red solid;
+      }
+      #div5{float:left;}
+      #div6{float:right;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2071">浮动模型</a></h1>
+    <hr>
+    <p>块状元素这么霸道都是独占一行，如果现在我们想让两个块状元素并排显示，怎么办呢？不要着急，设置元素浮动就可以实现这一愿望。</p>
+    <p>任何元素在默认情况下是不能浮动的，但可以用 CSS 定义为浮动，如 div、p、table、img 等元素都可以被定义为浮动。如下代码可以实现两个 div 元素一行显示。</p>
+    <pre>
+      div{
+        width:200px;
+        height:200px;
+        border:2px red solid;
+        float:left;
+      }
+    </pre>
+    <p>效果图如下：</p>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div style="clear:both"></div>
+    <p>当然你也可以同时设置两个元素右浮动也可以实现一行显示。</p>
+    <pre>
+      div{
+        width:200px;
+        height:200px;
+        border:2px red solid;
+        float:right;
+      }
+    </pre>
+    <p>效果图如下：</p>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div style="clear:both"></div>
+    <p>又有小伙伴问了，设置两个元素一左一右可以实现一行显示吗？当然可以：</p>
+    <pre>
+      div{
+        width:200px;
+        height:200px;
+        border:2px red solid;
+      }
+      #div5{float:left;}
+      #div6{float:right;}
+    </pre>
+    <p>效果图如下：</p>
+    <div id="div5"></div>
+    <div id="div6"></div>
+    <div style="clear:both"></div>
+  </body>
+</html>

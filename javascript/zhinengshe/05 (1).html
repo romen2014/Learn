@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>运动基础</title>
+	<style type="text/css">
+	#div1{
+		width:200px;
+		height:200px;
+		background-color: red;
+		position:absolute;
+		top: 50px;
+		left: 0px;
+	}
+	</style>
+	<script type="text/javascript">
+	var timer = null;
+	function startMove(){
+		var oDiv = document.getElementById('div1');
+		//	关闭已开启的定时器
+		clearInterval(timer);
+		//	开启新定时器
+		timer = setInterval(function(){
+			var speed  = 5;
+			//	目的地判断，到停未走
+			if(oDiv.offsetLeft >= 300){
+				clearInterval(timer);
+				//	精确控制终点位置
+				oDiv.style.left = 300+'px';
+			}else{
+				oDiv.style.left = oDiv.offsetLeft+speed+'px';
+			}
+		},30)
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="开始运动" id="btn1" onclick="startMove()">
+	<div id="div1"></div>
+</body>
+</html>

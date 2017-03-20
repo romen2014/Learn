@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>计时器setInterval()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1022">计时器setInterval()</a></h1>
+  <hr>
+  <p>在执行时,从载入页面后每隔指定的时间执行代码。</p>
+  <p>语法:</p>
+  <code>setInterval(代码,交互时间);</code>
+  <p>参数说明：</p>
+  <p>1. 代码：要调用的函数或要执行的代码串。</p>
+  <p>2. 交互时间：周期性执行或调用表达式之间的时间间隔，以毫秒计（1s=1000ms）。</p>
+  <p>返回值:</p>
+  <p>计时器对象。一个可以传递给 clearInterval() 从而取消对"代码"的周期性执行的值。</p>
+  <p>调用函数格式(假设有一个clock()函数):</p>
+  <pre>
+    setInterval("clock()",1000);
+    //或
+    setInterval(clock,1000);
+  </pre>
+  <p>我们设置一个计时器，每隔100毫秒调用clock()函数，并将时间显示出来。</p>
+  <p>JS代码：</p>
+  <pre>
+    var int=setInterval(clock, 100);
+    function clock(){
+      var time=new Date();
+      document.getElementById("clock").value = time;
+    }
+  </pre>
+  <p>HTML代码</p>
+  <pre>&lt;input type="text" id="clock" size="50"  /></pre>
+  <p>显示效果：</p>
+  <script type="text/javascript">
+    var int=setInterval(clock, 100);
+    function clock(){
+      var time=new Date();
+      document.getElementById("clock").value = time;
+    }
+  </script>
+  <input type="text" id="clock" size="50"  />
+</body>
+</html>

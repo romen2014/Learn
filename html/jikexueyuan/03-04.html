@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Storage</title>
+	<script>
+	window.onload = function () {
+		oSaveBtn = document.getElementById('savaBtn');
+		oSaveBtn.onclick = function () {
+			var data = new Object;
+			data.name = document.getElementById('name').value;
+			data.email = document.getElementById('email').value;
+			data.tel = document.getElementById('tel').value;
+			data.address = document.getElementById('address').value;
+			var json = JSON.stringify(data);
+			localStorage.setItem(data.name, json);
+		}
+
+		oSearchBtn = document.getElementById('searchBtn');
+		oSearchBtn.onclick = function () {
+			var keyword = document.getElementById('keyword').value;
+			var str = localStorage.getItem(keyword);
+			var data = JSON.parse(str);
+			var result = "name:" + data.name;
+			result += " | email:" + data.email;
+			result += " | tel:" + data.tel;
+			result += " | address:" + data.address;
+			document.getElementById('result').innerHTML = result;
+		}
+	}
+	</script>
+</head>
+<body>
+	<h1><a target="_blank" href="http://www.jikexueyuan.com/course/1389_3.html?ss=1">模拟数据库应用</a></h1>
+	<hr>
+	<input type="text" id="name" placeholder="name">
+	<input type="text" id="email" placeholder="email">
+	<input type="text" id="tel" placeholder="tel">
+	<input type="text" id="address" placeholder="address">
+	<input type="button" id="savaBtn" value="sava">
+	<hr>
+	<input type="text" id="keyword" placeholder="keyword">
+	<input type="button" id="searchBtn" value="search">
+	<div id="result"></div>
+</body>
+</html>

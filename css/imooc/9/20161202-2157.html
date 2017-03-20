@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文字排版--删除线</title>
+    <style media="screen">
+      code, pre{
+        color: red;
+        font-size: 2em;
+      }
+      .point {
+        color: red;
+      }
+      /*本节重点代码*/
+      .oldPrice{text-decoration:line-through;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/2081">文字排版--删除线</a></h1>
+    <hr>
+    <p>如果想在网页上设置删除线怎么办，这个样式在电商网站上常会见到：</p>
+    <img src="http://img.mukewang.com/53a0149700010f4802370316.jpg" alt="">
+    <p>上图中的原价上的删除线使用下面代码就可以实现：</p>
+    <code>.oldPrice{text-decoration:line-through;}</code>
+    <p>原价：<span class="oldPrice">300</span>元 现价：230 元</p>
+  </body>
+</html>

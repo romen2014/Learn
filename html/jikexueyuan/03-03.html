@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Storage</title>
+	<script>
+	window.onload = function () {
+		var oSaveBtn = document.getElementById('savaBtn');
+		oSaveBtn.onclick = function () {
+			var data = document.getElementById('memo').value;
+			var time = new Date().getTime();
+			localStorage.setItem(time,data);
+			loadMessages();
+			document.getElementById('memo').value = '';
+		}
+		var oDelBtn = document.getElementById('delBtn');
+		oDelBtn.onclick = function () {
+			localStorage.clear();
+			loadMessages();
+		}
+
+		var oShowBtn = document.getElementById('showBtn');
+		oShowBtn.onclick = function () {
+			loadMessages();
+		}
+
+		function loadMessages(){
+			var result = "<ul>";
+			for(var i = 0; i < localStorage.length; i++){
+				var key = localStorage.key(i);
+				var value = localStorage.getItem(key);
+				var date = new Date();
+				date.setTime(key);
+				result += "<li>";
+				result += value;
+				result += " @ ";
+				result += date;
+				result += "</li>";
+			}
+			result += "</ul>";
+			var oDiv = document.getElementById('msg');
+			oDiv.innerHTML = result;
+		}
+	}
+	</script>
+</head>
+<body>
+	<h1><a target="_blank" href="http://www.jikexueyuan.com/course/1389_2.html?ss=1">简单Web留言板(遍历)</a></h1>
+	<hr>
+	<div id="msg"></div>
+	<textarea name="" id="memo" cols="60" rows="10"></textarea><br/>
+	<input type="button" id="savaBtn" value="保存数据">
+	<input type="button" id="showBtn" value="显示数据">
+	<input type="button" id="delBtn" value="删除数据">
+</body>
+</html>

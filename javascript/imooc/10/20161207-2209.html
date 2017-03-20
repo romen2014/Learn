@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组属性length</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/238">数组属性length</a></h1>
+  <hr>
+  <p>如果我们想知道数组的大小，只需引用数组的一个属性length。Length属性表示数组的长度，即数组中元素的个数。</p>
+  <p>语法：</p>
+  <pre>
+    myarray.length; //获得数组myarray的长度
+  </pre>
+  <p><strong>注意：</strong>因为数组的索引总是由0开始，所以一个数组的上下限分别是：0和length-1。如数组的长度是5，数组的上下限分别是0和4。</p>
+  <pre>
+    var arr=[55,32,5,90,60,98,76,54];//包含8个数值的数组arr
+    document.write(arr.length); //显示数组长度8
+    document.write(arr[7]); //显示第8个元素的值54
+  </pre>
+  <p>同时，JavaScript数组的length属性是可变的，这一点需要特别注意。</p>
+  <pre>
+    arr.length=10; //增大数组的长度
+    document.write(arr.length); //数组长度已经变为10
+  </pre>
+  <p>数组随元素的增加，长度也会改变，如下:</p>
+  <pre>
+    var arr=[98,76,54,56,76]; // 包含5个数值的数组
+    document.write(arr.length); //显示数组的长度5
+    arr[15]=34;  //增加元素，使用索引为15,赋值为34
+    alert(arr.length); //显示数组的长度16
+  </pre>
+  <hr>
+  <h3>示例：</h3>
+  <pre>
+    var mynum=new Array(65,90,88,98);
+    document.write("数组的长度是:" + mynum.length);
+  </pre>
+  <script type="text/javascript">
+    var mynum=new Array(65,90,88,98);
+    document.write("数组的长度是:" + mynum.length);
+  </script>
+</body>
+</html>

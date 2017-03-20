@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>取消计时器clearInterval()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/code/1024">取消计时器clearInterval()</a></h1>
+  <hr>
+  <p>clearInterval() 方法可取消由 setInterval() 设置的交互时间。</p>
+  <p>语法：</p>
+  <code>clearInterval(id_of_setInterval)</code>
+  <p>参数说明:</p>
+  <p>id_of_setInterval：由 setInterval() 返回的 ID 值。</p>
+  <p>每隔 100 毫秒调用 clock() 函数,并显示时间。当点击按钮时，停止时间。</p>
+  <p>JS代码：</p>
+  <pre>
+    // 每隔100毫秒调用函数，并将返回值赋值给timer
+    var timer = setInterval(function(){
+      document.getElementById('clock').value = new Date();
+    },100);
+  </pre>
+  <p>HTML代码：</p>
+  <pre>
+    &lt;input type="text" id="clock" size="50" />
+    &lt;input type="button" value="Stop" onclick="clearInterval(timer)" />
+  </pre>
+  <p>效果如下：</p>
+  <script type="text/javascript">
+    var timer = setInterval(function(){
+      document.getElementById('clock').value = new Date();
+    },100);
+  </script>
+  <input type="text" id="clock" size="50" />
+  <input type="button" value="Stop" onclick="clearInterval(timer)" />
+</body>
+</html>

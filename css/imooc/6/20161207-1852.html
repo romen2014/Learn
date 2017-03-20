@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>圆角菜单</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    *{ margin: 0; padding: 0; }
+    /*圆角菜单样式*/
+    #menu3 ul{
+      list-style: none;
+      font-size: 14px;
+      height: 50px;
+      border-bottom: 5px solid #f60;
+      padding-left: 30px;
+    }
+    #menu3 li{
+      float:left;
+      margin-top: 20px;
+    }
+    #menu3 a{
+      text-decoration: none;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      width: 120px;
+      background-color: #ccc;
+      margin-bottom: 1px;
+      text-align: center;
+      background: url(btnBg.png);
+    }
+    #menu3 .active{
+      color: #fff;
+      /*背景图高度为60px。
+      其中上30px为菜单的默认样式，与菜单高度相同。
+      图片下30px为菜单的选中样式，利用背景定位上移 background-position: 0 -30px; 实现将其显示。*/
+      background-position: 0 -30px;
+    }
+    #menu3 a:hover{
+      color: #fff;
+      background-position: 0 -30px;
+    }
+  </style>
+</head>
+<body>
+  <h1><a href="http://www.imooc.com/video/67/0">圆角菜单</a></h1>
+  <hr>
+  <div id="menu3">
+    <ul>
+      <li><a href="#" class="active">菜单1</a></li>
+      <li><a href="#">菜单2</a></li>
+      <li><a href="#">菜单3</a></li>
+      <li><a href="#">菜单4</a></li>
+      <li><a href="#">菜单5</a></li>
+      <li><a href="#">菜单6</a></li>
+      <li><a href="#">菜单7</a></li>
+    </ul>
+  </div>
+</body>
+</html>

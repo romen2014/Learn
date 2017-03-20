@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>使用单选框、复选框，让用户选择</title>
+  </head>
+  <body>
+    <h1><a href="http://www.imooc.com/code/497">使用单选框、复选框，让用户选择</a></h1>
+    <hr>
+    <p>在使用表单设计调查表时，为了减少用户的操作，使用选择框是一个好主意，html中有两种选择框，即<strong>单选框</strong>和<strong>复选框</strong>，两者的区别是<strong>单选框</strong>中的选项用户只能选择一项，而<strong>复选框</strong>中用户可以任意选择多项，甚至全选。请看下面的例子:</p>
+    <p>语法：</p>
+    <code>&lt;input type="radio/checkbox" value="值" name="名称" checked="checked"/&gt;</code>
+    <ol>
+      <li>
+        <p><strong>type :</strong></p>
+        <p>当 type=<strong>"radio"</strong> 时，控件为<strong>单选框</strong></p>
+        <p>当 type=<strong>"checkbox"</strong> 时，控件为<strong>复选框</strong></p>
+      </li>
+      <li>
+        <strong>value :</strong>提交数据到服务器的值，以备后台程序 ASP、PHP 使用
+      </li>
+      <li>
+        <strong>name :</strong>为控件命名，以备后台程序 ASP、PHP 使用
+      </li>
+      <li>
+        <strong>checked :</strong>当设置 checked="checked" 时，该选项被默认选中
+      </li>
+    </ol>
+    <p>如下面代码：</p>
+    <img src="http://img.mukewang.com/52e5f7c60001a23f07360267.jpg" alt="">
+    <br />
+    <strong>注意：代码中的&lt;label&gt;标签在本章 5-9 中有讲解。</strong>
+    <p>在浏览器中显示的结果：</p>
+    <form name="iForm" action="save.php" method="post">
+      你是否喜欢旅游？<br />
+      <input type="radio" name="radioLove" value="喜欢" checked="checked">喜欢
+      <input type="radio" name="radioLove" value="不喜欢">不喜欢
+      <input type="radio" name="radioLove" value="无所谓">无所谓
+      <br /><br />
+      你对哪些运动感兴趣？<br />
+      <input type="checkbox" name="checkboxLove" value="跑步">跑步
+      <input type="checkbox" name="checkboxLove" value="打球" checked="checked">打球
+      <input type="checkbox" name="checkboxLove" value="登山" checked="checked">登山
+      <input type="checkbox" name="checkboxLove" value="健身">健身
+    </form>
+    <p>注意:<strong>同一组</strong>的单选按钮，name 取值<strong>一定要一致</strong>，比如上面例子为同一个名称“radioLove”，这样同一组的单选按钮才可以起到单选的作用。</p>
+  </body>
+</html>
