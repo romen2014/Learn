@@ -15,42 +15,59 @@
 - 大小写敏感
 
 ##### 关键字
-- ECMA-262中特定用途的词
-- 控制语句词
-  - if
-  - switch
-  - case
-  - in
-  - catch
-  - ...
-- 执行特定操作词
+- ECMA-262中特定用途的词(26个)
   - break
+  - case
+  - catch
+  - continue
+  - debugger
   - default
   - delete
+  - do
+  - else
+  - finally
+  - for
+  - function
+  - if
+  - in
+  - instanceof
   - new
   - return
+  - switch
   - this
+  - throw
+  - try
+  - typeof
+  - var
+  - void
+  - while
+  - with
+- 其他关键字
+  - null
+  - true
+  - false
+  - ...
 
 ##### 保留字
 - 现在没有特定用途，但未来可能做关键字的词
-- 基础保留字
+- 基础保留字(7个)
   - class
-  - enum
-  - extends
-  - super
   - const
+  - enum
   - export
+  - extends
   - import
-- 严格模式保留字
+  - super
+- 严格模式保留字(9个)
   - implements
-  - package
   - interface
-  - static
-  - public
-  - protected
-  - private
-  - yield
   - let
+  - package
+  - private
+  - protected
+  - public
+  - static
+  - yield
 
 ##### 驼峰命名法
 第一个单词以小写字母开始；之后每个单词的首字母大写
