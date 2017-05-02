@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form id="demoForm" action="#" method="post">
+    <fieldset>
+      <legend>用户登陆</legend>
+      <p>
+        <label for="username">用户名</label>
+        <input type="text" name="username" id="username">
+      </p>
+      <p>
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password">
+      </p>
+      <p>
+        <label for="confirm-password">密码</label>
+        <input type="password" name="confirm-password" id="confirm-password">
+      </p>
+      <p>
+        <input type="submit" value="登陆">
+      </p>
+    </fieldset>
+  </form>
+  <script src="../jquery-2.2.0.js"></script>
+  <script src="jquery.validate.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#demoForm').validate({
+        // 是否为调试模式,true时表单不会被调教，方便调试
+        debug: true,
+        /**
+         * 校验规则。
+         * 有以下常用项
+         * required 是否必填
+         * remote 远程校验
+         *
+         * minlength 最小长度
+         * maxlength 最大长度
+         * rangelength 长度范围
+         *
+         * min 数字最小值
+         * max 数字最大值
+         * range 数字值范围
+         *
+         * email 邮箱格式
+         * url URL格式
+         * date 日期格式
+         * dateISO ISO日期格式
+         *
+         * unmber 数字
+         * digits 整数
+         * equalTo 与另一个元素值相等
+         */
+        rules:{
+          username:{
+            // 是否位必填
+            required: true,
+            // 长度最小值
+            minlength: 2,
+            // 长度最大值
+            maxlength: 10,
+            // 远程校验，接收返回值为true表示可用，false表示不可用
+            remote: {
+              url: "remote.json",
+              type: "post",
+              // 附加数据
+              data: {
+                // 登陆时间（纯举例用）
+                loginTime: function(){
+                  return +new Date;
+                }
+              }
+            }
+          },
+          password:{
+            required: true,
+            // 长度范围。等同于一次性设置最大值与最小值
+            rangelength: [2, 16]
+          },
+          "confirm-password":{
+            equalTo: "#password"
+          }
+        },
+        // 提示信息
+        messages:{
+          username:{
+            required: "用户名不能为空",
+            minlength: "用户名最少填写2位",
+            maxlength: "用户名最长填写10位",
+            remote: "用户名已存在"
+          },
+          password:{
+            required: "密码不能为空",
+            rangelength: "密码长度应为2-16位"
+          },
+          "confirm-password":{
+            equalTo: "两次输入密码不一致"
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
