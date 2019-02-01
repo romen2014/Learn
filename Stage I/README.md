@@ -21,7 +21,7 @@ HTML(Hypertext Markup Language)即超文本标记语言
 #### 基础语法
 - HTML基本结构
   1. 由html标签、头部信息、网页内容三部分构成
-  1. [我的第一个HTML文件](我的第一个HTML文件)
+  1. [我的第一个HTML文件](我的第一个HTML文件/index.html)
 
 #### 常用标签
 #### 例子
