@@ -41,8 +41,10 @@
 
 ### 编程练习
 1. [我的第一个HTML文件](我的第一个HTML文件/index.html)
-### 1-6编程练习[点击查看我的答案](1-6编程练习答案/index.html)
+### 1-6编程练习
 1. 编写html基础结构。
 2. 设置网页标题为“hello”
 3. 网页中显示一段文字“HELLO, everyone. This is my first page!”
 4. 网页背景颜色”灰色”
+
+[点击查看我的答案](1-6编程练习答案/index.html)
