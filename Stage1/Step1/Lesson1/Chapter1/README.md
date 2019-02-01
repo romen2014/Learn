@@ -1,25 +1,23 @@
-# 基础语法
+# 第一章：HTML基础语法
 
-## HTML基础课程介绍
-
-#### HTML概念
+### HTML概念
 **什么是HTML？**
 
   HTML(Hypertext Markup Language)即超文本标记语言。
 
-#### HTML发展简史
+### HTML发展简史
 1. 1993年IETF发布HTML 1.0
 1. 1995年W3C发布HTML 2.0
 1. 2000年W3C发表 XHTML 1.0
 1. 2014年HTML5定稿
 
-#### HTML特点
+### HTML特点
 - HTML不需要编译，直接由浏览器执行
 - HTML文件是一个文本文件
 - HTML文件必须使用html或htm为文件名后缀
 - HTML大小写不敏感
 
-#### 基础语法
+### 基础语法
 - HTML基本结构
   1. 由html标签、头部信息head标签、网页内容body标签三部分构成。
 - 标签
@@ -41,9 +39,9 @@
   1. 注释的内容不会现实在页面上。
   1. 注释格式：\<\!\-\- 这是一个注释 \-\-\>
 
-#### 编程练习
+### 编程练习
 1. [我的第一个HTML文件](我的第一个HTML文件/index.html)
-#### 1-6编程练习[点击查看我的答案](1-6编程练习答案/index.html)
+### 1-6编程练习[点击查看我的答案](1-6编程练习答案/index.html)
 1. 编写html基础结构。
 2. 设置网页标题为“hello”
 3. 网页中显示一段文字“HELLO, everyone. This is my first page!”
