@@ -4,7 +4,8 @@
 
 #### HTML概念
 **什么是HTML？**
-HTML(Hypertext Markup Language)即超文本标记语言
+
+  HTML(Hypertext Markup Language)即超文本标记语言。
 
 #### HTML发展简史
 1. 1993年IETF发布HTML 1.0
