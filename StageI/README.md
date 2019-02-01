@@ -7,7 +7,7 @@
 HTML(Hypertext Markup Language)即超文本标记语言
 
 #### 了解HTML发展史
-- 1993年IETF发布HTML 1.0
+1. 1993年IETF发布HTML 1.0
 1. 1995年W3C发布HTML 2.0
 1. 2000年W3C发表 XHTML 1.0
 1. 2014年HTML5定稿
