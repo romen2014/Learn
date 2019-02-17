@@ -19,6 +19,7 @@
 
 ### 表格属性
 ##### table表格属性
+[点击查看外部资料](http://www.w3school.com.cn/tags/tag_table.asp)
 
 |属性|值|描述|
 |:---:|:---:|:---|
@@ -30,6 +31,8 @@
 |cellspacing|pixels、%|单元格之间的空白|
 |frame|[属性值](http://www.w3school.com.cn/tags/att_table_frame.asp)|规定外边框的哪个部分是可见的|
 |rules|[属性值](http://www.w3school.com.cn/tags/att_table_rules.asp)|规定内边框的哪个部分是可见的|
+
+*frame与rules属性可用css替代*
 
 ### 预览本章内容代码
 [点击预览](index.html)
