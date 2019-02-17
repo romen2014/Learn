@@ -2,9 +2,169 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>表单元素</title>
   </head>
   <body>
-
+    <h1 align='center'>注册信息</h1>
+    <hr color='#336699'>
+    <!-- form标签定义表单指定区域。action属性定义表单的提交地址 -->
+    <form action="">
+      <table width='600px' align='center' bgcolor='#f2f2f2'>
+        <tr>
+          <td align='right'>
+            姓名：
+          </td>
+          <td align='left'>
+            <!-- 隐藏域的信息通常为不希望用户看见又必须传递给服务器的信息 -->
+            <input type="hidden" name='id' value="1">
+            <!-- input的name属性可以为该表单元素命名，以便后续数据提交时使用 -->
+            <!-- 单行文本域中size属性定义了显示长度，maxlength属性限制最大输入字符数，placeholder属性设置了提示信息 -->
+            <input type="text" name='username' size='25' maxlength='6' placeholder='请输入姓名'>
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            邮箱：
+          </td>
+          <td align='left'>
+          <!-- 单行文本域中value属性设置了默认输入信息 -->
+            <input type="text" name='mail' size='25' value='@163.com'>
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            密码：
+          </td>
+          <td align='left'>
+            <!-- password类型可保护输入内容，常用于密码输入 -->
+            <input type="password" name='paw' size='25' maxlength='6' placeholder="请输入密码">
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            确认密码：
+          </td>
+          <td align='left'>
+            <!-- password类型可保护输入内容，常用于密码输入 -->
+            <input type="password" name='paw_confirm' size='25' maxlength='6' placeholder="请再次输入密码">
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            上传照片：
+          </td>
+          <td align='left'>
+            <!-- file类型的文件域可访问本地电脑，将用于指定的文件随表单一同发送 -->
+            <input type="file">
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            性别：
+          </td>
+          <td align='left'>
+            <!-- 同一组radio单选域必须具有同样的name命名值，且value不相同 -->
+            男<input type="radio" name='sex' value="man">
+            女<input type="radio" name='sex' value="woman">
+            <!-- radio单选域的默认状态需要在对应选项位置设置checked属性 -->
+            保密<input type="radio" name='sex' value="bm" checked>
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            爱好：
+          </td>
+          <td align='left'>
+            <!-- 同一组checkbox复选域必须具有同样的name命名值，且value不相同 -->
+            <!-- checkbox复选域的默认状态需要在对应选项位置设置checked属性 -->
+            抽烟<input type="checkbox" name='aihao' value='1' checked>
+            喝酒<input type="checkbox" name='aihao' value='2' checked>
+            烫头<input type="checkbox" name='aihao' value='3' checked>
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            城市：
+          </td>
+          <td align='left'>
+            <!-- 下拉菜单通常用于内容较多的单选选项，可节约网页空间，提升美观度 -->
+            <select class="" name="city1">
+              <option value="0" selected>--请选择--</option>
+              <optgroup label="直辖市">
+                <option value="1">北京</option>
+                <option value="2">上海</option>
+                <option value="6">天津</option>
+                <option value="7">重庆</option>
+              </optgroup>
+              <optgroup label="其他城市">
+                <option value="3">广州</option>
+                <option value="4">深圳</option>
+                <option value="5">杭州</option>
+                <option value="8">成都</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            区域：
+          </td>
+          <td align='left'>
+            <!-- 下拉菜单size属性可设置显示条目数，默认为1项目，大于1时显示为列表 -->
+            <select class="" name="city2" size='3'>
+              <option value="0">--请选择--</option>
+              <option value="1" selected>朝阳</option>
+              <option value="2">东城</option>
+              <option value="3">西城</option>
+              <option value="4">海淀</option>
+              <option value="5">通州</option>
+              <option value="6">丰台</option>
+              <option value="7">大兴</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            技能：
+          </td>
+          <td align='left'>
+            <!-- 下拉菜单multiple属性可以设置多选功能，同时默认为列表显示。 -->
+            <select class="" name="city3" multiple size="6">
+              <option value="0">--可按住ctrl进行多选--</option>
+              <optgroup label="前端">
+                <option value="1">html</option>
+                <option value="2">css</option>
+                <option value="3" selected>javascript</option>
+              </optgroup>
+              <optgroup label="后端">
+                <option value="1">java</option>
+                <option value="2" selected>php</option>
+                <option value="3">asp</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align='right'>
+            简介：
+          </td>
+          <td align='left'>
+            <textarea name="jianjie" id="jianjie" cols="30" rows="10" placeholder="请填写简介"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align='center'>
+            <!-- 普通按钮通常配合js一同使用，默认无任何实际功能 -->
+            <input type="button" value="按钮">
+            <!-- 提交按钮可将表单数据进行提交 -->
+            <input type="submit" value='提交'>
+            <!-- 重置按钮可将表单恢复至默认填写状态，之前所有的修改操作将别重置 -->
+            <input type="reset" value='重置'>
+            <!-- 图像域即带图像的提交按钮，同样可起到提交功能 -->
+            <input type="image" name='imgbtn' src='imgbtn.jpg'>
+          </td>
+        </tr>
+      </table>
+    </form>
   </body>
 </html>
