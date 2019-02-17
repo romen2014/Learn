@@ -19,7 +19,7 @@
 
 ### 表格属性
 ##### table表格属性
-[点击查看外部资料](http://www.w3school.com.cn/tags/tag_table.asp)
+[点击查看外部资料][1]
 
 |属性|值|描述|
 |:---:|:---:|:---|
@@ -29,10 +29,13 @@
 |bgcolor|rgb(x,x,x)、#xxxxxx、colorname|表格的背景颜色|
 |cellpadding|pixels、%|单元边沿与其内容之间的空白|
 |cellspacing|pixels、%|单元格之间的空白|
-|frame|[属性值](http://www.w3school.com.cn/tags/att_table_frame.asp)|规定外边框的哪个部分是可见的|
-|rules|[属性值](http://www.w3school.com.cn/tags/att_table_rules.asp)|规定内边框的哪个部分是可见的|
+|frame|[属性值][2]|规定外边框的哪个部分是可见的|
+|rules|[属性值][3]|规定内边框的哪个部分是可见的|
 
 *frame与rules属性可用css替代*
+[1]:http://www.w3school.com.cn/tags/tag_table.asp "HTML <table> 标签"
+[2]:http://www.w3school.com.cn/tags/att_table_frame.asp "HTML <table> 标签的 frame 属性"
+[3]:http://www.w3school.com.cn/tags/att_table_rules.asp "HTML <table> 标签的 rules 属性"
 
 ### 预览本章内容代码
 [点击预览](index.html)
