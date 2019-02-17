@@ -19,6 +19,7 @@
 
 ### 表格属性
 ##### table表格属性
+
 |属性|值|描述|
 |:---:|:---:|:---|
 |width|pixels、%|规定表格的宽度|
@@ -27,8 +28,8 @@
 |bgcolor|rgb(x,x,x)、#xxxxxx、colorname|表格的背景颜色|
 |cellpadding|pixels、%|单元边沿与其内容之间的空白|
 |cellspacing|pixels、%|单元格之间的空白|
-|frame|属性值|规定外侧边框的哪个部分是可见的|
-|rules|属性值|规定内侧边框的哪个部分是可见的|
+|frame|[属性值](http://www.w3school.com.cn/tags/att_table_frame.asp)|规定外边框的哪个部分是可见的|
+|rules|[属性值](http://www.w3school.com.cn/tags/att_table_rules.asp)|规定内边框的哪个部分是可见的|
 
 ### 预览本章内容代码
 [点击预览](index.html)
