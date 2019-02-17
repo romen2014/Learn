@@ -17,7 +17,8 @@
 |tbody|表格的主体(放数据主体)|
 |tfoot|表格的脚注(放表格的脚部注释)|
 
-### table标签属性
+### 表格属性
+##### table标签属性
 
 |属性|值|描述|
 |:---:|:---:|:---|
@@ -32,7 +33,7 @@
 
 *frame与rules属性可用css替代*
 
-### tr标签属性
+##### tr标签属性
 
 |属性|值|描述|
 |:---:|:---:|:---|
@@ -40,7 +41,7 @@
 |valign|top、middle、bottom、baseline|行内容的垂直对齐|
 |bgcolor|rgb(x,x,x)、#xxxxxx、colorname|行的背景颜色|
 
-### td、th单元格标签属性
+##### td、th单元格标签属性
 
 |属性|值|描述|
 |:---:|:---:|:---|
@@ -50,13 +51,13 @@
 |width|pixels、%|单元格的宽度|
 |height|pixels、%|单元格的高度|
 
-### thead、tbody、tfoot标签属性
+##### thead、tbody、tfoot标签属性
 |属性|值|描述|
 |:---:|:---:|:---|
 |align|left、center、right、justify、char|内容的水平对齐|
 |valign|top、middle、bottom、baseline|内容的垂直对齐|
 
-### 表格属性外部参考资料
+##### 表格属性外部参考资料
 |标签|参考资料|
 |:---:|:---|
 |table|[点击查看](http://www.w3school.com.cn/tags/tag_table.asp)|
@@ -66,6 +67,16 @@
 |thead|[点击查看](http://www.w3school.com.cn/tags/tag_thead.asp)|
 |tbody|[点击查看](http://www.w3school.com.cn/tags/tag_tbody.asp)|
 |tfoot|[点击查看](http://www.w3school.com.cn/tags/tag_tfoot.asp)|
+
+### 跨行与跨列
+##### 跨列属性colspan
+- 在相对应的单元格th、td标签使用colspan属性可实现跨列
+- 要将多余的单元格标签进行删除。如colpasn=2则需要删除多余的一个单元格。
+
+##### 跨行属性rowspan
+- 在相对应的单元格th、td标签使用colspan属性可实现跨列
+- 要将多余的单元格标签进行删除。如colpasn=2则需要删除多余的一个单元格。
+
 
 ### 预览本章内容代码
 [点击预览](index.html)
