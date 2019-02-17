@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>2-8编程练习</title>
+  </head>
+  <body>
+    <table border="1">
+      <caption>课程表</caption>
+      <tr>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>生物</td>
+      </tr>
+      <tr>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>生物</td>
+      </tr>
+      <tr>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>生物</td>
+      </tr>
+      <tr>
+        <td>语文</td>
+        <td>数学</td>
+        <td>英语</td>
+        <td>生物</td>
+      </tr>
+    </table>
+    <hr>
+    <h2>emmet语法参考</h2>
+    <code>
+      table[border=1]>(caption{课程表}+(tr>(th{星期一}+th{星期二}+th{星期四}+th{星期五}))+(tr>(td{语文}+td{数学}+td{英语}+td{生物}))*4)
+    </code>
+  </body>
+</html>
