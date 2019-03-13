@@ -9,7 +9,7 @@
     <hr color='#336699'>
     <!-- action属性定义表单的提交地址 -->
     <!-- method属性指定信息提交方式 -->
-    <form action="action.php" method="post" target="_blank">
+    <form action="action.php" method="post" enctype="multipart/form-data" target="_blank">
       <table width='600px' align='center' bgcolor='#f2f2f2'>
         <tr>
           <td align='right'>
@@ -49,7 +49,7 @@
             上传照片：
           </td>
           <td align='left'>
-            <input type="file">
+            <input type="file" name="touxiang">
           </td>
         </tr>
         <tr>
@@ -67,9 +67,9 @@
             爱好：
           </td>
           <td align='left'>
-            抽烟<input type="checkbox" name='aihao' value='1' checked>
-            喝酒<input type="checkbox" name='aihao' value='2' checked>
-            烫头<input type="checkbox" name='aihao' value='3' checked>
+            抽烟<input type="checkbox" name='aihao[]' value='1' checked>
+            喝酒<input type="checkbox" name='aihao[]' value='2' checked>
+            烫头<input type="checkbox" name='aihao[]' value='3' checked>
           </td>
         </tr>
         <tr>
