@@ -1,0 +1,14 @@
+.div2 p{
+  color:blue;
+  font-size: 40px;
+}
+.div2 h1{
+  color:red;
+}
+.div2 h1,h2,h3,h4{
+  font-size: 30px;
+}
+
+.div3 h1{
+  color:red;
+}
